@@ -85,7 +85,7 @@ Static docs alone are easy to misquote or drift from in prompts. A server **does
 | [`docs/`](docs/) | Concepts, principles, build intent, AUTH, MCP quickstart, compliance checklist, glossary ([**index**](docs/README.md)) |
 | [`standards/`](standards/) | Normative shorts ([**index**](standards/README.md)) |
 | [`templates/`](templates/) | Story, use case, PRD-lite, BIS-lite, acceptance criteria, layer map ([**index**](templates/README.md)) |
-| [`examples/`](examples/) | Worked artifact sets (e.g. [`examples/ai-task-assistant/`](examples/ai-task-assistant/)) |
+| [`examples/`](examples/) | Worked artifact sets ([**index**](examples/README.md); e.g. [`ai-task-assistant/`](examples/ai-task-assistant/)) |
 | [`community/`](community/) | Adoption guide, roadmap, maintainer contact expectations |
 
 ---
