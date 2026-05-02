@@ -40,7 +40,7 @@ Use the UDALI layer map to prevent silent cross-layer fixes—especially under a
 
 ## 10. Evidence-backed claims
 
-Statements like “secure,” “compliant,” or “correct” should point to **tests, reviews, or monitored signals** appropriate to the claim’s scope.
+Statements like “secure,” “correct,” or “meets our regulatory obligations” should point to **tests, reviews, or monitored signals** appropriate to the claim’s scope—without implying AADM or MCP tooling alone constitutes legal certification.
 
 ---
 

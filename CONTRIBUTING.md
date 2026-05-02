@@ -1,6 +1,6 @@
 # Contributing to the AADM Standard
 
-Thank you for helping improve a **public, documentation-first** standard for architecture-aware delivery. This repository is intentionally scoped to **explain**, **template**, and **example**—not to host proprietary runtimes or vendor-specific enforcement engines.
+Thank you for helping improve a **public, documentation-first** standard for **Agentic Authority Delivery Model (AADM)** delivery. This repository is intentionally scoped to **explain**, **template**, and **example**—not to host **MCP server implementations** (those belong in the MCP distribution repo) or **private customer materials**.
 
 ## What belongs here
 
@@ -13,9 +13,9 @@ Thank you for helping improve a **public, documentation-first** standard for arc
 
 **Out of scope**
 
-- Source code for commercial products  
+- MCP server **source code or binaries** (reference the MCP project instead)  
 - Client-specific templates or confidential materials  
-- Proprietary scoring, certification engines, or internal orchestration  
+- Undisclosed scoring formulas, certification exams, or trade-secret workflows  
 
 If you are unsure, open a discussion first (see below).
 
@@ -24,7 +24,7 @@ If you are unsure, open a discussion first (see below).
 1. **Open an issue** for substantive proposals (new standard sections, terminology changes, breaking clarifications).  
 2. **Fork and branch** using the prefixes below.  
 3. **Keep changes focused**—one logical improvement per pull request.  
-4. **Match tone**: authoritative, practical, and neutral (no marketing claims without evidence).  
+4. **Match tone**: authoritative, practical, and neutral—avoid unfounded legal, regulatory, or “official standard body” claims unless you cite verifiable sources.  
 5. **Cite sources** when referencing external frameworks or regulations.
 
 ## Branch naming
@@ -49,7 +49,7 @@ Use these prefixes (examples):
 - Define acronyms on first use in each document (cross-link to [`docs/glossary.md`](docs/glossary.md)).  
 - Use inclusive, precise language; avoid hype.  
 - When describing architecture, separate **intent** (what must be true) from **implementation** (how a stack might satisfy it).  
-- Do not embed secrets, tokens, or customer data—even in examples.
+- Do not embed secrets, tokens, customer data, or non-public URLs—even in examples.
 
 ## Licensing
 

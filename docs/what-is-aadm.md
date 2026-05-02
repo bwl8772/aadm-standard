@@ -1,6 +1,8 @@
 # What is AADM?
 
-**AADM** (Architecture-Aware Delivery Model) is an **open delivery standard** for building modern software—including systems that use AI agents—without surrendering structural integrity.
+**AADM** (**Agentic Authority Delivery Model**) is an **open delivery posture** for building modern software—including systems that use AI agents—without surrendering structural integrity.
+
+AADM is **not** a statute, ISO publication, or automatic “certification.” It is **documentation-first guidance** your organization may adopt, extend, or pair with tooling (such as an **AADM MCP server**) on your own terms.
 
 ## The problem AADM addresses
 
@@ -21,8 +23,15 @@ AADM responds with a **small set of enforceable ideas**:
 
 - **Not a framework** you install to “solve security.”  
 - **Not a replacement** for language-specific best practices or platform controls.  
-- **Not a certification program** (this public repo contains no proprietary scoring or exams).  
-- **Not a vendor product** — adopters bring their own tooling and governance.
+- **Not a legal or regulatory certification**—this public repo offers no exams, seals of approval, or proprietary scoring engines.  
+- **Not a single vendor product** — adopters choose tooling; many teams combine **this repo** with **an MCP server** so agents load consistent standard context.
+
+## How this repo fits an MCP server
+
+- **Here:** human-readable principles, templates, examples, and checklists—easy to fork, review in PRs, and attach to tickets.  
+- **MCP deployment:** agent-facing **resources, prompts, and bounded tools** so coding assistants do not rely on stale chat snippets.
+
+Neither replaces the other; neither replaces **your application’s** AUTH and domain enforcement.
 
 ## What you get from adopting AADM
 
@@ -32,10 +41,11 @@ AADM responds with a **small set of enforceable ideas**:
 
 ## Relationship to UDALI
 
-**UDALI** names roles and layers used throughout AADM materials. Think of AADM as the **delivery posture** and UDALI as the **organizing map**. See [UDALI 22-layer model](udali-22-layer-model.md).
+**UDALI** names roles and delivery groupings used throughout AADM materials. Think of AADM as the **delivery posture** and UDALI as the **organizing map**. See [UDALI 22-layer model](udali-22-layer-model.md).
 
 ## Next steps
 
 - [Architecture principles](architecture-principles.md)  
 - [Build intent specification](build-intent-specification.md)  
+- [MCP quickstart](mcp-quickstart.md)  
 - [Glossary](glossary.md)  

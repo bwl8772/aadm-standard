@@ -1,33 +1,63 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schemas/task-draft-v1.json",
-  "title": "TaskDraft",
+  "$id": "https://example.invalid/matchgrid/action-plan-draft-v1.json",
+  "title": "ActionPlanDraft",
+  "description": "Fictional MatchGrid example — AI-assisted structured plan before human confirm.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["workspaceId", "draftId", "items"],
+  "required": ["workspaceId", "draftId", "originalIntent", "goalStatement", "steps"],
   "properties": {
     "workspaceId": {
       "type": "string",
-      "description": "Tenant/workspace identifier (opaque)."
+      "description": "Opaque workspace identifier."
     },
     "draftId": {
       "type": "string",
       "description": "Correlation id for the non-persistent draft."
     },
-    "items": {
+    "originalIntent": {
+      "type": "string",
+      "maxLength": 8000,
+      "description": "User's vague task text."
+    },
+    "goalStatement": {
+      "type": "string",
+      "maxLength": 2000,
+      "description": "Single sentence reframing the outcome."
+    },
+    "steps": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["title"],
+        "required": ["order", "action"],
         "properties": {
-          "title": { "type": "string", "maxLength": 200 },
-          "description": { "type": "string", "maxLength": 4000 },
-          "assigneeUserId": { "type": ["string", "null"] },
-          "dueDate": { "type": ["string", "null"], "format": "date" }
+          "order": { "type": "integer", "minimum": 1 },
+          "action": { "type": "string", "maxLength": 1000 },
+          "estimatedEffort": {
+            "type": "string",
+            "enum": ["S", "M", "L", "unknown"]
+          },
+          "dependsOnStepOrders": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 1 }
+          }
         }
       }
+    },
+    "openQuestions": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 500 }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 500 }
+    },
+    "disclaimer": {
+      "type": "string",
+      "description": "Optional UX disclaimer that output is AI-generated.",
+      "maxLength": 500
     }
   }
 }

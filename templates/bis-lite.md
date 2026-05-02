@@ -71,7 +71,7 @@ _Optional:_ attach [layer-map.md](layer-map.md) for deeper placement.
 
 ## 13. MCP validation status
 
-<!-- Starter-level only: whether standard/agent context was checked against an external MCP server your org runs. MCP does not replace app AUTH. -->
+<!-- Record whether agents verified against your org’s AADM MCP server (recommended for agent-heavy teams). High-level notes only—no secrets. MCP complements this repo; it does not replace app AUTH. -->
 
 | Field | Value |
 |-------|--------|

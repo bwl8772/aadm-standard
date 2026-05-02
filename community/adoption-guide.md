@@ -1,6 +1,6 @@
 # Adoption guide
 
-Practical steps for teams adopting AADM **without** importing proprietary tooling.
+Practical steps for teams adopting AADM. **Use this repository for shared intent and templates**, and **add an AADM MCP server** when coding agents should load **canonical** standard context—both together reduce drift; neither replaces application AUTH.
 
 ## 1. Align on vocabulary
 
@@ -14,11 +14,11 @@ Outcome: shared understanding of layers and roles.
 
 ## 2. Map your reality
 
-Create an internal appendix: **your services ↔ UDALI layers**. Expect disagreement early; converge on a working map.
+Create an internal appendix: **your services ↔ UDALI groupings**. Expect disagreement early; converge on a working map.
 
 ## 3. Wire templates into your workflow
 
-Copy [`templates/`](../templates/) into your wiki or ticket system. Minimum set:
+Copy [`templates/`](../templates/) (see [`templates/README.md`](../templates/README.md)) into your wiki or ticket system. Minimum set:
 
 - `bis-lite.md` + `layer-map.md` for engineering-led changes  
 - `acceptance-criteria.md` for completion discipline  
@@ -39,12 +39,13 @@ If developers use AI agents:
 - Require human approval for production-impacting merges  
 - Treat agent outputs as **reviewable drafts**
 
-## 6. Optional MCP context servers
+## 6. Connect an AADM MCP server (recommended for agent-heavy teams)
 
-If your organization exposes standard docs via MCP:
+Static markdown prevents nothing by itself—agents need **stable distribution**. After templates are in place:
 
-- Follow [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md)  
-- Never substitute MCP connectivity for application authorization  
+- Follow [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md) to connect your IDE or gateway.  
+- Keep MCP credentials **scoped**; never expose production secrets for “context only.”  
+- Remember: MCP **does not** substitute for application authorization—see [`docs/auth-aware-delivery.md`](../docs/auth-aware-delivery.md).
 
 ## 7. Measure adoption health
 

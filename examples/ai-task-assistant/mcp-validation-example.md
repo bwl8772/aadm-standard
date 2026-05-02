@@ -1,39 +1,82 @@
-# MCP validation example (illustrative)
+# Mock MCP validation output (example only)
 
-This note shows **how teams might** use an external MCP server to give agents consistent standard context—**without** embedding proprietary server code in this repository.
+**This file is entirely fictional.** It shows what a team might **paste into a ticket or design doc** after running an **external** MCP-assisted review workflow.
 
-## Scenario
+---
 
-Developers use an IDE agent to draft a `bis-lite.md` update for the AI task assistant feature. The organization runs an MCP server that exposes **read-only resources**:
+## What this is not
 
-- `standard://aadm/glossary`  
-- `standard://aadm/layer-model-summary`  
-- `standard://templates/bis-lite`
+- **Not** output produced by this **aadm-standard** repository (there is **no MCP runtime** here).  
+- **Not** a live API response from any deployed server.  
+- **Not** proprietary scoring or validation internals—field names are **illustrative**.
 
-## Client configuration (conceptual)
+---
 
-Values are placeholders:
+## Scenario (fictional)
 
-- **Endpoint:** `https://mcp.internal.example.com/mcp`  
-- **Transport:** per your MCP client (for example, HTTP with streamed responses)  
-- **Credentials:** short-lived tokens scoped to **read-only** standard resources  
+A developer uses their IDE’s MCP client against **their organization’s** AADM MCP deployment (hosted elsewhere). They load **public standard excerpts** (or mirrored docs) and record a **manual checklist result** plus a **mock JSON record** for traceability.
 
-_No secrets appear in repositories; tokens are injected via your secret store._
+---
 
-## Validation developers perform
+## Mock MCP validation record
 
-1. **Scope check** — Agent may read standards; it may **not** obtain production credentials via MCP.  
-2. **Output review** — Pull requests still require human review; MCP does not auto-merge.  
-3. **Artifact diff** — `bis-lite.md` changes match confirmed UX and API contracts.  
+Below is **fabricated JSON** for documentation practice only.
 
-## Failure modes to guard against
+```json
+{
+  "validation_record_kind": "MOCK_EXAMPLE_DO_NOT_USE_FOR_PRODUCTION",
+  "generated_at": "2026-05-02T12:00:00Z",
+  "workspace_context": "matchgrid-example-docs-only",
+  "capability_id": "matchgrid-ai-action-plan-v1",
+  "standard_sources_claimed": [
+    "public AADM docs — udali-22-layer-model",
+    "public AADM docs — auth-aware-delivery",
+    "public AADM docs — build-intent-specification"
+  ],
+  "checks": [
+    {
+      "id": "UDALI-MAP-PRESENT",
+      "result": "pass",
+      "notes": "layer-map.md maps Unifier through Implementer"
+    },
+    {
+      "id": "AUTH-CONFIRM-PATH",
+      "result": "pass",
+      "notes": "bis-lite states confirm requires server-side AUTH"
+    },
+    {
+      "id": "HUMAN-CHECKPOINT-DOCUMENTED",
+      "result": "pass",
+      "notes": "Human confirm called out in use case and bis-lite"
+    },
+    {
+      "id": "SCHEMA-ALIGNMENT",
+      "result": "pass",
+      "notes": "sample-schema.json requires goal + ≥1 step"
+    }
+  ],
+  "limitations": [
+    "No automated compliance verdict",
+    "No connection to MatchGrid production systems",
+    "No model inference performed inside this repo"
+  ],
+  "operator_signature": "mock-operator@example.invalid"
+}
+```
 
-- MCP misconfigured with overly broad tool permissions  
-- Agents treating draft markdown as executable truth without tests  
-- Missing authorization checks because “the agent wrote the code”  
+---
 
-## Relationship to this repo
+## How teams should use real MCP (high level)
 
-The **standard** lives here as markdown. A **private or org-hosted MCP server** may mirror these files for convenience—that deployment is **outside** this public adoption repository.
+1. Connect the client to **your** MCP endpoint per [`docs/mcp-quickstart.md`](../../docs/mcp-quickstart.md).  
+2. Keep **secrets** out of git; store validation summaries in your **internal** ticket system if needed.  
+3. Never treat MCP output as **authorization** to skip code review or tests.
 
-See also: [`docs/mcp-quickstart.md`](../../docs/mcp-quickstart.md).
+---
+
+## Relationship to artifacts in this folder
+
+| Artifact | Role |
+|----------|------|
+| [`bis-lite.md`](bis-lite.md) §13 | Where a team might **reference** a real validation id |
+| This file | **Demo-only** mock for learners |

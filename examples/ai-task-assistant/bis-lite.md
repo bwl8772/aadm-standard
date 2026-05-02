@@ -1,57 +1,97 @@
-# BIS-lite — AI task assistant (example)
+# BIS-lite — MatchGrid AI task assistant (example)
 
-## Summary
+_Build intent: PRD authorizes; architecture constrains; this doc tells engineering what is built._  
+See [`docs/build-intent-specification.md`](../../docs/build-intent-specification.md).
 
-Add AI-assisted drafting for tasks from meeting snippets with human confirmation, strict workspace scoping, and auditability.
+---
 
-## Scope
+## 1. Capability name
 
-**In:** Draft generation from selected text; confirmation UX; persistence API; audit events.  
-**Out:** Full meeting transcription pipeline; mobile clients (phase 2).
+`matchgrid-ai-action-plan-v1`
 
-## Architecture placement
+## 2. User / customer outcome
 
-- **Primary UDALI layers:** Application services (orchestration), Validation (draft sanity), Authorization model (confirm path).  
-- **Systems touched:** Web app, task API, audit stream, policy service (existing).
+Members move from **vague tasks** to **reviewable, ordered action plans** faster, with **explicit human confirmation** before persistence.
 
-## Interfaces
+## 3. Problem statement
 
-| Interface | Type | Owner | Notes |
-|-----------|------|-------|-------|
-| `POST /tasks/drafts` | API | Tasks team | Non-persistent proposals |
-| `POST /tasks` | API | Tasks team | Persist after confirm |
-| `tasks.confirmed` | Event | Platform | Audit sink |
+Unstructured requests cause rework and stalled execution; ad-hoc chat with generic AI lacks workspace scope, audit trail, and guardrails.
 
-## Data
+## 4. In-scope
 
-- **Entities:** Task draft, Task, AuditEvent  
-- **Sensitivity class:** Internal collaboration; **no** attachments in v1  
-- **Retention:** Tasks follow workspace policy; drafts deleted after 24h if abandoned  
+- Free-text in → **draft** structured plan out (schema in [`sample-schema.json`](sample-schema.json)).  
+- Edit UI + **Confirm / Discard**.  
+- Persistence + audit on confirm only.  
+- Workspace-scoped AUTH; policy gates for AI enablement.
 
-## AUTH
+## 5. Out-of-scope
 
-- **Roles:** workspace-member, workspace-admin  
-- **Sensitive operations:** Confirming tasks that assign others (requires assignee visibility)
+- Auto-assigning tasks to other users without separate UX/policy.  
+- Training custom models; long-term memory across workspaces.  
+- Executive dashboards or billing changes.
 
-## Non-functional targets
+## 6. User story
 
-- **Latency:** see use case  
-- **Availability:** degrades gracefully—manual task creation always available  
+**As a** MatchGrid member, **I want** the assistant to **draft a structured plan from rough text**, **so that** I can **confirm** a clear plan aligned to my workspace.
 
-## Verification
+## 7. Acceptance criteria
 
-| Layer | Evidence |
-|-------|----------|
-| Validation | Unit tests for draft schema |
-| Authorization | Integration tests deny cross-workspace confirm |
-| Observability | Metric: draft→confirm funnel; audit completeness checks |
+_(Mirror [`use-case.md`](use-case.md) § Acceptance criteria.)_
 
-## Rollout
+- [ ] Confirm path persists only after AUTH success; drafts ephemeral until then.  
+- [ ] Cross-workspace attempts denied.  
+- [ ] Audit event on confirm.  
+- [ ] Policy/timeouts handled per alternate flows A1–A4.
 
-- Feature flag `ai_task_drafts` default off; pilot workspaces only  
+## 8. UDALI layer map
 
-## Decision log
+| Grouping | Role for this change |
+|----------|----------------------|
+| **Unifier** | Planning UX; safe defaults; clear confirm/discard; “AI-assisted” labeling |
+| **Designer** | Action plan schema; domain meaning of Step / Goal; DTOs for draft vs persisted entity |
+| **Adapter** | Repositories for draft session + plan; AUTH on create/confirm; optional cache **N/A** for v1 |
+| **Logician** | Orchestration: validate → call AI adapter → map response → persist on confirm; retries bounded |
+| **Implementer** | API routes/handlers; integration tests; feature flag rollout; staging validation vs AI sandbox |
 
-| Date | Decision | Rationale |
-|------|----------|-----------|
-| _Example_ | Drafts non-persistent until confirm | Reduce accidental data retention |
+_Optional detail:_ [`layer-map.md`](layer-map.md).
+
+## 9. Auth / permission assumptions
+
+- Roles: `workspace-member`, `workspace-admin`.  
+- **Create draft** and **confirm plan** require active membership in workspace.  
+- AI credential is **server-side only**; never returned to browser.
+
+## 10. Data / schema assumptions
+
+- Draft payload conforms to [`sample-schema.json`](sample-schema.json) (extend with persistence ids after confirm).  
+- No attachments v1; text fields max length enforced.
+
+## 11. Known risks
+
+| Risk | Mitigation / owner |
+|------|---------------------|
+| Model hallucination | Required open questions/assumptions; human confirm |
+| Prompt injection | Treat user text as untrusted; structured output validation |
+| Provider outage | A2 alternate flow; degrade to manual template |
+
+## 12. Human checkpoint
+
+- **Product** signs off on UX copy for AI-assisted flows.  
+- **Architecture** signs off on AUTH boundary and AI data scope.  
+- **Engineering** requires peer review for AI orchestration + persistence paths.
+
+## 13. MCP validation status
+
+| Field | Value |
+|-------|--------|
+| **Applies?** | Yes (optional process step) |
+| **Status** | Example only — see [`mcp-validation-example.md`](mcp-validation-example.md) (**mocked** output) |
+| **Notes** | Teams may record that agents loaded **public standard docs** via an **external** MCP server; **this repo does not run MCP.** |
+
+---
+
+## Links
+
+- PRD / authorization: _fictional — `PRD-MG-014`_  
+- Architecture / RFC: _fictional — `RFC-MG-AI-BOUNDARIES`_  
+- Epic / ticket: _fictional — `MG-4821`_  

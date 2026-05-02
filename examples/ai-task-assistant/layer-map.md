@@ -1,44 +1,73 @@
-# Layer map — AI task assistant (example)
+# Layer map — MatchGrid AI task assistant (example)
 
-## Change summary
+_Feature:_ AI-assisted **vague task → structured action plan** with human confirm.  
+_Reference:_ [`docs/udali-22-layer-model.md`](../../docs/udali-22-layer-model.md).
 
-Introduce AI-assisted task drafting with explicit confirm step and workspace-scoped authorization.
+---
 
-## Primary layer
+## Feature / capability
 
-**Layer:** Application services / orchestration (conceptual L6 region)  
-**Rationale:** Coordinates proposal flow, calls validation and policy checks, persists only after human confirm.
+`matchgrid-ai-action-plan-v1`
 
-## Secondary layers
+## One-line summary
 
-| Layer | Impact |
-|-------|--------|
-| Validation | Draft schema, content policy gates |
-| Authorization model | Confirm path must re-evaluate permissions |
-| Contracts | New draft endpoint shapes; event payload |
-| Observability | Funnel metrics; audit trace linkage |
+Orchestrate a **bounded AI draft** into an **editable structured plan**, persist **only** after confirm with workspace AUTH and audit.
 
-## Role review
+---
 
-| UDALI hat | Review focus | Reviewer |
-|-----------|--------------|----------|
-| Designer | Confirmation UX clarity, error states | _Example_ |
-| Adapter | Event emission & integration idempotency | _Example_ |
-| Logician | Schema + authorization matrix tests | _Example_ |
+## Layer mapping
 
-## Contract touches
+### Unifier
 
-- `POST /tasks/drafts` request/response  
-- `POST /tasks` confirms draft id  
-- `tasks.confirmed` event schema fragment (see JSON sample)
+| Item | Notes |
+|------|--------|
+| Surfaces | “Plan this task” entry, proposal review, confirm/discard |
+| UX / safety | Obvious AI-generated state; destructive actions not bundled into single misclick |
+| Boundary clarity | Client receives proposal for display; server validates schema and AUTH |
 
-## Risks of cross-layer leakage
+### Designer
 
-- UI-only checks while API accepts unscoped draft ids  
-- Agent/tooling paths bypassing audit hooks  
+| Item | Notes |
+|------|--------|
+| Contracts / schema | Draft vs persisted plan shapes; alignment with [`sample-schema.json`](sample-schema.json) |
+| Domain rules | Step ordering, required open questions/assumptions (product rule) |
+| DTOs / mapping | Provider JSON → internal canonical plan DTO |
+
+### Adapter
+
+| Item | Notes |
+|------|--------|
+| Data access | Store ephemeral draft metadata + persisted `ActionPlan` |
+| AuthN | Session / token validation on each mutation |
+| AuthZ | Workspace membership checked on draft create and confirm |
+| Caching | **None** v1 |
+
+### Logician
+
+| Item | Notes |
+|------|--------|
+| Application flow | Validate input → draft record → model call → validate structure → await confirm → persist |
+| External systems | AI inference HTTP client (timeout, redacted logging) |
+| AI / automation | Single bounded capability: “propose plan”; no autonomous assign |
+
+### Implementer
+
+| Item | Notes |
+|------|--------|
+| Entrypoints | REST or RPC handlers for draft create, fetch proposal, confirm, discard |
+| QA evidence | Contract tests on schema; integration tests for AUTH isolation; chaos **optional** |
+| Deploy / config | Feature flag `ai_action_plan_v1`; secrets for provider in env |
+| Integration validation | Staging run against AI sandbox; no prod keys in dev |
+
+---
+
+## Cross-cutting risks
+
+- UI-only confirmation without server re-validation  
+- Logging raw prompts containing PII  
 
 ## Evidence plan
 
-- Integration tests for workspace isolation  
-- Contract tests for event consumers  
-- Dashboards for draft abandonment vs confirms  
+- Integration tests: workspace A cannot confirm workspace B draft id  
+- Unit tests: schema rejects malformed model output  
+- Dashboard: draft → confirm funnel; error rate from provider  

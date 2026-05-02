@@ -15,9 +15,9 @@ This public repository evolves with community needs. Items below are **direction
 
 ## Principles for changes
 
-- Preserve **separation** between public standard docs and proprietary implementations  
+- Keep this repo **human-readable and fork-friendly**; leave **MCP runtime code** to MCP distributions—docs here should **complement**, not duplicate, server internals  
 - Prefer **small, reviewable** contributions  
-- Avoid embedding **client-specific** or **regulated** content in examples  
+- Avoid embedding **client-specific**, **non-public URLs**, or **regulated** content in examples  
 
 ## How to propose work
 

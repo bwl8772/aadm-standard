@@ -1,6 +1,8 @@
 # MCP quickstart — connecting to an AADM MCP server
 
-This guide explains how a **developer** can connect an **AI coding environment** (for example, an MCP-capable IDE) to an **external AADM MCP server** operated by your team or a trusted host.
+**Why connect:** Markdown in this **[standard repository](../README.md)** is ideal for humans and tickets; an **AADM MCP server** gives **coding agents** the same definitions, prompts, and bounded tools through **MCP**—reducing improvised prompts and copy-paste drift. You typically use **both**.
+
+This guide explains how a **developer** connects an **AI coding environment** (for example, an MCP-capable IDE) to **an AADM MCP server** your team runs or receives from a **trusted operator**.
 
 All URLs, hosts, and secrets below are **placeholders**. Replace them with values from **your** operator.
 

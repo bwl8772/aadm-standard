@@ -79,7 +79,7 @@ _Lightweight product brief: enough to **authorize work** and align stakeholders 
 | **Stakeholders** | Eng lead, Support lead |
 | **Problem** | Users manually copy hours; errors delay invoicing |
 | **Why now** | Top churn driver in SMB segment this quarter |
-| **Business outcome** | Higher activation of paid “workspace” tier |
+| **Business outcome** | Higher activation of subscription “workspace” tier |
 | **Target users** | Freelancers and small agencies |
 | **Top use cases** | Export week; handle empty week; deny other users’ data |
 | **In-scope** | CSV for single user/week; audit log |

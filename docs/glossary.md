@@ -4,7 +4,9 @@ Short definitions for terms used across this repository.
 
 ## AADM
 
-**Architecture-Aware Delivery Model** — An open standard framing for disciplined delivery with explicit architecture intent, layered responsibilities, and human accountability—especially when using automation or AI agents.
+**Agentic Authority Delivery Model** — An open framing for disciplined delivery of agentic systems: explicit intent, architecture boundaries, human checkpoints, and layer-aware execution—especially when using automation or AI agents.
+
+AADM is **community-published guidance**, not an ISO/IEC standard, statutory requirement, or universal “certification” unless **your** organization separately asserts one.
 
 ## UDALI
 
@@ -44,7 +46,7 @@ Joint shorthand for **authentication** and **authorization**. AADM stresses sepa
 
 ## MCP (Model Context Protocol)
 
-A protocol for clients to obtain **structured context** from servers (resources, prompts, tools). Useful for distributing standard definitions; not a substitute for application security. See [MCP quickstart](mcp-quickstart.md).
+A protocol for clients to obtain **structured context** from servers (resources, prompts, tools). In AADM programs, an **AADM MCP server** commonly exposes standard material to agents **alongside** this documentation repo—not as a replacement for application security. See [MCP quickstart](mcp-quickstart.md).
 
 ## Agent
 
@@ -64,4 +66,4 @@ An **undifferentiated lump** of unrelated responsibilities—often exacerbated w
 
 ## Adoption repo
 
-This **public documentation repository**—templates and guidance without proprietary engines or client secrets.
+This **public documentation repository**: templates and narrative guidance for humans and tickets. **Runtime MCP distribution** is maintained separately.
