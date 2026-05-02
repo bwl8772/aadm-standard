@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/task-draft-v1.json",
+  "title": "TaskDraft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["workspaceId", "draftId", "items"],
+  "properties": {
+    "workspaceId": {
+      "type": "string",
+      "description": "Tenant/workspace identifier (opaque)."
+    },
+    "draftId": {
+      "type": "string",
+      "description": "Correlation id for the non-persistent draft."
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title"],
+        "properties": {
+          "title": { "type": "string", "maxLength": 200 },
+          "description": { "type": "string", "maxLength": 4000 },
+          "assigneeUserId": { "type": ["string", "null"] },
+          "dueDate": { "type": ["string", "null"], "format": "date" }
+        }
+      }
+    }
+  }
+}
