@@ -39,7 +39,7 @@ _Use this as the lightweight **build intent** shared by product, architecture, a
 
 ## 8. UDALI layer map
 
-<!-- Primary grouping(s) and secondary touches: Unifier / Designer / Adapter / Logician / Implementer. -->
+<!-- Primary grouping(s) and secondary touches: Unifier / Designer / Adapter / Logician / Integrator (I in UDALI). -->
 
 | Grouping | Role for this change |
 |----------|----------------------|
@@ -47,7 +47,7 @@ _Use this as the lightweight **build intent** shared by product, architecture, a
 | Designer | <!-- --> |
 | Adapter | <!-- --> |
 | Logician | <!-- --> |
-| Implementer | <!-- --> |
+| Integrator | <!-- --> |
 
 _Optional:_ attach [layer-map.md](layer-map.md) for deeper placement.
 

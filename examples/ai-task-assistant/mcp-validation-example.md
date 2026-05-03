@@ -37,7 +37,7 @@ Below is **fabricated JSON** for documentation practice only.
     {
       "id": "UDALI-MAP-PRESENT",
       "result": "pass",
-      "notes": "layer-map.md maps Unifier through Implementer"
+      "notes": "layer-map.md maps Unifier through Integrator"
     },
     {
       "id": "AUTH-CONFIRM-PATH",

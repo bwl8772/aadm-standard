@@ -10,13 +10,13 @@ AADM is **community-published guidance**, not an ISO/IEC standard, statutory req
 
 ## UDALI
 
-**U / D / A / L** collaboration stances that structure AADM delivery architecture, plus **Implementer** for release closure (controllers, QA, deployment, integration validation). Optional finer slices (~22 discussion layers) may subdivide these groupings. See [UDALI 22-layer model](udali-22-layer-model.md).
+**U / D / A / L / I** collaboration stances that structure AADM delivery architecture—mnemonic **UDALI**. **I** is **Integrator** (release closure: controllers, QA, deployment, integration validation), not “implementer.” Optional finer slices (~22 discussion layers) may subdivide these groupings. See [UDALI 22-layer model](udali-22-layer-model.md).
 
 ## Layer
 
 A **conceptual stratum** of concerns (contracts, validation, persistence, observability, etc.). Layers guide responsibility; they need not map one-to-one to repository folders.
 
-## Role hat (U / D / A / L / Implementer)
+## Role hat (U / D / A / L / Integrator)
 
 A **collaboration stance**, not a job title. Public buckets:
 
@@ -24,7 +24,7 @@ A **collaboration stance**, not a job title. Public buckets:
 - **Designer** — schema, DTOs, domain logic, mapping  
 - **Adapter** — repositories, auth, authorization, caching  
 - **Logician** — services, workflows, orchestration, AI services, integrations  
-- **Implementer** — controllers, routing, QA, deployment, integration validation  
+- **Integrator (I)** — controllers, routing, QA, deployment, integration validation  
 
 See [UDALI 22-layer model](udali-22-layer-model.md).
 
@@ -50,7 +50,7 @@ A protocol for clients to obtain **structured context** from servers (resources,
 
 ## Navigator, Investigator, and Sentinel (MCP workflow personas)
 
-**Workflow-level labels** used by many AADM MCP deployments to separate **how** agents should behave across a ticket—distinct from **UDALI band hats** (Unifier, Designer, Adapter, Logician, Implementer). Treat them as **three equal paths**, not “troubleshooting only”:
+**Workflow-level labels** used by many AADM MCP deployments to separate **how** agents should behave across a ticket—distinct from **UDALI band hats** (Unifier, Designer, Adapter, Logician, Integrator). Treat them as **three equal paths**, not “troubleshooting only”:
 
 - **Navigator** (`delivery`) — Planned change: **scope → verify → readiness** for net-new capability or material improvement to an existing feature.  
 - **Investigator** (`defect`) — Broken versus expected: **investigate → diagnose → remediate**, with evidence-gated progression before architect-style diagnosis; primary surface is typically **`debug_defect`** (exact tool names depend on your server build).  

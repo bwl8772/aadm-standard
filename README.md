@@ -42,7 +42,7 @@ AADM does **not** claim to guarantee compliance or security by documentation alo
 
 ## 4. The UDALI delivery model
 
-**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Implementer—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (sometimes discussed as ~22 concerns) inside those groupings.
+**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Integrator (**I** in UDALI; not “implementer”)—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (sometimes discussed as ~22 concerns) inside those groupings.
 
 Together they cover contracts, validation, authorization posture, integration boundaries, persistence, observability, and shipping—so agent-generated changes can be reviewed with the same discipline as human-written ones.
 
@@ -147,6 +147,7 @@ See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concret
 | MCP (generic) | [docs/mcp-quickstart.md](docs/mcp-quickstart.md) |
 | MCP reference tool ids | [docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids](docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids) |
 | Compliance prompts | [docs/compliance-checklist.md](docs/compliance-checklist.md) |
+| Sentinel audits (UDALI vs AADM) | [docs/sentinel-audit-programs.md](docs/sentinel-audit-programs.md) |
 | Definitions | [docs/glossary.md](docs/glossary.md) |
 | Core normative summary | [standards/aadm-core-principles.md](standards/aadm-core-principles.md) |
 | Human authority | [standards/human-in-the-loop.md](standards/human-in-the-loop.md) |

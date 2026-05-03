@@ -61,9 +61,9 @@ _Services, workflows, orchestration, AI services, integrations._
 | External systems | <!-- third-party calls --> |
 | AI / automation | <!-- bounded AI steps, if any --> |
 
-### Implementer
+### Integrator (I)
 
-_Controllers, routing, QA, deployment, integration validation._
+_Controllers, routing, QA, deployment, integration validation—the **I** in **UDALI** means **Integrator**, not “implementer.”_
 
 | Item | Notes |
 |------|--------|
@@ -94,7 +94,7 @@ _Controllers, routing, QA, deployment, integration validation._
 | **Designer** | CSV column schema; domain rule “only own entries”; mapping from internal rows → CSV rows |
 | **Adapter** | Repository read for entries; session/auth for member; authorize workspace membership before query; optional short-lived export cache **N/A** |
 | **Logician** | Orchestrate validate → query → build file → audit; no external integrations |
-| **Implementer** | `GET` or `POST` export route; integration tests for AUTH + CSV; deploy behind feature flag; validate in staging with prod-like data volume sample |
+| **Integrator** | `GET` or `POST` export route; integration tests for AUTH + CSV; deploy behind feature flag; validate in staging with prod-like data volume sample |
 
 ---
 

@@ -49,7 +49,7 @@ Related: [Build intent specification](build-intent-specification.md), [BIS-lite 
 
 _No silent skips across accountability groupings._
 
-- [ ] **Layer map** completed (Unifier, Designer, Adapter, Logician, Implementer)  
+- [ ] **Layer map** completed (Unifier, Designer, Adapter, Logician, Integrator)  
 - [ ] **N/A** entries documented with a one-line rationale where a grouping does not apply  
 - [ ] **Cross-layer risks** (AUTH leakage, schema drift, missing audits) called out  
 - [ ] **Evidence plan** sketched for touched groupings  

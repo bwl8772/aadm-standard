@@ -30,7 +30,7 @@ Reference AADM MCP servers commonly describe **three equal workflows**—each wi
 
 **Sentinel** is **not** a renamed troubleshooter: it addresses **assurance and alignment**, not a single defect thread. **Investigator** owns the defect track; **`debug_defect`** (or your operator’s equivalent) is the usual first tool when the narrative is defect-shaped.
 
-Capability copy on the server often surfaces this via **`standard_brief`** (summary JSON), **`route_lane`** when your orchestrator already fixed **`intent`** as `delivery` / `defect` / `assurance`, and **`orchestrator_anchor`** for long-running session and persistence reminders. Canonical narrative URIs vary by bundle; your operator lists stable **`resources/read`** targets.
+Capability copy on the server often surfaces this via **`standard_brief`** (summary JSON). Reference **`aadm-mcp`** builds also emit **`capabilities_schema_version`** (aligned with **`orchestrator_contract.version`**), a read-only **`server`** block (**name**, **`version`**, **`registered_tool_count`**), and **`integration_hints`** — use **`tools/list`** after **`initialize`** as the authoritative tool inventory for that process. Also use **`route_lane`** when your orchestrator already fixed **`intent`** as `delivery` / `defect` / `assurance`, and **`orchestrator_anchor`** for long-running session and persistence reminders. Canonical narrative URIs vary by bundle; your operator lists stable **`resources/read`** targets.
 
 ### Reference AADM enforcement MCP tool ids
 
@@ -55,6 +55,8 @@ The **reference** open **AADM Standard Enforcement MCP** bundle registers tools 
 
 **Resources are not tools:** canonical markdown still loads via MCP **`resources/read`** (for example workflow mode URIs); hosts sometimes surface that as **`suggested_tool`: `resources/read`** inside **`follow_on_catalog`** entries.
 
+**Orchestrators and multiple applications:** if you integrate the open **AADM Standard Enforcement MCP** (`aadm-mcp`), use that repository’s **`docs/INTEGRATION.md`** for session stickiness, when to reload **`standard_brief`**, **`follow_on_catalog`** host mapping, **`debug_defect`** continuation parameters, and troubleshooter gate expectations (including Playwright-specific branches). Maintainer roadmap: **`docs/integration-roadmap.md`** there.
+
 **Older prose** may still mention retired ids. Common mappings when updating runbooks or tickets:
 
 | Older name | Use instead |
@@ -63,6 +65,38 @@ The **reference** open **AADM Standard Enforcement MCP** bundle registers tools 
 | `map_feature_to_layers` | **`map_feature`** |
 | `udali_route_delivery` | **`plan_delivery`** |
 | `aadm_troubleshooter` | **`debug_defect`** |
+
+### Example asks (plain-language prompts → typical tools)
+
+Your client **calls MCP tools**; you usually steer with **normal sentences**. The MCP does **not** execute your product code—it returns **standard framing**, doctrine slices, AUTH text, and structured troubleshooting payloads. Below are **patterns**; exact parameters live in **`tools/list`** → **`inputSchema`** for your server.
+
+**Always useful**
+
+- *“Load what this MCP exposes and how the three workflows fit together.”* → **`standard_brief`**, then branch on **`follow_on_catalog`** or **`route_lane`** if you already know **`delivery` / `defect` / `assurance`**.
+- *“We’ve been going for hours / the chat summarized—what should we persist and how do continuations work?”* → **`orchestrator_anchor`** (optional **`thread_ref`** for your own logs only).
+- *“Pull the official wording for AUTH-XX.”* → **`fetch_auth`** with the control id.
+- *“Give me the UDALI slice for role X.”* → **`role_guide`** (role key your operator documents).
+
+**Navigator (planned delivery)**
+
+- *“We’re adding / changing feature Y—where does it sit in the stack and what should we watch at boundaries?”* → **`map_feature`**, then **`plan_delivery`** for handoff and boundary hints.
+- *“Outline readiness / audit checks before we ship this slice.”* → **`audit_outline`** (and **`fetch_auth`** / **`role_guide`** when AUTH or role doctrine matters).
+
+**Investigator (defects)**
+
+- *“Here’s what broke vs what we expected—run the evidence-gated troubleshooting flow.”* → **`debug_defect`** with **`bug_context`** (paste anchors: failing test, route + status, stack line, etc., when you have them).
+- *“Classify this symptom / triage this paragraph before we go deep.”* → **`classify_bug`** or **`triage_bug`** (heuristic helpers—not a substitute for **`debug_defect`** when you want the full gate).
+- *“Quick hint before I pull the full troubleshooter.”* → **`debug_hint`**; heavier combined payload → **`debug_bundle`** if your bundle exposes it.
+
+**Sentinel (assurance vs standard / seams)**
+
+- *“Prove posture across vertical hops and horizontal seams we care about—not one bug ticket.”* → start from **`standard_brief`** (**Sentinel** / **`assurance`** lane), **`route_lane`** with **`intent`: `assurance`**, then **`audit_outline`**, **`fetch_auth`**, **`map_feature`**, **`role_guide`** as scope demands.
+
+The **reference** open **`aadm-mcp`** bundle also registers **Sentinel-focused** tools (for example templates and closure helpers). Those ids are **not** all listed in the alphabetical table above—use **`tools/list`** after **`initialize`** on **your** deployment.
+
+**Closing the loop**
+
+Tools suggest **rigor and vocabulary**; **your repo** still owns **implementation, tests, and CI**. For a worked thread that mixes Navigator framing with real code changes, see **[Example: AADM MCP in action](../examples/aadm-mcp-in-action.md)**.
 
 ---
 
@@ -207,3 +241,5 @@ See also [AUTH-aware delivery](auth-aware-delivery.md).
 
 - Model Context Protocol documentation for **your** client and SDK version  
 - [Glossary](glossary.md) — MCP, AUTH, build intent  
+- [Example: AADM MCP in action](../examples/aadm-mcp-in-action.md) — real-shaped thread: Navigator tools, then implementation in the app repo  
+- **`aadm-mcp`** (reference server): **`docs/INTEGRATION.md`**, **`docs/integration-roadmap.md`** — embed MCP across apps and CI without reverse-engineering tool payloads  
