@@ -45,6 +45,7 @@ Neither replaces the other; neither replaces **your application’s** AUTH and d
 
 ## Next steps
 
+- [UDALI coding personas](udali-personas.md) and [UDALI 22-layer model](udali-22-layer-model.md)  
 - [Architecture principles](architecture-principles.md)  
 - [Build intent specification](build-intent-specification.md)  
 - [MCP quickstart](mcp-quickstart.md)  

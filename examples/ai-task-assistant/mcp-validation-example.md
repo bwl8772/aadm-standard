@@ -29,7 +29,7 @@ Below is **fabricated JSON** for documentation practice only.
   "workspace_context": "matchgrid-example-docs-only",
   "capability_id": "matchgrid-ai-action-plan-v1",
   "standard_sources_claimed": [
-    "public AADM docs — udali-22-layer-model",
+    "public AADM docs — udali-personas / udali-22-layer-model",
     "public AADM docs — auth-aware-delivery",
     "public AADM docs — build-intent-specification"
   ],

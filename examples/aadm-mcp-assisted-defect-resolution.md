@@ -42,7 +42,7 @@ Early calls to the troubleshooter surface (**`debug_defect`** on current servers
 
 When logs finally showed **exact enum mismatch paths**, the tool could move to **structured diagnosis** (Path B–style): contract choke point vs client state vs read-model degradation—not three guesses, but a **labeled stack**.
 
-### 2. Layer and ownership hints ([UDALI](../../docs/udali-22-layer-model.md)-shaped)
+### 2. Layer and ownership hints ([UDALI](../../docs/udali-personas.md)-shaped; optional [L1–L22](../../docs/udali-22-layer-model.md))
 
 The MCP does not replace architecture reviews, but its outputs **name bands/layers** (e.g. presentation coherence vs application boundary vs contract validation ordering). That reduced the risk of a **single mega-change** that rewires read models, clients, and gateways in one undifferentiated patch. Even when fixes landed in close succession, the **narrative** stayed: “boundary normalization,” “client inference guard,” “transport/schema ordering.”
 

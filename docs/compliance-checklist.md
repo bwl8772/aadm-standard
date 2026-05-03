@@ -45,7 +45,7 @@ Related: [Build intent specification](build-intent-specification.md), [BIS-lite 
 
 ---
 
-## 4. [UDALI](udali-22-layer-model.md) layer readiness
+## 4. [UDALI](udali-personas.md) layer readiness
 
 _No silent skips across accountability groupings._
 
@@ -54,7 +54,7 @@ _No silent skips across accountability groupings._
 - [ ] **Cross-layer risks** (AUTH leakage, schema drift, missing audits) called out  
 - [ ] **Evidence plan** sketched for touched groupings  
 
-Related: [UDALI 22-layer model](udali-22-layer-model.md), [Layer map template](../templates/layer-map.md), [UDALI layer boundaries](../standards/udali-layer-boundaries.md)
+Related: [UDALI coding personas](udali-personas.md), [UDALI 22-layer model](udali-22-layer-model.md), [Layer map template](../templates/layer-map.md), [UDALI layer boundaries](../standards/udali-layer-boundaries.md)
 
 ---
 

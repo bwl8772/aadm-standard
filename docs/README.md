@@ -8,11 +8,11 @@ Start at the [project README](../README.md) for positioning. **AADM** here means
 |-----|---------|
 | [what-is-aadm.md](what-is-aadm.md) | Problem, posture, what AADM is and is not |
 | [udali-personas.md](udali-personas.md) | [UDALI](udali-personas.md) coding personas — five delivery groupings (U, D, A, L, I) |
-| [udali-22-layer-model.md](udali-22-layer-model.md) | [UDALI](udali-22-layer-model.md) 22-layer model — optional L1–L22 slice aligned to those personas |
+| [udali-22-layer-model.md](udali-22-layer-model.md) | Optional **UDALI** L1–L22 lattice (aligned to [personas](udali-personas.md)) |
 | [architecture-principles.md](architecture-principles.md) | Ten practical principles |
 | [build-intent-specification.md](build-intent-specification.md) | PRD / architecture / BIS bridge |
 | [auth-aware-delivery.md](auth-aware-delivery.md) | AUTH discipline with agents |
-| [sentinel-audit-programs.md](sentinel-audit-programs.md) | Sentinel: **[UDALI](udali-22-layer-model.md) audit** vs **AADM audit** — scope, stages, deliverables, MCP builder requirements |
+| [sentinel-audit-programs.md](sentinel-audit-programs.md) | Sentinel: **UDALI audit** (placement / [personas](udali-personas.md)) vs **AADM audit** — scope, stages, deliverables, MCP builder requirements |
 | [glossary.md](glossary.md) | Definitions |
 
 ## Adoption & tooling
