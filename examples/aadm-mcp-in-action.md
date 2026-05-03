@@ -98,4 +98,4 @@ No single production incident was pasted—but the thread treated **ambiguous co
 3. If behavior spans **UI + prep + compose + projections** and the narrative is **defect-shaped**, paste **path:line** or a **failing test name** into **`debug_defect`** for evidence-gated troubleshooting hints—not **`Sentinel`**, which is for assurance posture across seams.
 4. In **HR App**, run your aggregate **`go`/`ci`** or targeted **`vitest`** on the contracts and hook guards you touched.
 
-For **UDALI layers** and **AUTH** definitions, see the **AADM Standard** repository (canonical URL in that repo’s root README).
+For **[UDALI](../docs/udali-22-layer-model.md) layers** and **AUTH** definitions, see the **AADM Standard** repository (canonical URL in that repo’s root README).

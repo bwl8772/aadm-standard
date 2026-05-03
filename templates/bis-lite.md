@@ -37,9 +37,9 @@ _Use this as the lightweight **build intent** shared by product, architecture, a
 - [ ] <!-- criterion -->
 - [ ] 
 
-## 8. UDALI layer map
+## 8. [UDALI](../docs/udali-22-layer-model.md) layer map
 
-<!-- Primary grouping(s) and secondary touches: Unifier / Designer / Adapter / Logician / Integrator (I in UDALI). -->
+<!-- Primary grouping(s) and secondary touches: Unifier / Designer / Adapter / Logician / Integrator. -->
 
 | Grouping | Role for this change |
 |----------|----------------------|

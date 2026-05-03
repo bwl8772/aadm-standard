@@ -1,4 +1,4 @@
-# UDALI layer boundaries
+# [UDALI](../docs/udali-22-layer-model.md) layer boundaries
 
 Covers **no skipped layers** and **separation of concerns** across delivery groupings. Companion: [`aadm-core-principles.md`](aadm-core-principles.md) §§5 and 7.
 

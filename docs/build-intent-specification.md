@@ -52,7 +52,7 @@ Full specifications are not always warranted. **[BIS-lite](../templates/bis-lite
 
 - One capability, clear outcome, explicit in/out scope  
 - User story and acceptance criteria tied to product success  
-- UDALI layer map so reviews land on the right accountability buckets  
+- [UDALI](udali-22-layer-model.md) layer map so reviews land on the right accountability buckets  
 - AUTH and data/schema assumptions stated plainly  
 - Known risks and **human checkpoints** for authority-bound work  
 - Optional note on **MCP validation status** when agents consume standard context from an external server—without treating MCP as a substitute for application security  
@@ -69,7 +69,7 @@ Use BIS-lite when the change spans services, touches AUTH or contracts, or invol
 | [BIS-lite](../templates/bis-lite.md) | Shared build intent for engineering |
 | [Customer story](../templates/customer-story.md) | Narrative slice from the user’s perspective |
 | [Use case](../templates/use-case.md) | Structured interaction description |
-| [Layer map](../templates/layer-map.md) | Detailed UDALI placement (can nest inside BIS-lite) |
+| [Layer map](../templates/layer-map.md) | Detailed [UDALI](udali-22-layer-model.md) placement (can nest inside BIS-lite) |
 | [Acceptance criteria](../templates/acceptance-criteria.md) | May mirror or extend section 7 of BIS-lite |
 
 ---

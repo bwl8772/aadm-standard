@@ -26,7 +26,7 @@ Reference AADM MCP servers commonly describe **three equal workflows**—each wi
 |---------|----------------|---------------------|
 | **Navigator** | Planned delivery (net new **or** meaningful improvement) | Scope → verify → readiness |
 | **Investigator** | Broken versus expected, errors, regressions | Investigate → diagnose → remediate (evidence-gated before deep diagnosis) |
-| **Sentinel** | Prove **existing** posture against AUTH / UDALI / evidence across seams | Scope & frame → trace & bind evidence → attest readiness |
+| **Sentinel** | Prove **existing** posture against AUTH / [UDALI](udali-22-layer-model.md) / evidence across seams | Scope & frame → trace & bind evidence → attest readiness |
 
 **Sentinel** is **not** a renamed troubleshooter: it addresses **assurance and alignment**, not a single defect thread. **Investigator** owns the defect track; **`debug_defect`** (or your operator’s equivalent) is the usual first tool when the narrative is defect-shaped.
 
@@ -48,7 +48,7 @@ The **reference** open **AADM Standard Enforcement MCP** bundle registers tools 
 | **`map_feature`** | Feature → stack / AUTH hints (heuristic) |
 | **`orchestrator_anchor`** | Long-thread orchestrator checklist |
 | **`plan_delivery`** | Multi-role delivery handoff / boundary hints |
-| **`role_guide`** | Compact UDALI doctrine slice by role |
+| **`role_guide`** | Compact [UDALI](udali-22-layer-model.md) doctrine slice by role |
 | **`route_lane`** | Explicit `delivery` / `defect` / `assurance` lane metadata |
 | **`standard_brief`** | Full capability snapshot (workflows, contracts, **`follow_on_catalog`** where published) |
 | **`triage_bug`** | Symptom paragraph → triage hints (heuristic) |
