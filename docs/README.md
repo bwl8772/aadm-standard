@@ -7,7 +7,8 @@ Start at the [project README](../README.md) for positioning. **AADM** here means
 | Doc | Summary |
 |-----|---------|
 | [what-is-aadm.md](what-is-aadm.md) | Problem, posture, what AADM is and is not |
-| [udali-22-layer-model.md](udali-22-layer-model.md) | [UDALI](udali-22-layer-model.md) delivery architecture (five groupings + optional finer slices) |
+| [udali-personas.md](udali-personas.md) | [UDALI](udali-personas.md) coding personas — five delivery groupings (U, D, A, L, I) |
+| [udali-22-layer-model.md](udali-22-layer-model.md) | [UDALI](udali-22-layer-model.md) 22-layer model — optional L1–L22 slice aligned to those personas |
 | [architecture-principles.md](architecture-principles.md) | Ten practical principles |
 | [build-intent-specification.md](build-intent-specification.md) | PRD / architecture / BIS bridge |
 | [auth-aware-delivery.md](auth-aware-delivery.md) | AUTH discipline with agents |

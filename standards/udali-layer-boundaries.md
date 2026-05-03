@@ -1,4 +1,4 @@
-# [UDALI](../docs/udali-22-layer-model.md) layer boundaries
+# UDALI layer boundaries
 
 Covers **no skipped layers** and **separation of concerns** across delivery groupings. Companion: [`aadm-core-principles.md`](aadm-core-principles.md) §§5 and 7.
 
@@ -6,7 +6,7 @@ Covers **no skipped layers** and **separation of concerns** across delivery grou
 
 ## Definition
 
-**Layer boundaries** (in AADM public materials: Unifier, Designer, Adapter, Logician, Integrator—see [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md)) organize **accountability**. Work belongs primarily where its **invariant lives**. Crossing boundaries happens through **contracts**, not through leaked implementation detail.
+**Layer boundaries** (in AADM public materials: Unifier, Designer, Adapter, Logician, Integrator—see [`docs/udali-personas.md`](../docs/udali-personas.md) and the optional L1–L22 lattice in [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md)) organize **accountability**. Work belongs primarily where its **invariant lives**. Crossing boundaries happens through **contracts**, not through leaked implementation detail.
 
 **No skipped layers** means: for material changes, each relevant grouping is considered and documented; silent omission is treated as unowned risk.
 
@@ -67,5 +67,6 @@ Symptom patching: slap validation or AUTH checks at the outer edge while the dom
 
 ## Further reading
 
+- [`docs/udali-personas.md`](../docs/udali-personas.md)  
 - [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md)  
 - [`docs/glossary.md`](../docs/glossary.md)  

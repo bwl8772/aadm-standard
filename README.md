@@ -11,7 +11,7 @@ This repository is the **public home for the standard**—education, templates, 
 AADM is a **structured way to deliver AI-powered systems** so that speed does not erase accountability. It combines:
 
 - **Written intent** before broad implementation churn  
-- A **layered view of delivery** ([UDALI](docs/udali-22-layer-model.md)) so changes land in the right review context  
+- A **layered view of delivery** ([UDALI coding personas](docs/udali-personas.md), optional [L1–L22](docs/udali-22-layer-model.md)) so changes land in the right review context  
 - **Explicit human authority** for sensitive or irreversible decisions  
 - **Separation of concerns** between **human-readable standard artifacts** (this repo) and **agent-distributed context** (typically an **AADM MCP server** you connect from your IDE)
 
@@ -40,15 +40,16 @@ AADM does **not** claim to guarantee compliance or security by documentation alo
 
 ---
 
-## 4. The [UDALI](docs/udali-22-layer-model.md) delivery model
+## 4. The UDALI delivery model
 
-**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Integrator—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (sometimes discussed as ~22 concerns) inside those groupings.
+**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Integrator—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (numbered **L1–L22**) inside those groupings.
 
 Together they cover contracts, validation, authorization posture, integration boundaries, persistence, observability, and shipping—so agent-generated changes can be reviewed with the same discipline as human-written ones.
 
 Start here:
 
-- **[UDALI 22-layer model](docs/udali-22-layer-model.md)**  
+- **[UDALI coding personas](docs/udali-personas.md)** — five groupings (accountability spine)  
+- **[UDALI 22-layer model](docs/udali-22-layer-model.md)** — optional L1–L22 reference  
 - **[UDALI layer boundaries](standards/udali-layer-boundaries.md)**  
 - **[Glossary](docs/glossary.md)**
 
@@ -140,7 +141,7 @@ See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concret
 | Topic | Document |
 |-------|----------|
 | AADM overview | [docs/what-is-aadm.md](docs/what-is-aadm.md) |
-| UDALI layers | [docs/udali-22-layer-model.md](docs/udali-22-layer-model.md) |
+| UDALI (personas + L1–L22) | [docs/udali-personas.md](docs/udali-personas.md), [docs/udali-22-layer-model.md](docs/udali-22-layer-model.md) |
 | Principles | [docs/architecture-principles.md](docs/architecture-principles.md) |
 | Build intent | [docs/build-intent-specification.md](docs/build-intent-specification.md) |
 | AUTH placement | [docs/auth-aware-delivery.md](docs/auth-aware-delivery.md) |
