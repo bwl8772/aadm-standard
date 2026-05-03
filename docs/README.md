@@ -11,6 +11,7 @@ Start at the [project README](../README.md) for positioning. **AADM** here means
 | [architecture-principles.md](architecture-principles.md) | Ten practical principles |
 | [build-intent-specification.md](build-intent-specification.md) | PRD / architecture / BIS bridge |
 | [auth-aware-delivery.md](auth-aware-delivery.md) | AUTH discipline with agents |
+| [sentinel-audit-programs.md](sentinel-audit-programs.md) | Sentinel: **UDALI audit** vs **AADM audit** — scope, stages, deliverables, MCP builder requirements |
 | [glossary.md](glossary.md) | Definitions |
 
 ## Adoption & tooling
