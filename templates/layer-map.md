@@ -63,7 +63,7 @@ _Services, workflows, orchestration, AI services, integrations._
 
 ### Integrator (I)
 
-_Controllers, routing, QA, deployment, integration validation—the **I** in **UDALI** means **Integrator**, not “implementer.”_
+_Controllers, routing, QA, deployment, integration validation—the **I** in **[UDALI](../docs/udali-22-layer-model.md)** means **Integrator**._
 
 | Item | Notes |
 |------|--------|

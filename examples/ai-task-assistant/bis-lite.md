@@ -43,7 +43,7 @@ _(Mirror [`use-case.md`](use-case.md) § Acceptance criteria.)_
 - [ ] Audit event on confirm.  
 - [ ] Policy/timeouts handled per alternate flows A1–A4.
 
-## 8. UDALI layer map
+## 8. [UDALI](../../docs/udali-22-layer-model.md) layer map
 
 | Grouping | Role for this change |
 |----------|----------------------|

@@ -8,9 +8,9 @@ Short definitions for terms used across this repository.
 
 AADM is **community-published guidance**, not an ISO/IEC standard, statutory requirement, or universal “certification” unless **your** organization separately asserts one.
 
-## UDALI
+## [UDALI](udali-22-layer-model.md)
 
-**U / D / A / L / I** collaboration stances that structure AADM delivery architecture—mnemonic **UDALI**. **I** is **Integrator** (release closure: controllers, QA, deployment, integration validation), not “implementer.” Optional finer slices (~22 discussion layers) may subdivide these groupings. See [UDALI 22-layer model](udali-22-layer-model.md).
+**U / D / A / L / I** collaboration stances that structure AADM delivery architecture—mnemonic **[UDALI](udali-22-layer-model.md)**. **I** is **Integrator** (release closure: controllers, QA, deployment, integration validation). Optional finer slices (~22 discussion layers) may subdivide these groupings. See [UDALI 22-layer model](udali-22-layer-model.md).
 
 ## Layer
 

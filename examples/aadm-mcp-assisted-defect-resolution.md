@@ -1,6 +1,6 @@
 # Example: AADM MCP assisting a multi-layer “save blocked” defect
 
-**Santized case study.** Names, modules, and identifiers are invented; the **pattern** (degraded read path + client omitting normalization + strict validation before normalization on write) is grounded in a real class of production incidents. Timeline language (“hours vs weeks”) is **illustrative**, not a benchmark promise.
+**Sanitized case study.** Names, modules, and identifiers are invented; the **pattern** (degraded read path + client omitting normalization + strict validation before normalization on write) is grounded in a real class of production incidents. Timeline language (“hours vs weeks”) is **illustrative**, not a benchmark promise.
 
 ---
 
@@ -42,7 +42,7 @@ Early calls to the troubleshooter surface (**`debug_defect`** on current servers
 
 When logs finally showed **exact enum mismatch paths**, the tool could move to **structured diagnosis** (Path B–style): contract choke point vs client state vs read-model degradation—not three guesses, but a **labeled stack**.
 
-### 2. Layer and ownership hints (UDALI-shaped)
+### 2. Layer and ownership hints ([UDALI](../../docs/udali-22-layer-model.md)-shaped)
 
 The MCP does not replace architecture reviews, but its outputs **name bands/layers** (e.g. presentation coherence vs application boundary vs contract validation ordering). That reduced the risk of a **single mega-change** that rewires read models, clients, and gateways in one undifferentiated patch. Even when fixes landed in close succession, the **narrative** stayed: “boundary normalization,” “client inference guard,” “transport/schema ordering.”
 

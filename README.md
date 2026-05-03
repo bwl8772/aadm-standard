@@ -11,7 +11,7 @@ This repository is the **public home for the standard**—education, templates, 
 AADM is a **structured way to deliver AI-powered systems** so that speed does not erase accountability. It combines:
 
 - **Written intent** before broad implementation churn  
-- A **layered view of delivery** (UDALI) so changes land in the right review context  
+- A **layered view of delivery** ([UDALI](docs/udali-22-layer-model.md)) so changes land in the right review context  
 - **Explicit human authority** for sensitive or irreversible decisions  
 - **Separation of concerns** between **human-readable standard artifacts** (this repo) and **agent-distributed context** (typically an **AADM MCP server** you connect from your IDE)
 
@@ -40,9 +40,9 @@ AADM does **not** claim to guarantee compliance or security by documentation alo
 
 ---
 
-## 4. The UDALI delivery model
+## 4. The [UDALI](docs/udali-22-layer-model.md) delivery model
 
-**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Integrator (**I** in UDALI; not “implementer”)—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (sometimes discussed as ~22 concerns) inside those groupings.
+**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Integrator—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (sometimes discussed as ~22 concerns) inside those groupings.
 
 Together they cover contracts, validation, authorization posture, integration boundaries, persistence, observability, and shipping—so agent-generated changes can be reviewed with the same discipline as human-written ones.
 

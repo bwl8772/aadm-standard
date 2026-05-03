@@ -7,11 +7,11 @@ Start at the [project README](../README.md) for positioning. **AADM** here means
 | Doc | Summary |
 |-----|---------|
 | [what-is-aadm.md](what-is-aadm.md) | Problem, posture, what AADM is and is not |
-| [udali-22-layer-model.md](udali-22-layer-model.md) | UDALI delivery architecture (five groupings + optional finer slices) |
+| [udali-22-layer-model.md](udali-22-layer-model.md) | [UDALI](udali-22-layer-model.md) delivery architecture (five groupings + optional finer slices) |
 | [architecture-principles.md](architecture-principles.md) | Ten practical principles |
 | [build-intent-specification.md](build-intent-specification.md) | PRD / architecture / BIS bridge |
 | [auth-aware-delivery.md](auth-aware-delivery.md) | AUTH discipline with agents |
-| [sentinel-audit-programs.md](sentinel-audit-programs.md) | Sentinel: **UDALI audit** vs **AADM audit** — scope, stages, deliverables, MCP builder requirements |
+| [sentinel-audit-programs.md](sentinel-audit-programs.md) | Sentinel: **[UDALI](udali-22-layer-model.md) audit** vs **AADM audit** — scope, stages, deliverables, MCP builder requirements |
 | [glossary.md](glossary.md) | Definitions |
 
 ## Adoption & tooling

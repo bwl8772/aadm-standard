@@ -32,4 +32,4 @@ Detailed checks live in [`use-case.md`](use-case.md) and [`bis-lite.md`](bis-lit
 
 - [`use-case.md`](use-case.md) — UC-MG-101 Turn vague task into structured action plan  
 - [`bis-lite.md`](bis-lite.md) — Build intent  
-- [`layer-map.md`](layer-map.md) — UDALI-style mapping  
+- [`layer-map.md`](layer-map.md) — [UDALI](../../docs/udali-22-layer-model.md)-style mapping  

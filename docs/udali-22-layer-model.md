@@ -1,6 +1,6 @@
-# UDALI as AADM delivery architecture
+# [UDALI](udali-22-layer-model.md) as AADM delivery architecture
 
-Within **AADM** (**Agentic Authority Delivery Model**), **UDALI** is the **delivery architecture** your team uses to place work, reviews, and evidence in consistent buckets—before and during agent-assisted implementation.
+Within **AADM** (**Agentic Authority Delivery Model**), **[UDALI](udali-22-layer-model.md)** is the **delivery architecture** your team uses to place work, reviews, and evidence in consistent buckets—before and during agent-assisted implementation.
 
 **UDALI** is a mnemonic for **five** collaboration stances—the letters are **U, D, A, L, I**:
 
@@ -8,7 +8,7 @@ Within **AADM** (**Agentic Authority Delivery Model**), **UDALI** is the **deliv
 - **D — Designer**  
 - **A — Adapter**  
 - **L — Logician**  
-- **I — Integrator** (not “implementer”; this hat owns **integration** of intent into **running software**: HTTP/UI entrypoints, quality gates, deployment, and integration validation)
+- **I — Integrator** — this hat owns **integration** of intent into **running software**: HTTP/UI entrypoints, quality gates, deployment, and integration validation
 
 Together, these five groupings describe **how capability moves from idea to production** without losing boundaries.
 

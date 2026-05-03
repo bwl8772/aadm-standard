@@ -45,7 +45,7 @@ Related: [Build intent specification](build-intent-specification.md), [BIS-lite 
 
 ---
 
-## 4. UDALI layer readiness
+## 4. [UDALI](udali-22-layer-model.md) layer readiness
 
 _No silent skips across accountability groupings._
 

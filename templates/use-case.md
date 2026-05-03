@@ -93,4 +93,4 @@ _Describes one goal-oriented interaction: who is involved, what starts it, the h
 
 ---
 
-_Link to [customer-story.md](customer-story.md) for the narrative line; [layer-map.md](layer-map.md) for UDALI placement._
+_Link to [customer-story.md](customer-story.md) for the narrative line; [layer-map.md](layer-map.md) for [UDALI](../docs/udali-22-layer-model.md) placement._

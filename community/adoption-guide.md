@@ -14,7 +14,7 @@ Outcome: shared understanding of layers and roles.
 
 ## 2. Map your reality
 
-Create an internal appendix: **your services ↔ UDALI groupings**. Expect disagreement early; converge on a working map.
+Create an internal appendix: **your services ↔ [UDALI](../docs/udali-22-layer-model.md) groupings**. Expect disagreement early; converge on a working map.
 
 ## 3. Wire templates into your workflow
 
