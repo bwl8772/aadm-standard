@@ -1,8 +1,8 @@
-# MCP quickstart — connecting to an AADM MCP server
+# MCP quickstart — connecting to the AADM MCP server
 
-**Why connect:** Markdown in this **[standard repository](../README.md)** is ideal for humans and tickets; an **AADM MCP server** gives **coding agents** the same definitions, prompts, and bounded tools through **MCP**—reducing improvised prompts and copy-paste drift. You typically use **both**.
+**Why connect:** This **[standard repository](../README.md)** is ideal for humans and tickets; There is also an **AADM MCP server** that gives **coding agents** the same definitions, prompts, and bounded tools through **MCP**—reducing improvised prompts and copy-paste drift. You typically use **both**.
 
-This guide explains how a **developer** connects an **AI coding environment** (for example, an MCP-capable IDE) to **an AADM MCP server** your team runs or receives from a **trusted operator**.
+This guide explains how a **developer** connects an **AI coding environment** (for example, the MCP-capable IDE) to **the AADM MCP server** your team runs or receives from a **trusted operator**.
 
 All URLs, hosts, and secrets below are **placeholders**. Replace them with values from **your** operator.
 
@@ -116,7 +116,7 @@ This public repo documents **how to think about** MCP in an AADM program; it doe
 | Requirement | Notes |
 |-------------|--------|
 | **Server URL** | MCP HTTP URL including path **`/mcp`** (scheme + host + `/mcp`). A separate **`/health`** path is often used for load balancers (not MCP protocol traffic). |
-| **Client support** | An MCP client that supports **Streamable HTTP** (check your IDE’s MCP docs). |
+| **Client support** | the MCP client that supports **Streamable HTTP** (check your IDE’s MCP docs). |
 | **Trust** | You connect only to servers **you operate or explicitly trust**. |
 | **Headers / sessions** | Clients must send the **`Accept`** headers required by Streamable HTTP (`application/json` **and** `text/event-stream` on **`POST /mcp`**). Session behavior follows your MCP SDK and server (for example, session id headers after `initialize`). |
 | **Runtime (if self-hosted)** | Operators typically document Node version, build, and port—follow **their** runbook, not guesses here. |
