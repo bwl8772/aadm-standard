@@ -2,7 +2,7 @@
 
 These principles describe **delivery intent** for **agent-aware** programs. They are **educational** and **tooling-neutral**—adapt wording to your organization’s policies.
 
-For layer vocabulary, see [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md). For deeper dives, see the linked standards files at the end of each section.
+For layer vocabulary, see [`docs/udali-personas.md`](../docs/udali-personas.md) (five groupings) and the optional L1–L22 lattice in [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md). For deeper dives, see the linked standards files at the end of each section.
 
 ---
 

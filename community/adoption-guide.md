@@ -7,6 +7,7 @@ Practical steps for teams adopting AADM. **Use this repository for shared intent
 Run a one-hour workshop using:
 
 - [`docs/what-is-aadm.md`](../docs/what-is-aadm.md)  
+- [`docs/udali-personas.md`](../docs/udali-personas.md)  
 - [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md)  
 - [`docs/glossary.md`](../docs/glossary.md)
 
@@ -14,7 +15,7 @@ Outcome: shared understanding of layers and roles.
 
 ## 2. Map your reality
 
-Create an internal appendix: **your services ↔ [UDALI](../docs/udali-22-layer-model.md) groupings**. Expect disagreement early; converge on a working map.
+Create an internal appendix: **your services ↔ [UDALI](../docs/udali-personas.md) groupings** (optional [L1–L22](../docs/udali-22-layer-model.md)). Expect disagreement early; converge on a working map.
 
 ## 3. Wire templates into your workflow
 

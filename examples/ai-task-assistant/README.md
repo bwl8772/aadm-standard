@@ -17,7 +17,7 @@ The name **MatchGrid** and domain **matchgrid.co** are used here as a **plausibl
 1. **Outcome first** — README and [`story.md`](story.md) lead with value.  
 2. **User story** — Canonical “As a / I want / so that” line.  
 3. **Acceptance criteria** — Observable checks in [`use-case.md`](use-case.md) and [`bis-lite.md`](bis-lite.md).  
-4. **[UDALI](../../docs/udali-22-layer-model.md) delivery mapping** — Five groupings in [`layer-map.md`](layer-map.md) (aligned with [`docs/udali-22-layer-model.md`](../../docs/udali-22-layer-model.md)).  
+4. **[UDALI](../../docs/udali-personas.md) delivery mapping** — Five groupings in [`layer-map.md`](layer-map.md) (optional [`docs/udali-22-layer-model.md`](../../docs/udali-22-layer-model.md) L1–L22).  
 5. **Basic schema** — [`sample-schema.json`](sample-schema.json) for a draft action plan payload.  
 6. **Mock MCP validation** — [`mcp-validation-example.md`](mcp-validation-example.md): **fabricated** MCP-style response, clearly labeled; **the public standard repo does not ship or run an MCP server.**
 

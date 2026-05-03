@@ -2,7 +2,7 @@
 
 _Map the feature across AADM’s **five public delivery groupings** so reviews and evidence land in the right place. Roles are hats, not job titles._
 
-Reference: [docs/udali-22-layer-model.md](../docs/udali-22-layer-model.md).
+Reference: [docs/udali-personas.md](../docs/udali-personas.md) (five groupings); optional [docs/udali-22-layer-model.md](../docs/udali-22-layer-model.md) (L1–L22).
 
 ---
 
@@ -63,7 +63,7 @@ _Services, workflows, orchestration, AI services, integrations._
 
 ### Integrator (I)
 
-_Controllers, routing, QA, deployment, integration validation—the **I** in **[UDALI](../docs/udali-22-layer-model.md)** means **Integrator**._
+_Controllers, routing, QA, deployment, integration validation—the **I** in **[UDALI](../docs/udali-personas.md)** means **Integrator**._
 
 | Item | Notes |
 |------|--------|

@@ -16,6 +16,8 @@ This file identifies **community maintainer expectations** and **contact paths**
 
 _To list named maintainers, add rows below._  
 
+
 | Name | GitHub | Focus |
 |------|--------|-------|
-| _TBD_ | | |
+| Brian Lambert PhD | bwl8772 | Standards|
+| your name here|  | tbd|

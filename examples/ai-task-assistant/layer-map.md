@@ -1,7 +1,7 @@
 # Layer map — MatchGrid AI task assistant (example)
 
 _Feature:_ AI-assisted **vague task → structured action plan** with human confirm.  
-_Reference:_ [`docs/udali-22-layer-model.md`](../../docs/udali-22-layer-model.md).
+_Reference:_ [`docs/udali-personas.md`](../../docs/udali-personas.md); optional [`docs/udali-22-layer-model.md`](../../docs/udali-22-layer-model.md).
 
 ---
 

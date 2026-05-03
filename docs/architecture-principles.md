@@ -36,7 +36,7 @@ When ambiguity is high, spend cycles on **structure and constraints** before mas
 
 ## 9. Map work to layers deliberately
 
-Use the [UDALI](udali-22-layer-model.md) layer map to prevent silent cross-layer fixes—especially under agent pressure. See [UDALI 22-layer model](udali-22-layer-model.md).
+Use the [UDALI coding personas](udali-personas.md) layer map to prevent silent cross-layer fixes—especially under agent pressure. For optional numbered layers, see [UDALI 22-layer model](udali-22-layer-model.md).
 
 ## 10. Evidence-backed claims
 

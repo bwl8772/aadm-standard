@@ -1,10 +1,10 @@
-# Sentinel audit programs — [UDALI](udali-22-layer-model.md) vs AADM (requirements)
+# Sentinel audit programs — UDALI vs AADM (requirements)
 
 **Persona:** **Sentinel** (`assurance` workflow) — prove alignment with declared standards for **existing** posture, not a single feature brief and not a single defect thread.
 
 **Purpose of this document:** Scope and requirements for two **launchable audit programs** hosts may expose as distinct Sentinel passes:
 
-1. **[UDALI](udali-22-layer-model.md) audit** — placement, boundaries, and collaboration-map discipline.  
+1. **UDALI audit** — placement, boundaries, and collaboration-map discipline (see [UDALI coding personas](udali-personas.md); optional [L1–L22](udali-22-layer-model.md)).  
 2. **AADM audit** — full delivery-model posture, including UDALI **plus** AUTH, enforcement, evidence, and agent-facing discipline.
 
 Canonical workflow narrative: bundled MCP resource pattern `aadm://modes/delivery-defect-workflows` (or your operator’s equivalent). This **standard repo** does not ship MCP runtime behavior; it defines **what each program means** and **what evidence must exist** before calling an audit “complete.”
@@ -175,6 +175,7 @@ These are **requirements on hosts** that want a literal **“Launch UDALI audit�
 ## Related reading
 
 - [What is AADM?](what-is-aadm.md)  
+- [UDALI coding personas](udali-personas.md)  
 - [UDALI 22-layer model](udali-22-layer-model.md)  
 - [AUTH-aware delivery](auth-aware-delivery.md)  
 - [Build intent specification](build-intent-specification.md)  

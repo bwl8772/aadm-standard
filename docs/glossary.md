@@ -8,9 +8,9 @@ Short definitions for terms used across this repository.
 
 AADM is **community-published guidance**, not an ISO/IEC standard, statutory requirement, or universal “certification” unless **your** organization separately asserts one.
 
-## [UDALI](udali-22-layer-model.md)
+## UDALI
 
-**U / D / A / L / I** collaboration stances that structure AADM delivery architecture—mnemonic **[UDALI](udali-22-layer-model.md)**. **I** is **Integrator** (release closure: controllers, QA, deployment, integration validation). Optional finer slices (~22 discussion layers) may subdivide these groupings. See [UDALI 22-layer model](udali-22-layer-model.md).
+**U / D / A / L / I** collaboration stances that structure AADM delivery architecture—mnemonic **UDALI**. **I** is **Integrator** (release closure: controllers, QA, deployment, integration validation). See [UDALI coding personas](udali-personas.md). Optional numbered slices (**L1–L22**) subdivide those groupings for discussion; see [UDALI 22-layer model](udali-22-layer-model.md).
 
 ## Layer
 
@@ -26,7 +26,7 @@ A **collaboration stance**, not a job title. Public buckets:
 - **Logician** — services, workflows, orchestration, AI services, integrations  
 - **Integrator (I)** — controllers, routing, QA, deployment, integration validation  
 
-See [UDALI 22-layer model](udali-22-layer-model.md).
+See [UDALI coding personas](udali-personas.md) and [UDALI 22-layer model](udali-22-layer-model.md).
 
 ## Build intent
 

@@ -15,7 +15,7 @@ Fast iteration and agent assistance often collapse boundaries:
 AADM responds with a **small set of enforceable ideas**:
 
 1. **Intent before churn** — what you are building, for whom, and under what constraints is written down and revisable.  
-2. **Named layers and roles** — work is placed in a consistent model so handoffs are explicit (see [UDALI 22-layer model](udali-22-layer-model.md)).  
+2. **Named layers and roles** — work is placed in a consistent model so handoffs are explicit (see [UDALI coding personas](udali-personas.md) and [UDALI 22-layer model](udali-22-layer-model.md)).  
 3. **Human accountability** — people remain responsible for high-risk decisions; automation assists within declared limits ([Human in the loop](../standards/human-in-the-loop.md)).  
 4. **No accidental monolith of concerns** — unrelated responsibilities are not fused into a single unmaintainable surface ([No monolith rule](../standards/no-monolith-rule.md)).
 
@@ -39,12 +39,13 @@ Neither replaces the other; neither replaces **your application’s** AUTH and d
 - Templates that turn fuzzy requests into reviewable artifacts  
 - A disciplined place for agent-assisted work **without** pretending agents are architects-of-record  
 
-## Relationship to [UDALI](udali-22-layer-model.md)
+## Relationship to UDALI
 
-**[UDALI](udali-22-layer-model.md)** names roles and delivery groupings used throughout AADM materials. Think of AADM as the **delivery posture** and UDALI as the **organizing map**. See [UDALI 22-layer model](udali-22-layer-model.md).
+**UDALI** names roles and delivery groupings used throughout AADM materials. Think of AADM as the **delivery posture** and UDALI as the **organizing map**. See [UDALI coding personas](udali-personas.md) for the five groupings (U, D, A, L, I) and [UDALI 22-layer model](udali-22-layer-model.md) for the optional **L1–L22** slice.
 
 ## Next steps
 
+- [UDALI coding personas](udali-personas.md) and [UDALI 22-layer model](udali-22-layer-model.md)  
 - [Architecture principles](architecture-principles.md)  
 - [Build intent specification](build-intent-specification.md)  
 - [MCP quickstart](mcp-quickstart.md)  
