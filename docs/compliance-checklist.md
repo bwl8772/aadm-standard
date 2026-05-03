@@ -128,6 +128,7 @@ Related: [Human in the loop](../standards/human-in-the-loop.md)
 _Context servers support consistency; they do not replace app AUTH._
 
 - [ ] **Whether MCP applies** is explicit (yes / no / N/A) for this initiative  
+- [ ] If yes: leads recognize **Navigator** (delivery), **Investigator** (defects), and **Sentinel** (assurance across seams) as **distinct** MCP-facing workflows—Sentinel is **not** a substitute for defect tooling on a concrete bug thread  
 - [ ] If yes: **endpoint and scope** documented by your operator (not pasted into git)  
 - [ ] **Least privilege** for MCP credentials; read-only where sufficient  
 - [ ] **Outputs from MCP or agents** treated as drafts until reviewed against BIS and tests  

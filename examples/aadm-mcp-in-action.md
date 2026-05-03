@@ -20,20 +20,21 @@ The thread mixed **AADM-style framing** (layers, suggested validation) with **co
 
 ## What AADM MCP is (one paragraph)
 
-The AADM MCP provides **portable standard context and tools**—capabilities, layer maps, route delivery audits, troubleshooter hints—not a substitute for cloning CI into chat. It does **not** replace **HR App’s** tests or scripts. **Pass/fail** stays in the repo: Vitest contract suites, tiered `npm` scripts, and architecture guard tests. The MCP answers “what layer and what AUTH vocabulary apply?” and “what kind of evidence should we collect?”; HR App answers “did we ship correct behavior?”
+The AADM MCP provides **portable standard context and tools**—workflow framing (**Navigator** / **Investigator** / **Sentinel**), layer maps, delivery routing hints, audit scaffolds, and evidence-gated defect tooling—not a substitute for cloning CI into chat. It does **not** replace **HR App’s** tests or scripts. **Pass/fail** stays in the repo: Vitest contract suites, tiered `npm` scripts, and architecture guard tests. The MCP answers “what layer and what AUTH vocabulary apply?” and “what kind of evidence should we collect?”; HR App answers “did we ship correct behavior?”
 
 ---
 
 ## Phase 1 — Readiness framing via MCP
 
-There is **no tool literally named “readiness.”** In this session, framing started like this:
+There is **no tool literally named “readiness.”** In this session, framing started like this (names reflect **reference** AADM MCP tool ids—see [MCP quickstart — Reference tool ids](../docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids); your operator may alias them):
 
-1. **`aadm_capabilities`** — Confirm which tools exist for the workflow.
-2. **`map_feature_to_layers`** — Map the Creator/orchestration concern to delivery layers (where UI stops and contracts/services begin).
-3. **`udali_route_delivery`** — Audit/hydrate **route delivery** context; gatekeeper **pass**, layers **L13–L16** called out for this class of work.
-4. **Suggested validation commands** from the standard were **not** copy-pasted script names from HR App—the remind list mentioned generic checks (imports, validate tiers). On HR App the team mapped that intent to **whatever the repo actually exposes** (e.g. a **`go`** or **`ci`** aggregate script), instead of assuming a script name from another template exists locally.
+1. **`standard_brief`** — Load the capability snapshot (three workflows: **Navigator** / **Investigator** / **Sentinel**, orchestrator hints, and structured follow-ons where published).
+2. **`map_feature`** — Map the Creator/orchestration concern to delivery layers (where UI stops and contracts/services begin).
+3. **`plan_delivery`** — Classify multi-role delivery work and boundary hints for the change (Navigator-shaped routing, not a defect troubleshooter).
+4. **`audit_outline`** (as appropriate) — Scaffold readiness checks against bundled domains; optional **`fetch_auth`** / **`role_guide`** when AUTH or doctrine slices matter.
+5. **Suggested validation commands** from the standard were **not** copy-pasted script names from HR App—the remind list mentioned generic checks (imports, validate tiers). On HR App the team mapped that intent to **whatever the repo actually exposes** (e.g. a **`go`** or **`ci`** aggregate script), instead of assuming a script name from another template exists locally.
 
-**Takeaway:** MCP output was **heuristic and governance-oriented**. It did **not** lint HR App’s tree or flip CI green.
+**Takeaway:** MCP output was **heuristic and governance-oriented**. It did **not** lint HR App’s tree or flip CI green. This phase aligned with **Navigator** (delivery); **Sentinel** would apply if the primary ask had been “prove posture across seams,” and **Investigator** if the thread had been defect-first.
 
 ---
 
@@ -71,7 +72,7 @@ No single production incident was pasted—but the thread treated **ambiguous co
 - **Scope alignment** for aggregate completion vs generate target.
 - **Production wiring** — Hook subscribes to **structure-compose-control** so staleness is **server-backed**, not guessed.
 
-**`aadm_troubleshooter`** in a similar session would be used for **boundary hints** (orchestration vs Forge human surfaces)—it **does not** edit files; fixes stay in HR App.
+**`debug_defect`** (Investigator track) in a similar defect-shaped session would carry **boundary hints** (orchestration versus Forge human surfaces)—it **does not** edit files; fixes stay in HR App.
 
 ---
 
@@ -82,7 +83,7 @@ No single production incident was pasted—but the thread treated **ambiguous co
 
 ## Lessons learned (from this thread)
 
-- **MCP first** → layers, AUTH, delivery audit, and *classes* of validation—not repo-specific pass/fail.
+- **MCP first** → layers, AUTH, delivery routing hints, and *classes* of validation—not repo-specific pass/fail.
 - **Repo second** → script names and tiers are **local**; map suggestions to **`go` / `ci` / contract tests** that actually exist.
 - **Dual code paths** are a **bug farm**; converge or document “navigation vs orchestration decision” until one wins.
 - **Collapsed enums** (`blocked` without codes) hurt **agents**; extend contracts **before** UX debt spreads.
@@ -92,9 +93,9 @@ No single production incident was pasted—but the thread treated **ambiguous co
 
 ## Try it yourself — minimal checklist
 
-1. Enable **AADM MCP**, call **`aadm_capabilities`**, then **`udali_route_delivery`** (or **`map_feature_to_layers`**) for your feature slice.
+1. Enable **AADM MCP**, call **`standard_brief`**, then **`map_feature`** / **`plan_delivery`** for Navigator-shaped delivery work—or pick **`route_lane`** if your orchestrator already fixed **`intent`** (`delivery` / `defect` / `assurance`).
 2. Map suggested checks to **your** `package.json` scripts and **Vitest** contract paths—do not assume template script names exist.
-3. If behavior spans **UI + prep + compose + projections**, paste **path:line** or a **failing test name** into **`aadm_troubleshooter`** for boundary hints.
+3. If behavior spans **UI + prep + compose + projections** and the narrative is **defect-shaped**, paste **path:line** or a **failing test name** into **`debug_defect`** for evidence-gated troubleshooting hints—not **`Sentinel`**, which is for assurance posture across seams.
 4. In **HR App**, run your aggregate **`go`/`ci`** or targeted **`vitest`** on the contracts and hook guards you touched.
 
 For **UDALI layers** and **AUTH** definitions, see the **AADM Standard** repository (canonical URL in that repo’s root README).
