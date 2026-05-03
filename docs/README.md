@@ -18,7 +18,7 @@ Start at the [project README](../README.md) for positioning. **AADM** here means
 
 | Doc | Summary |
 |-----|---------|
-| [mcp-quickstart.md](mcp-quickstart.md) | Connect an MCP client to **an** AADM MCP server; three workflows; **reference tool ids** + legacy renames (placeholders only) |
+| [mcp-quickstart.md](mcp-quickstart.md) | Connect an MCP client to **an** AADM MCP server; three workflows; **example chat prompts** mapped to tools; **reference tool ids** + legacy renames (placeholders only); pointer to **`aadm-mcp`** integration docs for orchestrators |
 | [compliance-checklist.md](compliance-checklist.md) | Public AADM readiness self-assessment |
 
 ## Elsewhere in the repo
