@@ -51,7 +51,7 @@ _(Mirror [`use-case.md`](use-case.md) § Acceptance criteria.)_
 | **Designer** | Action plan schema; domain meaning of Step / Goal; DTOs for draft vs persisted entity |
 | **Adapter** | Repositories for draft session + plan; AUTH on create/confirm; optional cache **N/A** for v1 |
 | **Logician** | Orchestration: validate → call AI adapter → map response → persist on confirm; retries bounded |
-| **Implementer** | API routes/handlers; integration tests; feature flag rollout; staging validation vs AI sandbox |
+| **Integrator** | API routes/handlers; integration tests; feature flag rollout; staging validation vs AI sandbox |
 
 _Optional detail:_ [`layer-map.md`](layer-map.md).
 

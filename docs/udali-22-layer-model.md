@@ -2,14 +2,15 @@
 
 Within **AADM** (**Agentic Authority Delivery Model**), **UDALI** is the **delivery architecture** your team uses to place work, reviews, and evidence in consistent buckets—before and during agent-assisted implementation.
 
-**UDALI** is a mnemonic for four collaboration stances:
+**UDALI** is a mnemonic for **five** collaboration stances—the letters are **U, D, A, L, I**:
 
 - **U — Unifier**  
 - **D — Designer**  
 - **A — Adapter**  
-- **L — Logician**
+- **L — Logician**  
+- **I — Integrator** (not “implementer”; this hat owns **integration** of intent into **running software**: HTTP/UI entrypoints, quality gates, deployment, and integration validation)
 
-AADM’s public materials also include a fifth grouping—**Implementer**—for the concrete surfaces that turn intent into **running software** (HTTP/UI entrypoints, quality gates, deployment, and integration validation). Together, these five groupings describe **how capability moves from idea to production** without losing boundaries.
+Together, these five groupings describe **how capability moves from idea to production** without losing boundaries.
 
 This document is **not** a folder layout mandate and **not** proprietary tooling. Map these groupings onto your repositories, services, and pipelines in whatever structure fits—then **record** the mapping for each meaningful change ([layer map template](../templates/layer-map.md)).
 
@@ -67,9 +68,9 @@ Focus: orchestrated behavior across time and systems—where “what happens nex
 - **AI services** — model-invoking paths treated as **bounded capabilities** with explicit inputs/outputs and governance  
 - **Integrations** — calls across organizational or vendor boundaries with explicit failure semantics
 
-### Implementer (I)
+### Integrator (I)
 
-Focus: shipping discipline—what must be true for software to reach users safely.
+Focus: shipping discipline—what must be true for software to reach users safely (integration of build artifacts into environments users touch, end-to-end validation).
 
 - **Controllers** — HTTP handlers, RPC entrypoints, message consumers—thin edges that delegate inward  
 - **Routing** — traffic rules, API gateways as relevant  
@@ -91,7 +92,7 @@ Typical failure modes:
 | **Designer** | Implicit schemas, unstable DTOs, domain rules scattered or duplicated |
 | **Adapter** | Data access sprawl, AUTH gaps, cache incoherence under edge cases |
 | **Logician** | Hidden orchestration, brittle AI paths, integrations without explicit failure handling |
-| **Implementer** | Untested routing, deploy drift, “works on my machine” integrations |
+| **Integrator** | Untested routing, deploy drift, “works on my machine” integrations |
 
 These risks compound under agent-generated churn because defects replicate faster than intuition catches them.
 
@@ -107,7 +108,7 @@ A practical mental sequence:
 2. **Domain truth and contracts (Designer-heavy)** — What entities and rules apply? What crosses boundaries as DTOs/schemas?  
 3. **Access and enforcement (Adapter-heavy)** — How is identity established and authorization enforced next to real operations? How is data read/written and cached safely?  
 4. **Behavior through time (Logician-heavy)** — What services/workflows/integration calls execute? How do AI-invoking paths stay bounded?  
-5. **Shipping proof (Implementer-heavy)** — What controllers/routes expose this? What QA proves it? How is it deployed and validated against real integrations?
+5. **Shipping proof (Integrator-heavy)** — What controllers/routes expose this? What QA proves it? How is it deployed and validated against real integrations?
 
 Real teams iterate—early spikes may start mid-stack—but **promotion to production** should recover missing evidence rather than pretending skipped areas “don’t apply.”
 
@@ -142,7 +143,7 @@ Use this per meaningful change (adjust wording to your program). Check **N/A** o
 - [ ] Integration assumptions documented  
 - [ ] AI-invoking paths have scoped inputs/outputs and human checkpoints where required by policy
 
-### Implementer
+### Integrator
 
 - [ ] Controllers/routes remain thin; delegation matches grouping responsibilities  
 - [ ] QA evidence planned and executed for the risk level  

@@ -106,7 +106,7 @@ Further reading: [`no-monolith-rule.md`](no-monolith-rule.md).
 ## 5. No skipped layers
 
 **Definition**  
-For each change, **accountability groupings** (Unifier, Designer, Adapter, Logician, Implementer—or your equivalent) are considered; none are skipped silently when they materially apply.
+For each change, **accountability groupings** (Unifier, Designer, Adapter, Logician, Integrator—or your equivalent) are considered; none are skipped silently when they materially apply.
 
 **Why it matters**  
 Skipping shows up later as production incidents: UI-only security, schema drift, missing audits.

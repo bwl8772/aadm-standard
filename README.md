@@ -42,7 +42,7 @@ AADM does **not** claim to guarantee compliance or security by documentation alo
 
 ## 4. The UDALI delivery model
 
-**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Implementer—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (sometimes discussed as ~22 concerns) inside those groupings.
+**UDALI** structures AADM delivery as **five collaboration groupings**—Unifier, Designer, Adapter, Logician, Integrator (**I** in UDALI; not “implementer”)—so teams can discuss **where** a decision belongs and **who** should scrutinize it. Many teams also use **optional finer slices** (sometimes discussed as ~22 concerns) inside those groupings.
 
 Together they cover contracts, validation, authorization posture, integration boundaries, persistence, observability, and shipping—so agent-generated changes can be reviewed with the same discipline as human-written ones.
 

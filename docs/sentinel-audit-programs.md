@@ -48,7 +48,7 @@ Reference implementations MAY mirror deterministic closure concepts (depth, vert
 
 ### 2.1 Definition
 
-A **UDALI audit** attests that work **fits the collaboration map**: concerns sit in the right **U / D / A / L / Implementer** stance (and finer slices where your organization uses them), **handoffs** are explicit, and **cross-layer leakage** is bounded or explicitly accepted risk.
+A **UDALI audit** attests that work **fits the collaboration map**: concerns sit in the right **U / D / A / L / Integrator** stance (and finer slices where your organization uses them), **handoffs** are explicit, and **cross-layer leakage** is bounded or explicitly accepted risk.
 
 It is **architecture-and-process placement**, not full AUTH catalog conformance unless you explicitly widen scope.
 
@@ -57,8 +57,8 @@ It is **architecture-and-process placement**, not full AUTH catalog conformance 
 | Area | Requirement |
 |------|-------------|
 | **Layer / role map** | Artifact ties features or systems to UDALI groupings (and optional layer IDs if you use a 22-slice map). |
-| **Boundary discipline** | Named interfaces between presentation, application/API, domain, data access, and delivery closure (Implementer); no silent “god path” without documented exception. |
-| **Handoffs** | Designer ↔ Adapter ↔ Logician ↔ Implementer (and Unifier where UI/client involved) have **clear ownership** for the scoped flows. |
+| **Boundary discipline** | Named interfaces between presentation, application/API, domain, data access, and delivery closure (Integrator); no silent “god path” without documented exception. |
+| **Handoffs** | Designer ↔ Adapter ↔ Logician ↔ Integrator (and Unifier where UI/client involved) have **clear ownership** for the scoped flows. |
 | **Evidence** | Spot-check: representative paths have **tests or reviews** at declared boundaries (or documented gaps). |
 
 ### 2.3 Out of scope (unless explicitly added)

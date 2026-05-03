@@ -30,7 +30,7 @@ The name **MatchGrid** and domain **matchgrid.co** are used here as a **plausibl
 | [`story.md`](story.md) | Customer story and outcome |
 | [`use-case.md`](use-case.md) | Title, objective, actors, flows, acceptance criteria, postconditions |
 | [`bis-lite.md`](bis-lite.md) | Build intent bridge (product authorize → architecture constrain → engineering execute) |
-| [`layer-map.md`](layer-map.md) | Unifier / Designer / Adapter / Logician / Implementer |
+| [`layer-map.md`](layer-map.md) | Unifier / Designer / Adapter / Logician / Integrator |
 | [`sample-schema.json`](sample-schema.json) | JSON Schema fragment for an action-plan draft |
 | [`mcp-validation-example.md`](mcp-validation-example.md) | **Mock** MCP validation record (not live tooling) |
 

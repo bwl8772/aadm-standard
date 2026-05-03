@@ -6,7 +6,7 @@ Covers **no skipped layers** and **separation of concerns** across delivery grou
 
 ## Definition
 
-**Layer boundaries** (in AADM public materials: Unifier, Designer, Adapter, Logician, Implementer—see [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md)) organize **accountability**. Work belongs primarily where its **invariant lives**. Crossing boundaries happens through **contracts**, not through leaked implementation detail.
+**Layer boundaries** (in AADM public materials: Unifier, Designer, Adapter, Logician, Integrator—see [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md)) organize **accountability**. Work belongs primarily where its **invariant lives**. Crossing boundaries happens through **contracts**, not through leaked implementation detail.
 
 **No skipped layers** means: for material changes, each relevant grouping is considered and documented; silent omission is treated as unowned risk.
 
@@ -14,7 +14,7 @@ Covers **no skipped layers** and **separation of concerns** across delivery grou
 
 ## Why it matters
 
-Skipping shows up as production defects: UI-only validation while APIs stay porous; domain rules scattered in controllers; integrations rewriting domain meaning; missing audits because “shipping” skipped Implementer evidence.
+Skipping shows up as production defects: UI-only validation while APIs stay porous; domain rules scattered in controllers; integrations rewriting domain meaning; missing audits because “shipping” skipped Integrator evidence.
 
 Agentic workflows amplify this because changes touch many surfaces quickly.
 
@@ -53,7 +53,7 @@ Symptom patching: slap validation or AUTH checks at the outer edge while the dom
 3. **Stable edges** — evolve contracts deliberately with compatibility notes.  
 4. **AUTH meaning** — enforce permissions adjacent to domain interpretation, not only in templates.  
 5. **Integration hygiene** — translate external idioms at boundaries; keep cores provider-agnostic.  
-6. **Evidence** — Implementer grouping carries planned QA/deploy validation appropriate to risk.
+6. **Evidence** — Integrator grouping carries planned QA/deploy validation appropriate to risk.
 
 ---
 

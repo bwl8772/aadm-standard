@@ -50,7 +50,7 @@ Orchestrate a **bounded AI draft** into an **editable structured plan**, persist
 | External systems | AI inference HTTP client (timeout, redacted logging) |
 | AI / automation | Single bounded capability: “propose plan”; no autonomous assign |
 
-### Implementer
+### Integrator (I)
 
 | Item | Notes |
 |------|--------|

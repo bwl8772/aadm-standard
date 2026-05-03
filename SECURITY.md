@@ -27,7 +27,7 @@ We aim to acknowledge reports within a few business days. Disclosure timelines w
 
 Reports appropriate for this project include:
 
-- Content that could mislead implementers into unsafe patterns (for example, guidance that weakens authorization boundaries)  
+- Content that could mislead readers into unsafe patterns (for example, guidance that weakens authorization boundaries)  
 - Malicious or unintended executable content embedded in this repo  
 - Supply-chain concerns tied to **this repository’s** contents or automation  
 
