@@ -8,7 +8,7 @@ Within **AADM** (**Agentic Authority Delivery Model**), **[UDALI](udali-22-layer
 - **D — Designer**  
 - **A — Adapter**  
 - **L — Logician**  
-- **I — Integrator** — this hat owns **integration** of intent into **running software**: HTTP/UI entrypoints, quality gates, deployment, and integration validation
+- **I — Integrator**
 
 Together, these five groupings describe **how capability moves from idea to production** without losing boundaries.
 
