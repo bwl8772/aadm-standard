@@ -43,7 +43,8 @@ If developers use AI agents:
 
 Static markdown prevents nothing by itself—agents need **stable distribution**. After templates are in place:
 
-- Follow [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md) to connect your IDE or gateway.  
+- Follow [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md) to connect your IDE or gateway and to copy **current tool ids** (`standard_brief`, `debug_defect`, …); reconcile internal wikis if they still say `aadm_capabilities`, `aadm_troubleshooter`, `map_feature_to_layers`, or `udali_route_delivery`.  
+- Teach leads the **three workflow personas** reference bundles publish—**Navigator** (delivery), **Investigator** (defects), **Sentinel** (assurance across seams)—so tickets route to the right framing; Sentinel is **not** a substitute for defect tooling when the ask is a concrete bug.  
 - Keep MCP credentials **scoped**; never expose production secrets for “context only.”  
 - Remember: MCP **does not** substitute for application authorization—see [`docs/auth-aware-delivery.md`](../docs/auth-aware-delivery.md).
 

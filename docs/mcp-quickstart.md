@@ -18,6 +18,52 @@ An **AADM-aligned MCP server** is typically a **small HTTP service** that speaks
 
 The framing used across AADM MCP deployments: **the MCP carries the standard to agents**; **your application repository** still owns production behavior, AUTH enforcement, tests, and evidence.
 
+### Three agent workflows (Navigator · Investigator · Sentinel)
+
+Reference AADM MCP servers commonly describe **three equal workflows**—each with **three stages**—so hosts do not collapse everything into “bug chat”:
+
+| Persona | Typical intent | Shape (high level) |
+|---------|----------------|---------------------|
+| **Navigator** | Planned delivery (net new **or** meaningful improvement) | Scope → verify → readiness |
+| **Investigator** | Broken versus expected, errors, regressions | Investigate → diagnose → remediate (evidence-gated before deep diagnosis) |
+| **Sentinel** | Prove **existing** posture against AUTH / UDALI / evidence across seams | Scope & frame → trace & bind evidence → attest readiness |
+
+**Sentinel** is **not** a renamed troubleshooter: it addresses **assurance and alignment**, not a single defect thread. **Investigator** owns the defect track; **`debug_defect`** (or your operator’s equivalent) is the usual first tool when the narrative is defect-shaped.
+
+Capability copy on the server often surfaces this via **`standard_brief`** (summary JSON), **`route_lane`** when your orchestrator already fixed **`intent`** as `delivery` / `defect` / `assurance`, and **`orchestrator_anchor`** for long-running session and persistence reminders. Canonical narrative URIs vary by bundle; your operator lists stable **`resources/read`** targets.
+
+### Reference AADM enforcement MCP tool ids
+
+The **reference** open **AADM Standard Enforcement MCP** bundle registers tools under these ids (alphabetical). Your deployment may add aliases or omit tools; treat **`tools/list`** after **`initialize`** as authoritative for **your** server.
+
+| Id | Role (short) |
+|----|----------------|
+| **`audit_outline`** | Audit / readiness scaffold |
+| **`classify_bug`** | Bug symptom classification helper |
+| **`debug_bundle`** | Larger combined troubleshooting payload (power users) |
+| **`debug_defect`** | Primary Investigator / defect troubleshooter |
+| **`debug_hint`** | Lightweight troubleshooting hint |
+| **`fetch_auth`** | Load AUTH control markdown by id |
+| **`fix_pack`** | Structured fix-oriented pack helper |
+| **`map_feature`** | Feature → stack / AUTH hints (heuristic) |
+| **`orchestrator_anchor`** | Long-thread orchestrator checklist |
+| **`plan_delivery`** | Multi-role delivery handoff / boundary hints |
+| **`role_guide`** | Compact UDALI doctrine slice by role |
+| **`route_lane`** | Explicit `delivery` / `defect` / `assurance` lane metadata |
+| **`standard_brief`** | Full capability snapshot (workflows, contracts, **`follow_on_catalog`** where published) |
+| **`triage_bug`** | Symptom paragraph → triage hints (heuristic) |
+
+**Resources are not tools:** canonical markdown still loads via MCP **`resources/read`** (for example workflow mode URIs); hosts sometimes surface that as **`suggested_tool`: `resources/read`** inside **`follow_on_catalog`** entries.
+
+**Older prose** may still mention retired ids. Common mappings when updating runbooks or tickets:
+
+| Older name | Use instead |
+|------------|-------------|
+| `aadm_capabilities` | **`standard_brief`** |
+| `map_feature_to_layers` | **`map_feature`** |
+| `udali_route_delivery` | **`plan_delivery`** |
+| `aadm_troubleshooter` | **`debug_defect`** |
+
 ---
 
 ## 2. What it does not do

@@ -29,7 +29,7 @@ AADM responds with a **small set of enforceable ideas**:
 ## How this repo fits an MCP server
 
 - **Here:** human-readable principles, templates, examples, and checklists—easy to fork, review in PRs, and attach to tickets.  
-- **MCP deployment:** agent-facing **resources, prompts, and bounded tools** so coding assistants do not rely on stale chat snippets.
+- **MCP deployment:** agent-facing **resources, prompts, and bounded tools** so coding assistants do not rely on stale chat snippets. Reference servers typically expose **Navigator** (planned delivery), **Investigator** (defects), and **Sentinel** (assurance—not a single bug thread) as **equal** workflows; see [MCP quickstart](mcp-quickstart.md) and [Glossary](glossary.md).
 
 Neither replaces the other; neither replaces **your application’s** AUTH and domain enforcement.
 

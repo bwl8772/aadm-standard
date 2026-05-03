@@ -67,6 +67,7 @@ Start here:
 Static docs alone are easy to misquote or drift from in prompts. A server **does not replace** this repository; it **distributes** what the standard means to agents in a **controlled, versionable** way. Typical benefits:
 
 - **Same vocabulary** in every session—UDALI, AUTH, build intent—without pasting large files into chats  
+- **Three equal agent workflows** on reference deployments—**Navigator** (delivery), **Investigator** (defects), **Sentinel** (assurance across seams)—so framing is not troubleshoot-only; see [Glossary](docs/glossary.md) and [MCP quickstart](docs/mcp-quickstart.md)  
 - **Prompt and workflow surfaces** aligned to how your organization applies AADM  
 - **Bounded tools** for diagnostics or mapping (capabilities vary by deployment—see publisher docs)
 
@@ -74,7 +75,8 @@ Static docs alone are easy to misquote or drift from in prompts. A server **does
 
 - This repo **does not ship** MCP server source, binaries, or private implementation details—those live in the **MCP project / distribution** your team runs or obtains from a **trusted provider**.  
 - MCP supplies **context and agent-facing workflows**, not **your** product’s business authorization—application code and gateways remain authoritative (see [AUTH-aware delivery](docs/auth-aware-delivery.md)).  
-- Exact behavior depends on **which** MCP deployment you use; read its publisher’s documentation.
+- Exact behavior depends on **which** MCP deployment you use; read its publisher’s documentation.  
+- **Reference tool ids** on the open enforcement MCP bundle (**`standard_brief`**, **`debug_defect`**, **`route_lane`**, etc.) are listed in [MCP quickstart](docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids), with a short **legacy-name** mapping for older docs.
 
 ---
 
@@ -143,6 +145,7 @@ See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concret
 | Build intent | [docs/build-intent-specification.md](docs/build-intent-specification.md) |
 | AUTH placement | [docs/auth-aware-delivery.md](docs/auth-aware-delivery.md) |
 | MCP (generic) | [docs/mcp-quickstart.md](docs/mcp-quickstart.md) |
+| MCP reference tool ids | [docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids](docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids) |
 | Compliance prompts | [docs/compliance-checklist.md](docs/compliance-checklist.md) |
 | Definitions | [docs/glossary.md](docs/glossary.md) |
 | Core normative summary | [standards/aadm-core-principles.md](standards/aadm-core-principles.md) |
