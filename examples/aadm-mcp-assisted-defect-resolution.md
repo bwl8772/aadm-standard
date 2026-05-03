@@ -1,14 +1,12 @@
 # Example: AADM MCP assisting a multi-layer “save blocked” defect
 
-**Fictionalized case study.** Names, modules, and identifiers are invented; the **pattern** (degraded read path + client omitting normalization + strict validation before normalization on write) is grounded in a real class of production incidents. Timeline language (“hours vs weeks”) is **illustrative**, not a benchmark promise.
+**Santized case study.** Names, modules, and identifiers are invented; the **pattern** (degraded read path + client omitting normalization + strict validation before normalization on write) is grounded in a real class of production incidents. Timeline language (“hours vs weeks”) is **illustrative**, not a benchmark promise.
 
 ---
 
 ## Minimal product context (only what matters)
 
 Imagine a **web authoring product**: users fill in a **structured blueprint** for a deliverable, save it, then move through downstream **build** and **publish** stages. If saving the blueprint fails, the whole pipeline stalls—nothing durable to build from, flags stay red, shipping stops.
-
-That is enough context to follow the failure mode without naming a sector, codebase, or schema.
 
 ---
 
@@ -34,7 +32,7 @@ Three separate issues stacked; **any one** could have caused pain; **all three**
 
 ---
 
-## How AADM MCP helped (this is the point of the example)
+## How AADM MCP helped
 
 The team had the **AADM Standard Enforcement MCP** available in the IDE. Below is how it **contributed**, stated plainly—without pretending the MCP edited files or ran tests.
 

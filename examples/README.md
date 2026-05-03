@@ -5,7 +5,7 @@ Worked artifact chains that show how templates fit together. **Fictional scenari
 | Example | Description |
 |---------|-------------|
 | [aadm-mcp-in-action.md](aadm-mcp-in-action.md) | **HR App (pseudonym):** AADM MCP for Navigator-shaped readiness (`standard_brief`, `map_feature`, `plan_delivery`), then **contracts + decider + hook** alignment—dual paths, gate codes, precedence |
-| [aadm-mcp-assisted-defect-resolution.md](aadm-mcp-assisted-defect-resolution.md) | **Fictionalized defect:** “Save blocked” from stacked read-model degradation + client normalization gap + validate-before-normalize PATCH—and **how AADM MCP** (evidence gates, Path B, AUTH, HOLD/orchestration, continuations) helped the investigation |
+| [aadm-mcp-assisted-defect-resolution.md](aadm-mcp-assisted-defect-resolution.md) | **Real World example defect:** “Save blocked” from stacked read-model degradation + client normalization gap + validate-before-normalize PATCH—and **how AADM MCP** (evidence gates, Path B, AUTH, HOLD/orchestration, continuations) helped the investigation |
 | [ai-task-assistant/](ai-task-assistant/) | MatchGrid-flavored **vague task → structured action plan** with BIS-lite, layer map, schema, and **mock** MCP validation |
 
 Use with [`templates/README.md`](../templates/README.md) and [`docs/README.md`](../docs/README.md).
