@@ -40,6 +40,16 @@ A **lightweight technical intent** document emphasizing interfaces, boundaries, 
 
 A **stable agreement** between producers and consumers: API schemas, event payloads, tool inputs/outputs, compatibility expectations.
 
+## TRACE (contract trace spine)
+
+An **optional** Sentinel-friendly practice for proving that **critical field meanings survive handoffs** (wire, DTO, domain, persistence, events, partner APIs): bound a **slice**, pick **3–5 critical fields**, walk **material seams**, and record **PASS / FAIL / DEFERRED** with **application-repo evidence** (paths, tests, CI) or an explicit gap owner. Drift is labeled with stable **`TRACE-NN`** pattern ids on **reference** AADM MCP bundles.
+
+**Line between this repo and MCP:** The **public standard** describes *why* and *what to prove*; the **authoritative pattern catalog** (**TRACE-01–12**), worksheet, Sentinel **`audit_program_id`** for contract trace, and prefix rules (**`AUTH-`** vs **`TRACE-`** vs **`VERT_*`/`HORI_*`** vs UDALI **`L`**) ship with the MCP distribution — **`resources/read` `aadm://trace/catalog`** on reference servers. Pin MCP version when reproducibility matters.
+
+## VERT_* and HORI_* (Sentinel seam ids)
+
+Short **machine-stable ids** for **scope-of-attestation seams** on reference MCP tooling (e.g. closure output from **`sentinel_closure`**): **`VERT_*`** coarse vertical hops (presentation → platform bands), **`HORI_*`** horizontal kinds (schema contract, service boundary, auth trust, external integration, async/event). They are **not** UDALI **L1–L22** layer numbers. Exact enumerations and tool mappings belong to the **MCP bundle** you run; this glossary names the concepts only.
+
 ## AUTH
 
 Joint shorthand for **authentication** and **authorization**. AADM stresses separating identity establishment from permission enforcement. See [AUTH-aware delivery](auth-aware-delivery.md).

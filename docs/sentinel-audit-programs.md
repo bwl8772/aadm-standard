@@ -136,6 +136,16 @@ Everything in **§2.5**, **plus**:
 
 Same Sentinel tools as §2.6, with **heavier** use of **`fetch_auth`**, **`audit_outline`**, and **`standard_brief`** (`sentinel_assurance`, **`orchestrator_contract`**). **`route_lane`** with `intent: assurance` MAY be used to pin deterministic lane metadata in scripted flows.
 
+### 3.7 Optional — Contract boundary trace (**TRACE**)
+
+When the dominant risk is **data contract drift** (not only “was AUTH cited?”), teams MAY add a **contract trace** slice inside an **AADM audit** (or a narrower Sentinel pass):
+
+- **Slice-bound** scope; **3–5 critical fields** whose drift would hurt the business.  
+- Per field × **material handoff** (e.g. wire ↔ validated shape ↔ domain ↔ persistence ↔ async payload): **PASS**, **FAIL**, or **DEFERRED** with owner — each claim anchored in the **application repository** or explicitly gapped.  
+- Drift classified with stable **`TRACE-NN`** pattern ids where your tooling provides them.
+
+**Standard vs MCP (maintain the boundary):** This **public repo** states the **practice** and evidence rule (repo proves; MCP does not scan consumers). The **canonical TRACE pattern table**, worksheets, combined **`AUTH-` / `TRACE-` / `VERT_*` / `HORI_*` / `L`** citation guidance, and reference Sentinel template id (**`sentinel_audit_slice_contract_trace`**) live in the **enforcement MCP bundle** — see **`resources/read` `aadm://trace/catalog`** on reference deployments; pin server version for reproducible citations.
+
 ---
 
 ## 4. Relationship summary
@@ -175,6 +185,7 @@ These are **requirements on hosts** that want a literal **“Launch UDALI audit�
 ## Related reading
 
 - [What is AADM?](what-is-aadm.md)  
+- [Glossary — TRACE, VERT\_\*, HORI\_\*](glossary.md)  
 - [UDALI coding personas](udali-personas.md)  
 - [UDALI 22-layer model](udali-22-layer-model.md)  
 - [AUTH-aware delivery](auth-aware-delivery.md)  
