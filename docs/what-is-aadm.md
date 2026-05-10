@@ -29,7 +29,8 @@ AADM responds with a **small set of enforceable ideas**:
 ## How this repo fits an MCP server
 
 - **Here:** human-readable principles, templates, examples, and checklists—easy to fork, review in PRs, and attach to tickets.  
-- **MCP deployment:** agent-facing **resources, prompts, and bounded tools** so coding assistants do not rely on stale chat snippets. Reference servers typically expose **Navigator** (planned delivery), **Investigator** (defects), and **Sentinel** (assurance—not a single bug thread) as **equal** workflows; see [MCP quickstart](mcp-quickstart.md) and [Glossary](glossary.md).
+- **MCP deployment:** agent-facing **resources, prompts, and bounded tools** so coding assistants do not rely on stale chat snippets. Reference servers typically expose **Navigator** (planned delivery), **Investigator** (defects), and **Sentinel** (assurance—not a single bug thread) as **equal** workflows; see [MCP quickstart](mcp-quickstart.md) and [Glossary](glossary.md).  
+- **Optional contract trace (TRACE):** this repo describes the *practice* in [Sentinel audit programs](sentinel-audit-programs.md) and [Glossary](glossary.md); the **TRACE-01–12 pattern catalog**, worksheets, and Sentinel template wiring live on **reference** MCP bundles (`resources/read` **`aadm://trace/catalog`** — pin server version for reproducible citations).
 
 Neither replaces the other; neither replaces **your application’s** AUTH and domain enforcement.
 
