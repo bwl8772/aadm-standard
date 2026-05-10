@@ -1,24 +1,24 @@
-# Mock MCP validation output (example only)
+# Mock validation record (example only)
 
-**This file is entirely fictional.** It shows what a team might **paste into a ticket or design doc** after running an **external** MCP-assisted review workflow.
+**This file is entirely fictional.** It shows what a team might **paste into a ticket or design doc** after an **internal** alignment review against AADM templates—still **not** a compliance verdict.
 
 ---
 
 ## What this is not
 
-- **Not** output produced by this **aadm-standard** repository (there is **no MCP runtime** here).  
-- **Not** a live API response from any deployed server.  
-- **Not** proprietary scoring or validation internals—field names are **illustrative**.
+- **Not** output produced automatically by this **aadm-standard** repository.  
+- **Not** a live API response from any deployed product.  
+- **Not** proprietary scoring internals—field names are **illustrative**.
 
 ---
 
 ## Scenario (fictional)
 
-A developer uses their IDE’s MCP client against **their organization’s** AADM MCP deployment (hosted elsewhere). They load **public standard excerpts** (or mirrored docs) and record a **manual checklist result** plus a **mock JSON record** for traceability.
+A developer walks through **public standard excerpts**, completes a **manual checklist**, and stores a **mock JSON record** for traceability in their internal wiki.
 
 ---
 
-## Mock MCP validation record
+## Mock validation record
 
 Below is **fabricated JSON** for documentation practice only.
 
@@ -66,11 +66,11 @@ Below is **fabricated JSON** for documentation practice only.
 
 ---
 
-## How teams should use real MCP (high level)
+## How teams should use real validation
 
-1. Connect the client to **your** MCP endpoint per [`docs/mcp-quickstart.md`](../../docs/mcp-quickstart.md).  
-2. Keep **secrets** out of git; store validation summaries in your **internal** ticket system if needed.  
-3. Never treat MCP output as **authorization** to skip code review or tests.
+1. Keep **secrets** out of git; store summaries in **your** ticket system if needed.  
+2. Treat checklist output as **input to review**—never as authorization to skip code review or **failing tests**.  
+3. Prefer **CI signals** (unit, contract, integration) as the authoritative proof for behavior claims.
 
 ---
 
@@ -78,5 +78,5 @@ Below is **fabricated JSON** for documentation practice only.
 
 | Artifact | Role |
 |----------|------|
-| [`bis-lite.md`](bis-lite.md) §13 | Where a team might **reference** a real validation id |
+| [`bis-lite.md`](bis-lite.md) §13 | Where a team might **reference** a validation record id |
 | This file | **Demo-only** mock for learners |

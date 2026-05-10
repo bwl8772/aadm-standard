@@ -13,9 +13,9 @@ AADM is a **structured way to deliver AI-powered systems** so that speed does no
 - **Written intent** before broad implementation churn  
 - A **layered view of delivery** ([UDALI coding personas](docs/udali-personas.md), optional [L1–L22](docs/udali-22-layer-model.md)) so changes land in the right review context  
 - **Explicit human authority** for sensitive or irreversible decisions  
-- **Separation of concerns** between **human-readable standard artifacts** (this repo) and **agent-distributed context** (typically an **AADM MCP server** you connect from your IDE)
+- **Shared vocabulary** ([Glossary](docs/glossary.md)) so reviews stay anchored—Module / Interface / Seam, UDALI, AUTH, delivery lanes (**Navigator**, **Investigator**, **Sentinel**)
 
-It is descriptive guidance you can adopt in policies, tickets, and architecture reviews. **Teams using coding agents benefit from both:** markdown templates here for humans *and* an MCP deployment so agents load **consistent** definitions, prompts, and bounded tools—not guesses from stale snippets.
+It is descriptive guidance you can adopt in policies, tickets, and architecture reviews. **Proof stays in your application:** automated tests, CI gates, and operational controls—not in prose alone (see [Architecture principles](docs/architecture-principles.md), [Repository scope](docs/repository-scope.md)).
 
 ---
 
@@ -55,37 +55,33 @@ Start here:
 
 ---
 
-## 5. How this public repo relates to an AADM MCP server
+## 5. How teams apply the standard
 
-| **This repository (public)** | **AADM MCP server (separate distribution)** |
-|------------------------------|---------------------------------------------|
-| Standard narrative, education, templates, examples | **Agent-facing surface** for loading curated standard context (and, where provided, workflows) over MCP |
-| Something you **read, fork, and cite** | Something you **run and connect** from an MCP-capable client |
-| No requirement to use any particular server | Purpose-built to give agents **stable resources, prompts, and tools** tied to the standard—so adoption is consistent across repos |
-
-### Why teams still run an AADM MCP server
-
-Static docs alone are easy to misquote or drift from in prompts. A server **does not replace** this repository; it **distributes** what the standard means to agents in a **controlled, versionable** way. Typical benefits:
-
-- **Same vocabulary** in every session—UDALI, AUTH, build intent—without pasting large files into chats  
-- **Three equal agent workflows** on reference deployments—**Navigator** (delivery), **Investigator** (defects), **Sentinel** (assurance across seams)—so framing is not troubleshoot-only; see [Glossary](docs/glossary.md) and [MCP quickstart](docs/mcp-quickstart.md)  
-- **Prompt and workflow surfaces** aligned to how your organization applies AADM  
-- **Bounded tools** for diagnostics or mapping (capabilities vary by deployment—see publisher docs)
-
-**Important clarifications:**
-
-- This repo **does not ship** MCP server source, binaries, or private implementation details—those live in the **MCP project / distribution** your team runs or obtains from a **trusted provider**.  
-- MCP supplies **context and agent-facing workflows**, not **your** product’s business authorization—application code and gateways remain authoritative (see [AUTH-aware delivery](docs/auth-aware-delivery.md)).  
-- Exact behavior depends on **which** MCP deployment you use; read its publisher’s documentation.  
-- **Reference tool ids** on the open enforcement MCP bundle (**`standard_brief`**, **`debug_defect`**, **`route_lane`**, etc.) are listed in [MCP quickstart](docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids), with a short **legacy-name** mapping for older docs.
+1. **Anchor intent** — PRD / BIS-lite, layer map, acceptance criteria ([templates/](templates/)).  
+2. **Speak one vocabulary** — UDALI placement, AUTH themes, and design words (**Module**, **Interface**, **Seam**) from the [Glossary](docs/glossary.md).  
+3. **Pick the right delivery lane** — **Navigator** (planned change), **Investigator** (broken vs expected), **Sentinel** (assurance across seams)—three **human-facing** postures, defined in the glossary; they help route reviews and audits without collapsing everything into “bug chat.”  
+4. **Prove claims with tests** — tie risky behavior to falsifiable checks and CI; use the [Compliance checklist](docs/compliance-checklist.md) as a self-assessment.  
 
 ---
 
-## 6. What is included in this repo
+## 6. Using the AADM MCP
+
+**Coding agents** can load AADM context and tools from the **hosted MCP** documented on the product site.
+
+| Resource | Link |
+|----------|------|
+| **Overview and connection instructions** | **[https://www.aadm.io](https://www.aadm.io)** |
+| **MCP endpoint** (use with your client’s MCP config; details on the site) | **`https://mcp.aadm.io/mcp`** |
+
+Repository shortcut (canonical endpoint + reminders): **[Using the AADM MCP](docs/mcp-quickstart.md)**. Full steps stay on **[www.aadm.io](https://www.aadm.io)** so they stay current with the service.
+
+---
+
+## 7. What is included in this repo
 
 | Path | Contents |
 |------|----------|
-| [`docs/`](docs/) | Concepts, principles, build intent, AUTH, MCP quickstart, compliance checklist, glossary ([**index**](docs/README.md)) |
+| [`docs/`](docs/) | Concepts, principles, build intent, AUTH, skills alignment, hosted MCP pointer, repository scope, compliance checklist, glossary ([**index**](docs/README.md)) |
 | [`standards/`](standards/) | Normative shorts ([**index**](standards/README.md)) |
 | [`templates/`](templates/) | Story, use case, PRD-lite, BIS-lite, acceptance criteria, layer map ([**index**](templates/README.md)) |
 | [`examples/`](examples/) | Worked artifact sets ([**index**](examples/README.md); e.g. [`ai-task-assistant/`](examples/ai-task-assistant/)) |
@@ -93,41 +89,43 @@ Static docs alone are easy to misquote or drift from in prompts. A server **does
 
 ---
 
-## 7. What is intentionally not included
+## 8. What is intentionally not included
 
-- **MCP server source code, binaries, or internal implementation details**  
+- **MCP server source code** in this repo (the **hosted** service is reached via [www.aadm.io](https://www.aadm.io) and **`https://mcp.aadm.io/mcp`** — see §6 and [Using the AADM MCP](docs/mcp-quickstart.md))  
 - **Proprietary enforcement algorithms**, scoring models, or certification materials  
 - **Client-specific** templates or confidential playbooks  
 - **Paid-only** or **enterprise-only** workflow bundles  
 
-If you want **agent connectivity**, **consistent standard loading**, or **workflow tooling** beyond static markdown, plan for an **AADM MCP server deployment** (run or hosted) **alongside** this repo—not instead of it. Application enforcement remains in your services and CI.
+Formal gates remain **your** policies, tests, and CI. This repository stays portable markdown.
 
 ---
 
-## 8. Quickstart
+## 9. Quickstart
 
 1. Read **[What is AADM?](docs/what-is-aadm.md)** and the **[documentation index](docs/README.md)**.  
 2. Skim **[Architecture principles](docs/architecture-principles.md)** and **[Build intent specification](docs/build-intent-specification.md)**.  
 3. Copy **[templates/](templates/)** (see **[templates/README.md](templates/README.md)**) into your wiki or ticket system; complete **[layer map](templates/layer-map.md)** for your next meaningful change.  
 4. Walk **[AUTH-aware delivery](docs/auth-aware-delivery.md)** with your security or platform owners.  
-5. **For AI-assisted development:** connect your environment to **an AADM MCP server** using **[MCP quickstart](docs/mcp-quickstart.md)**—least-privilege credentials only; never substitute MCP access for production AUTH.
+5. **Testing discipline:** define acceptance criteria and wire **CI checks** that fail when boundaries regress—see [Compliance checklist](docs/compliance-checklist.md) §QA and [Repository scope](docs/repository-scope.md).  
+6. **Agent skills:** if you package playbooks as skills, align them to delivery lanes and templates—see [Creating and aligning skills with the AADM standard](docs/skills.md).  
+7. **Hosted MCP:** connect agents per **[www.aadm.io](https://www.aadm.io)** using endpoint **`https://mcp.aadm.io/mcp`** — see [Using the AADM MCP](docs/mcp-quickstart.md).
 
 ---
 
-## 9. Example workflow
+## 10. Example workflow
 
 1. **Shape intent** — Draft **BIS-lite** + **layer map** for the change (`templates/bis-lite.md`, `templates/layer-map.md`).  
 2. **Align product narrative** — Optional **customer story** / **use case** for traceability (`templates/customer-story.md`, `templates/use-case.md`).  
 3. **Define done** — **Acceptance criteria** with AUTH and observability checks (`templates/acceptance-criteria.md`).  
 4. **Implement with discipline** — Agents (if any) work inside declared scope; code reviews reference the layer map.  
 5. **Human checkpoint** — Approvals for authority-bound operations per [`standards/human-in-the-loop.md`](standards/human-in-the-loop.md).  
-6. **MCP (recommended for agent-heavy teams)** — Wire your IDE to **an AADM MCP server** so agents pull **canonical** standard context; merge requests and tests still gate quality—MCP does not auto-ship code.
+6. **Verify** — Run the tests and gates your layer map implies; capture evidence links in your ticket or ADR.
 
-See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concrete artifact chain.
+See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concrete artifact chain, and **[examples/navigator-readiness-hr-app.md](examples/navigator-readiness-hr-app.md)** for a delivery-shaped thread grounded in contracts and tests.
 
 ---
 
-## 10. Contribution guidelines (summary)
+## 11. Contribution guidelines (summary)
 
 - **Scope:** improvements to **public standard content**, templates, and examples—**not** proprietary server code in this repo.  
 - **Tone:** authoritative, practical, and evidence-aware; **avoid overclaiming**.  
@@ -136,7 +134,7 @@ See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concret
 
 ---
 
-## 11. Link map — key docs
+## 12. Link map — key docs
 
 | Topic | Document |
 |-------|----------|
@@ -145,11 +143,12 @@ See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concret
 | Principles | [docs/architecture-principles.md](docs/architecture-principles.md) |
 | Build intent | [docs/build-intent-specification.md](docs/build-intent-specification.md) |
 | AUTH placement | [docs/auth-aware-delivery.md](docs/auth-aware-delivery.md) |
-| MCP (generic) | [docs/mcp-quickstart.md](docs/mcp-quickstart.md) |
-| MCP reference tool ids | [docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids](docs/mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids) |
+| AADM site & MCP connection | [https://www.aadm.io](https://www.aadm.io) · MCP endpoint `https://mcp.aadm.io/mcp` · [docs/mcp-quickstart.md](docs/mcp-quickstart.md) |
+| Repository scope (standard vs runtime) | [docs/repository-scope.md](docs/repository-scope.md) |
 | Compliance prompts | [docs/compliance-checklist.md](docs/compliance-checklist.md) |
 | Sentinel audits (UDALI vs AADM) | [docs/sentinel-audit-programs.md](docs/sentinel-audit-programs.md) |
 | Definitions | [docs/glossary.md](docs/glossary.md) |
+| Skills & agent packs | [docs/skills.md](docs/skills.md) |
 | Core normative summary | [standards/aadm-core-principles.md](standards/aadm-core-principles.md) |
 | Human authority | [standards/human-in-the-loop.md](standards/human-in-the-loop.md) |
 | Adoption path | [community/adoption-guide.md](community/adoption-guide.md) |

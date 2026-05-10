@@ -80,13 +80,13 @@ _Optional detail:_ [`layer-map.md`](layer-map.md).
 - **Architecture** signs off on AUTH boundary and AI data scope.  
 - **Engineering** requires peer review for AI orchestration + persistence paths.
 
-## 13. MCP validation status
+## 13. Standard alignment / validation notes
 
 | Field | Value |
 |-------|--------|
 | **Applies?** | Yes (optional process step) |
-| **Status** | Example only — see [`mcp-validation-example.md`](mcp-validation-example.md) (**mocked** output) |
-| **Notes** | Teams may record that agents loaded **public standard docs** via an **external** MCP server; **this repo does not run MCP.** |
+| **Status** | Example only — see [`mock-validation-record-example.md`](mock-validation-record-example.md) (**mocked** output) |
+| **Notes** | Teams may record an internal checklist or pilot against **public standard docs**; proof still lives in **tests and CI**. |
 
 ---
 

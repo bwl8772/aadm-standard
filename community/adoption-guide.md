@@ -1,6 +1,6 @@
 # Adoption guide
 
-Practical steps for teams adopting AADM. **Use this repository for shared intent and templates**, and **add an AADM MCP server** when coding agents should load **canonical** standard context—both together reduce drift; neither replaces application AUTH.
+Practical steps for teams adopting AADM. **Use this repository for shared intent and templates**; pair with **your** tests, CI, and governance—documentation does not replace application AUTH.
 
 ## 1. Align on vocabulary
 
@@ -9,13 +9,13 @@ Run a one-hour workshop using:
 - [`docs/what-is-aadm.md`](../docs/what-is-aadm.md)  
 - [`docs/udali-personas.md`](../docs/udali-personas.md)  
 - [`docs/udali-22-layer-model.md`](../docs/udali-22-layer-model.md)  
-- [`docs/glossary.md`](../docs/glossary.md)
+- [`docs/glossary.md`](../docs/glossary.md) — include **Module**, **Interface**, **Seam**, and delivery lanes (**Navigator** / **Investigator** / **Sentinel**)
 
-Outcome: shared understanding of layers and roles.
+Outcome: shared understanding of layers, roles, and review routing.
 
 ## 2. Map your reality
 
-Create an internal appendix: **your services ↔ [UDALI](../docs/udali-personas.md) groupings** (optional [L1–L22](../docs/udali-22-layer-model.md)). Expect disagreement early; converge on a working map.
+Create an internal appendix: **your systems ↔ [UDALI](../docs/udali-personas.md) groupings** (optional [L1–L22](../docs/udali-22-layer-model.md)). Expect disagreement early; converge on a working map.
 
 ## 3. Wire templates into your workflow
 
@@ -40,16 +40,27 @@ If developers use AI agents:
 - Require human approval for production-impacting merges  
 - Treat agent outputs as **reviewable drafts**
 
-## 6. Connect an AADM MCP server (recommended for agent-heavy teams)
+If you maintain **agent skills** (packaged playbooks), align them with lanes and vocabulary—see [`docs/skills.md`](../docs/skills.md) (*Creating and aligning skills with the AADM standard*).
 
-Static markdown prevents nothing by itself—agents need **stable distribution**. After templates are in place:
+## 6. Connect coding agents (hosted MCP)
 
-- Follow [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md) to connect your IDE or gateway and to copy **current tool ids** (`standard_brief`, `debug_defect`, …); reconcile internal wikis if they still say `aadm_capabilities`, `aadm_troubleshooter`, `map_feature_to_layers`, or `udali_route_delivery`.  
-- Teach leads the **three workflow personas** reference bundles publish—**Navigator** (delivery), **Investigator** (defects), **Sentinel** (assurance across seams)—so tickets route to the right framing; Sentinel is **not** a substitute for defect tooling when the ask is a concrete bug.  
-- Keep MCP credentials **scoped**; never expose production secrets for “context only.”  
-- Remember: MCP **does not** substitute for application authorization—see [`docs/auth-aware-delivery.md`](../docs/auth-aware-delivery.md).
+Use the **hosted AADM MCP** when agents should load standard context and tools consistently:
 
-## 7. Measure adoption health
+- **Instructions and product context:** [https://www.aadm.io](https://www.aadm.io)  
+- **MCP endpoint:** `https://mcp.aadm.io/mcp`  
+- **Shortcut in this repo:** [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md)  
+
+Least-privilege credentials only; MCP does **not** replace application AUTH ([`docs/auth-aware-delivery.md`](../docs/auth-aware-delivery.md)).
+
+## 7. Tie claims to tests
+
+For each material initiative:
+
+- Name **CI jobs** or suites that must stay green before release  
+- Prefer **falsifiable** checks at declared **Interfaces** and **Seams** ([Glossary](../docs/glossary.md))  
+- Use [`docs/compliance-checklist.md`](../docs/compliance-checklist.md) as a periodic self-assessment  
+
+## 8. Measure adoption health
 
 Indicators:
 

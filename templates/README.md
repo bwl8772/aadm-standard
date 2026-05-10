@@ -11,4 +11,4 @@ Starter blanks for product and engineering alignment. Pair with [`docs/build-int
 | [acceptance-criteria.md](acceptance-criteria.md) | Observable “done” checks |
 | [layer-map.md](layer-map.md) | Unifier → Integrator placement |
 
-For agents loading canonical wording at runtime, teams often pair these files with an **AADM MCP server** (see [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md))—this folder stays **static markdown** for humans and tickets.
+This folder stays **static markdown** for humans and tickets. Teams may mirror excerpts into internal wikis or gate them with CI; see [`docs/repository-scope.md`](../docs/repository-scope.md). When you encode similar guidance as **agent skills**, align triggers and outputs with templates and lanes—see [`docs/skills.md`](../docs/skills.md).

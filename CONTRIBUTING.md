@@ -1,6 +1,6 @@
 # Contributing to the AADM Standard
 
-Thank you for helping improve a **public, documentation-first** standard for **Agentic Authority Delivery Model (AADM)** delivery. This repository is intentionally scoped to **explain**, **template**, and **example**—not to host **MCP server implementations** (those belong in the MCP distribution repo) or **private customer materials**.
+Thank you for helping improve a **public, documentation-first** standard for **Agentic Authority Delivery Model (AADM)** delivery. This repository is intentionally scoped to **explain**, **template**, and **example**—not to host **runtime servers**, proprietary scoring engines, or **private customer materials**.
 
 ## What belongs here
 
@@ -13,7 +13,7 @@ Thank you for helping improve a **public, documentation-first** standard for **A
 
 **Out of scope**
 
-- MCP server **source code or binaries** (reference the MCP project instead)  
+- Runtime server **source code or binaries** (document those in the appropriate project)  
 - Client-specific templates or confidential materials  
 - Undisclosed scoring formulas, certification exams, or trade-secret workflows  
 

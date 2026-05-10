@@ -203,4 +203,4 @@ Further reading: [`docs/build-intent-specification.md`](../docs/build-intent-spe
 
 Teams may paste sections into internal playbooks or cite them in architecture reviews. Nothing here replaces **legal counsel**, **regulated control frameworks**, or **your production enforcement stack**.
 
-For **agent-facing** consistency, pair these ideas with an **AADM MCP server**—see [`docs/mcp-quickstart.md`](../docs/mcp-quickstart.md).
+For **agent-facing** consistency, mirror this vocabulary in **your** internal playbooks and CI guardrails—see [`docs/repository-scope.md`](../docs/repository-scope.md).

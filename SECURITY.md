@@ -39,4 +39,4 @@ When you implement AADM-aligned systems:
 
 - Treat **authorization** and **data access** as application responsibilities—documentation does not replace enforcement in code.  
 - Prefer **least privilege**, **explicit boundaries**, and **reviewable automation** over implicit trust in agents or tools.  
-- If you use the **AADM MCP server**, secure it like any internal API (TLS, scoped credentials, monitoring)—**this documentation repo does not host that runtime**.
+- Secure any **agent or assistant runtimes** your organization operates like internal APIs (TLS, scoped credentials, monitoring)—**this documentation repo does not host those systems**.

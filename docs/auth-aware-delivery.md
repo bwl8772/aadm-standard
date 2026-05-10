@@ -4,7 +4,7 @@
 
 ## Why this matters for agentic systems
 
-Agents and MCP-style tools can traverse documentation, generate code, and invoke APIs rapidly. Without discipline, teams risk:
+Agents and integrated coding assistants can traverse documentation, generate code, and invoke APIs rapidly. Without discipline, teams risk:
 
 - **Privilege bleed** — generated code performs actions beyond the user’s intent  
 - **Ambient credentials** — tokens available to automation “just work” everywhere  
@@ -35,10 +35,10 @@ Align these checkpoints with your [layer map](../templates/layer-map.md): author
 
 ## Agents and tools
 
-When agents use tools (including MCP servers):
+When agents use external tools or context services:
 
 - Scope credentials **narrowly** to the agent’s task  
-- Prefer **read-only** context servers where possible  
+- Prefer **read-only** context where possible  
 - Require **human approval** for destructive or broadly scoped operations  
 - Treat tool outputs as **untrusted input** to your application unless validated  
 
@@ -51,4 +51,5 @@ When agents use tools (including MCP servers):
 
 - [Architecture principles](architecture-principles.md)  
 - [Compliance checklist](compliance-checklist.md)  
-- [MCP quickstart](mcp-quickstart.md) (generic connectivity patterns)  
+- [Repository scope](repository-scope.md)  
+- [Using the AADM MCP](mcp-quickstart.md) — hosted agent context; setup on [www.aadm.io](https://www.aadm.io)  
