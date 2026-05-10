@@ -4,8 +4,8 @@ Worked artifact chains that show how templates fit together. **Fictional scenari
 
 | Example | Description |
 |---------|-------------|
-| [aadm-mcp-in-action.md](aadm-mcp-in-action.md) | **HR App (pseudonym):** AADM MCP for Navigator-shaped readiness (`standard_brief`, `map_feature`, `plan_delivery`), then **contracts + decider + hook** alignment—dual paths, gate codes, precedence |
-| [aadm-mcp-assisted-defect-resolution.md](aadm-mcp-assisted-defect-resolution.md) | **Real World example defect:** “Save blocked” from stacked read-model degradation + client normalization gap + validate-before-normalize PATCH—and **how AADM MCP** (evidence gates, Path B, AUTH, HOLD/orchestration, continuations) helped the investigation |
-| [ai-task-assistant/](ai-task-assistant/) | MatchGrid-flavored **vague task → structured action plan** with BIS-lite, layer map, schema, and **mock** MCP validation |
+| [navigator-readiness-hr-app.md](navigator-readiness-hr-app.md) | **HR App (pseudonym):** Navigator-shaped readiness—layer map, contracts, decider, hook—dual paths, gate codes, precedence, **tests prove behavior** |
+| [evidence-first-defect-resolution.md](evidence-first-defect-resolution.md) | **Sanitized defect:** “Save blocked” from stacked read-model degradation + client normalization gap + validate-before-normalize PATCH—**Investigator-style** evidence gates and UDALI framing |
+| [ai-task-assistant/](ai-task-assistant/) | MatchGrid-flavored **vague task → structured action plan** with BIS-lite, layer map, schema, and **mock** validation record |
 
 Use with [`templates/README.md`](../templates/README.md) and [`docs/README.md`](../docs/README.md).

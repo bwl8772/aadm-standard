@@ -28,6 +28,18 @@ A **collaboration stance**, not a job title. Public buckets:
 
 See [UDALI coding personas](udali-personas.md) and [UDALI 22-layer model](udali-22-layer-model.md).
 
+## Module
+
+A **cohesive unit of implementation** with a named owner and an explicit boundary. Reviews ask what the Module promises to callers and what it must **not** reach across without an Interface.
+
+## Interface
+
+The **contract surface** between a Module and its collaborators: APIs, events, types, error shapes, or other stable agreements. Design discussions often focus **leverage** (what the Interface lets callers depend on) and **locality** (what stays internal to the Module).
+
+## Seam
+
+A place where **responsibility or trust changes**—for example wire ↔ validated shape ↔ domain ↔ persistence, or your code ↔ an external provider. Sentinel-style audits and contract traces bind evidence **per seam** so drift is visible.
+
 ## Build intent
 
 The **declared purpose and constraints** of a change before implementation churn dominates. See [Build intent specification](build-intent-specification.md).
@@ -40,35 +52,33 @@ A **lightweight technical intent** document emphasizing interfaces, boundaries, 
 
 A **stable agreement** between producers and consumers: API schemas, event payloads, tool inputs/outputs, compatibility expectations.
 
+## TRACE (contract trace spine)
+
+An **optional** practice for proving that **critical field meanings survive handoffs** (wire, DTO, domain, persistence, events, partner APIs): bound a **slice**, pick **3–5 critical fields**, walk **material seams**, and record **PASS / FAIL / DEFERRED** with **application-repository evidence** (paths, tests, CI) or an explicit gap owner.
+
+Organizations that need machine-stable labels sometimes use **`TRACE-NN`** pattern ids in internal catalogs; **this public repo** describes the **practice** only. Pin **your** catalog version when reproducibility matters.
+
+## VERT_* and HORI_* (Sentinel seam ids)
+
+Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows: **`VERT_*`** for coarse vertical hops (e.g. presentation toward platform concerns), **`HORI_*`** for horizontal kinds (schema contract, integration boundary, auth trust, external dependency, async/event). They are **not** UDALI **L1–L22** layer numbers. Exact enumerations are **organizational**—this glossary names the concepts only.
+
 ## AUTH
 
 Joint shorthand for **authentication** and **authorization**. AADM stresses separating identity establishment from permission enforcement. See [AUTH-aware delivery](auth-aware-delivery.md).
 
-## MCP (Model Context Protocol)
+## Navigator, Investigator, and Sentinel (delivery lanes)
 
-A protocol for clients to obtain **structured context** from servers (resources, prompts, tools). In AADM programs, an **AADM MCP server** commonly exposes standard material to agents **alongside** this documentation repo—not as a replacement for application security. See [MCP quickstart](mcp-quickstart.md).
+**Human-facing workflow labels** for how work should be framed—distinct from **UDALI band hats** (Unifier, Designer, Adapter, Logician, Integrator). Treat them as **three equal paths**, not “troubleshooting only”:
 
-## Navigator, Investigator, and Sentinel (MCP workflow personas)
+- **Navigator** — Planned change: scope → verify → readiness for net-new capability or material improvement.  
+- **Investigator** — Broken versus expected: investigate → diagnose → remediate, with **evidence before deep architectural guesses**.  
+- **Sentinel** — Assurance: prove **existing** alignment with declared standards **across** vertical slices and horizontal seams—not the same narrow scope as a single defect thread.
 
-**Workflow-level labels** used by many AADM MCP deployments to separate **how** agents should behave across a ticket—distinct from **UDALI band hats** (Unifier, Designer, Adapter, Logician, Integrator). Treat them as **three equal paths**, not “troubleshooting only”:
+Your application repository still owns tests, CI, and AUTH enforcement.
 
-- **Navigator** (`delivery`) — Planned change: **scope → verify → readiness** for net-new capability or material improvement to an existing feature.  
-- **Investigator** (`defect`) — Broken versus expected: **investigate → diagnose → remediate**, with evidence-gated progression before architect-style diagnosis; primary surface is typically **`debug_defect`** (exact tool names depend on your server build).  
-- **Sentinel** (`assurance`) — Prove **existing** alignment with the standard **across** vertical slices and horizontal seams—not scoped to a single feature brief **nor** a single defect thread; framing and audit-style tools, not a substitute for **`debug_defect`** on a concrete bug.
+## Skill (agent skill)
 
-External orchestrators usually load a fixed capability snapshot (often exposed as **`standard_brief`** on reference servers) including persona selection rules and structured follow-on hints. Your application repo still owns tests, CI, and AUTH enforcement.
-
-## standard_brief (reference MCP tool name)
-
-On **reference** AADM MCP servers, a **`standard_brief`**-style tool returns a **versioned snapshot** of workflows, persona blocks, orchestrator-oriented contract text, and (where published) a **`follow_on_catalog`** of stable ids for host-side branching—**not** a compliance verdict. Exact JSON shapes vary by deployment; pin server version when you rely on reproducibility.
-
-## Reference MCP tool ids
-
-The **canonical enumeration** of tool names on the reference enforcement MCP bundle lives in [MCP quickstart — Reference AADM enforcement MCP tool ids](mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids). Always reconcile internal docs with **`tools/list`** from the server you actually run.
-
-## Legacy MCP tool names
-
-Older examples or tickets may use retired identifiers. Typical replacements: **`aadm_capabilities`** → **`standard_brief`**; **`map_feature_to_layers`** → **`map_feature`**; **`udali_route_delivery`** → **`plan_delivery`**; **`aadm_troubleshooter`** → **`debug_defect`**. See the migration table in [MCP quickstart](mcp-quickstart.md#reference-aadm-enforcement-mcp-tool-ids).
+A **packaged playbook** an agent runtime loads for recurring tasks—often authored as a skill file (for example `SKILL.md` in some products). Skills benefit from **explicit delivery lanes**, links to [templates](../templates/README.md), and boundaries that match [AUTH-aware delivery](auth-aware-delivery.md). Authoring guidance: [Creating and aligning skills with the AADM standard](skills.md).
 
 ## Agent
 
@@ -88,4 +98,4 @@ An **undifferentiated lump** of unrelated responsibilities—often exacerbated w
 
 ## Adoption repo
 
-This **public documentation repository**: templates and narrative guidance for humans and tickets. **Runtime MCP distribution** is maintained separately.
+This **public documentation repository**: templates and narrative guidance for humans and tickets. **Coding agents:** hosted MCP instructions on **[www.aadm.io](https://www.aadm.io)**; endpoint **`https://mcp.aadm.io/mcp`** — [Using the AADM MCP](mcp-quickstart.md).

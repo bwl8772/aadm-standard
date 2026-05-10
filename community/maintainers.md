@@ -6,7 +6,7 @@ This file identifies **community maintainer expectations** and **contact paths**
 
 - Triage issues and pull requests constructively  
 - Uphold [`CODE_OF_CONDUCT.md`](../CODE_OF_CONDUCT.md)  
-- Keep content aligned with the repo’s scope: **public standard narrative and templates**—not MCP server implementations, customer-confidential artifacts, or unfounded legal/certification claims  
+- Keep content aligned with the repo’s scope: **public standard narrative and templates**—not proprietary runtime implementations, customer-confidential artifacts, or unfounded legal/certification claims  
 - Coordinate security reports per [`SECURITY.md`](../SECURITY.md)
 
 ## Contact

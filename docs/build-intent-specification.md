@@ -55,7 +55,7 @@ Full specifications are not always warranted. **[BIS-lite](../templates/bis-lite
 - [UDALI coding personas](udali-personas.md) layer map so reviews land on the right accountability buckets  
 - AUTH and data/schema assumptions stated plainly  
 - Known risks and **human checkpoints** for authority-bound work  
-- Optional note on **MCP validation status** when agents consume standard context from an external server—without treating MCP as a substitute for application security  
+- Optional note on **external validation status** when teams record alignment checks from internal workflows—without treating those checks as a substitute for application security  
 
 Use BIS-lite when the change spans services, touches AUTH or contracts, or involves agent-generated implementation.
 
@@ -90,4 +90,4 @@ For a worked example of adjacent artifacts, see [`examples/ai-task-assistant/`](
 - [AUTH-aware delivery](auth-aware-delivery.md)  
 - [UDALI coding personas](udali-personas.md)  
 - [UDALI 22-layer model](udali-22-layer-model.md)  
-- [MCP quickstart](mcp-quickstart.md)  
+- [Repository scope](repository-scope.md)  

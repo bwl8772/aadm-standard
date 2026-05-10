@@ -69,15 +69,15 @@ _Optional:_ attach [layer-map.md](layer-map.md) for deeper placement.
 
 <!-- Approvals or manual steps required before/after ship (e.g. elevated privilege, prod config, legal/compliance). Name role responsible. -->
 
-## 13. MCP validation status
+## 13. Standard alignment / validation notes
 
-<!-- Record whether agents verified against your org’s AADM MCP server (recommended for agent-heavy teams). High-level notes only—no secrets. MCP complements this repo; it does not replace app AUTH. -->
+<!-- Optional: record whether the team ran an internal checklist, architecture review, or pilot against this BIS. High-level notes only—no secrets. Documentation complements enforcement; it does not replace app AUTH or CI. -->
 
 | Field | Value |
 |-------|--------|
 | Applies? | <!-- Yes / No / N/A --> |
 | Status | <!-- e.g. Not started / Draft reviewed / Ready for implementation --> |
-| Notes | <!-- what was loaded or validated at a high level—no internal server details --> |
+| Notes | <!-- summary of reviews or gates—no internal credentials --> |
 
 ---
 

@@ -10,4 +10,4 @@ Short normative statements you can adopt or adapt. Full narrative lives in [`doc
 | [no-monolith-rule.md](no-monolith-rule.md) | Avoid undifferentiated lumping |
 | [udali-layer-boundaries.md](udali-layer-boundaries.md) | Layer accountability |
 
-These documents do **not** constitute legal or regulatory certification. Formal gates are defined by **your** policies and tooling (often including an **AADM MCP server** for agent-facing checks).
+These documents do **not** constitute legal or regulatory certification. Formal gates are defined by **your** policies, tests, and CI.

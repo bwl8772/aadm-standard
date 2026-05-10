@@ -1,8 +1,8 @@
 # AADM readiness checklist (public self-assessment)
 
-Use this checklist to assess whether a capability or release is **aligned with AADM delivery expectations**—intent, artifacts, layers, AUTH, AI boundaries, QA, human gates, and optional MCP validation.
+Use this checklist to assess whether a capability or release is **aligned with AADM delivery expectations**—intent, artifacts, layers, AUTH, AI boundaries, QA, human gates, and reproducible evidence.
 
-**This checklist is a public self-assessment.** It is **not** legal advice and **not** a certification. **Formal validation** may require an **AADM MCP server** deployment, **your organization’s** governance review, or regulated control evidence beyond these boxes.
+**This checklist is a public self-assessment.** It is **not** legal advice and **not** a certification. **Formal validation** requires **your organization’s** governance review, automated tests, CI gates, and regulated control evidence beyond these boxes.
 
 ---
 
@@ -123,18 +123,17 @@ Related: [Human in the loop](../standards/human-in-the-loop.md)
 
 ---
 
-## 10. MCP validation readiness
+## 10. Agent-assisted delivery consistency
 
-_Context servers support consistency; they do not replace app AUTH._
+_Assistants support drafting; they do not replace app AUTH or CI._
 
-- [ ] **Whether MCP applies** is explicit (yes / no / N/A) for this initiative  
-- [ ] If yes: leads recognize **Navigator** (delivery), **Investigator** (defects), and **Sentinel** (assurance across seams) as **distinct** MCP-facing workflows—Sentinel is **not** a substitute for defect tooling on a concrete bug thread  
-- [ ] If yes: **endpoint and scope** documented by your operator (not pasted into git)  
-- [ ] **Least privilege** for MCP credentials; read-only where sufficient  
-- [ ] **Outputs from MCP or agents** treated as drafts until reviewed against BIS and tests  
+- [ ] **Whether coding agents apply** to this initiative is explicit (yes / no / N/A)  
+- [ ] Leads recognize **Navigator** (delivery), **Investigator** (defects), and **Sentinel** (assurance across seams) as **distinct review postures**—Sentinel is **not** a substitute for defect investigation on a concrete bug thread ([Glossary](glossary.md))  
+- [ ] **Scopes and credentials** for any assistant tooling are least-privilege and **not** committed to git  
+- [ ] **Outputs from agents** treated as drafts until reviewed against BIS and **green CI**  
 - [ ] **Formal validation** (if required) scheduled or owned—not assumed from this checklist alone  
 
-Related: [MCP quickstart](mcp-quickstart.md)
+Related: [Repository scope](repository-scope.md), [AUTH-aware delivery](auth-aware-delivery.md), [Using the AADM MCP](mcp-quickstart.md) ([www.aadm.io](https://www.aadm.io))
 
 ---
 

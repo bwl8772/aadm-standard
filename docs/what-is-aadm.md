@@ -2,7 +2,7 @@
 
 **AADM** (**Agentic Authority Delivery Model**) is an **open delivery posture** for building modern software—including systems that use AI agents—without surrendering structural integrity.
 
-AADM is **not** a statute, ISO publication, or automatic “certification.” It is **documentation-first guidance** your organization may adopt, extend, or pair with tooling (such as the available **AADM MCP server**) on your own terms.
+AADM is **not** a statute, ISO publication, or automatic “certification.” It is **documentation-first guidance** your organization may adopt, extend, or pair with **your own** governance and tooling.
 
 ## The problem AADM addresses
 
@@ -24,14 +24,22 @@ AADM responds with a **small set of enforceable ideas**:
 - **Not a framework** you install to “solve security.”  
 - **Not a replacement** for language-specific best practices or platform controls.  
 - **Not a legal or regulatory certification**—this public repo offers no exams, seals of approval, or proprietary scoring engines.  
-- **Not a single vendor product** — adopters choose tooling; many teams combine **this repo** with **an MCP server** so agents load consistent standard context.
+- **Not a runtime** — this repository publishes **markdown** for humans and tickets; proof lives in **your** tests and CI ([Repository scope](repository-scope.md)).
 
-## How this repo fits an MCP server
+## Standard artifacts vs proof
 
-- **Here:** human-readable principles, templates, examples, and checklists—easy to fork, review in PRs, and attach to tickets.  
-- **MCP deployment:** agent-facing **resources, prompts, and bounded tools** so coding assistants do not rely on stale chat snippets. Reference servers typically expose **Navigator** (planned delivery), **Investigator** (defects), and **Sentinel** (assurance—not a single bug thread) as **equal** workflows; see [MCP quickstart](mcp-quickstart.md) and [Glossary](glossary.md).
+- **Here:** principles, templates, examples, and vocabulary—easy to fork, review in PRs, and attach to tickets.  
+- **In your application:** failing tests, CI gates, code review, and operational signals that **prove** behavior.  
 
-Neither replaces the other; neither replaces **your application’s** AUTH and domain enforcement.
+Shared language helps: **Module**, **Interface**, **Seam**, UDALI placement, AUTH themes, and delivery lanes (**Navigator**, **Investigator**, **Sentinel**)—see [Glossary](glossary.md).
+
+## Using the AADM MCP (hosted)
+
+For **coding agents**, AADM also exposes a **hosted MCP**: overview and **connection instructions** on **[www.aadm.io](https://www.aadm.io)**, MCP URL **`https://mcp.aadm.io/mcp`**. This repo links there rather than duplicating setup steps—see [Using the AADM MCP](mcp-quickstart.md).
+
+## Optional contract trace (TRACE)
+
+When the dominant risk is **data contract drift**, teams may add a **contract trace** slice: bound the slice, pick critical fields, walk material seams, record PASS / FAIL / DEFERRED with repo anchors. Practice is described in [Sentinel audit programs](sentinel-audit-programs.md) and the [Glossary](glossary.md).
 
 ## What you get from adopting AADM
 
@@ -48,5 +56,7 @@ Neither replaces the other; neither replaces **your application’s** AUTH and d
 - [UDALI coding personas](udali-personas.md) and [UDALI 22-layer model](udali-22-layer-model.md)  
 - [Architecture principles](architecture-principles.md)  
 - [Build intent specification](build-intent-specification.md)  
-- [MCP quickstart](mcp-quickstart.md)  
 - [Glossary](glossary.md)  
+- [Creating and aligning skills with the AADM standard](skills.md)  
+- [Using the AADM MCP](mcp-quickstart.md) · [www.aadm.io](https://www.aadm.io)  
+- [Repository scope](repository-scope.md)  

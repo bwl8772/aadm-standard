@@ -40,7 +40,7 @@ Use the [UDALI coding personas](udali-personas.md) layer map to prevent silent c
 
 ## 10. Evidence-backed claims
 
-Statements like “secure,” “correct,” or “meets our regulatory obligations” should point to **tests, reviews, or monitored signals** appropriate to the claim’s scope—without implying AADM or MCP tooling alone constitutes legal certification.
+Statements like “secure,” “correct,” or “meets our regulatory obligations” should point to **tests, reviews, or monitored signals** appropriate to the claim’s scope—without implying AADM documentation alone constitutes legal certification.
 
 ---
 

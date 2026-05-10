@@ -4,7 +4,7 @@
 
 **Users ship unclear work with less thrash.** When someone types a fuzzy goal (“fix the onboarding mess”), MatchGrid’s **AI task assistant** proposes a **structured action plan**—ordered steps, clarifying questions, and explicit assumptions—so the user can **edit, approve, and execute** instead of staring at a blank task list.
 
-This folder is a **fictional end-to-end slice** for learning **AADM** artifacts. It contains **markdown and JSON examples only**—no application code and **no MCP server runtime** (see [`mcp-validation-example.md`](mcp-validation-example.md) for **mocked** tool output).
+This folder is a **fictional end-to-end slice** for learning **AADM** artifacts. It contains **markdown and JSON examples only**—no application code and **no hosted runtime** (see [`mock-validation-record-example.md`](mock-validation-record-example.md) for **fabricated** checklist output).
 
 ### MatchGrid naming
 
@@ -19,7 +19,7 @@ The name **MatchGrid** and domain **matchgrid.co** are used here as a **plausibl
 3. **Acceptance criteria** — Observable checks in [`use-case.md`](use-case.md) and [`bis-lite.md`](bis-lite.md).  
 4. **[UDALI](../../docs/udali-personas.md) delivery mapping** — Five groupings in [`layer-map.md`](layer-map.md) (optional [`docs/udali-22-layer-model.md`](../../docs/udali-22-layer-model.md) L1–L22).  
 5. **Basic schema** — [`sample-schema.json`](sample-schema.json) for a draft action plan payload.  
-6. **Mock MCP validation** — [`mcp-validation-example.md`](mcp-validation-example.md): **fabricated** MCP-style response, clearly labeled; **the public standard repo does not ship or run an MCP server.**
+6. **Mock validation record** — [`mock-validation-record-example.md`](mock-validation-record-example.md): **fabricated** JSON, clearly labeled; **the public standard repo does not execute validation for you.**
 
 ---
 
@@ -32,7 +32,7 @@ The name **MatchGrid** and domain **matchgrid.co** are used here as a **plausibl
 | [`bis-lite.md`](bis-lite.md) | Build intent bridge (product authorize → architecture constrain → engineering execute) |
 | [`layer-map.md`](layer-map.md) | Unifier / Designer / Adapter / Logician / Integrator |
 | [`sample-schema.json`](sample-schema.json) | JSON Schema fragment for an action-plan draft |
-| [`mcp-validation-example.md`](mcp-validation-example.md) | **Mock** MCP validation record (not live tooling) |
+| [`mock-validation-record-example.md`](mock-validation-record-example.md) | **Mock** validation record (not live tooling) |
 
 ---
 
@@ -43,6 +43,6 @@ The name **MatchGrid** and domain **matchgrid.co** are used here as a **plausibl
 3. [`bis-lite.md`](bis-lite.md)  
 4. [`layer-map.md`](layer-map.md)  
 5. [`sample-schema.json`](sample-schema.json)  
-6. [`mcp-validation-example.md`](mcp-validation-example.md)  
+6. [`mock-validation-record-example.md`](mock-validation-record-example.md)  
 
 Then compare to [`templates/README.md`](../../templates/README.md) and the [`docs/` index](../../docs/README.md).
