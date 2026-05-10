@@ -2,7 +2,7 @@
 
 **AADM** (**Agentic Authority Delivery Model**) is an **open delivery posture** for building modern software—including systems that use AI agents—without surrendering structural integrity.
 
-AADM is **not** a statute, ISO publication, or automatic “certification.” It is **documentation-first guidance** your organization may adopt, extend, or pair with tooling (such as an **AADM MCP server**) on your own terms.
+AADM is **not** a statute, ISO publication, or automatic “certification.” It is **documentation-first guidance** your organization may adopt, extend, or pair with tooling (such as the available **AADM MCP server**) on your own terms.
 
 ## The problem AADM addresses
 
