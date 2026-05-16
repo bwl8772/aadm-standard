@@ -9,5 +9,6 @@ Short normative statements you can adopt or adapt. Full narrative lives in [`doc
 | [human-in-the-loop.md](human-in-the-loop.md) | Human approval for high-risk actions |
 | [no-monolith-rule.md](no-monolith-rule.md) | Avoid undifferentiated lumping |
 | [udali-layer-boundaries.md](udali-layer-boundaries.md) | Layer accountability |
+| [guidance-feedback-seam.md](guidance-feedback-seam.md) | System-status feedback as one server seam (verdict → resolver → affordance) |
 
 These documents do **not** constitute legal or regulatory certification. Formal gates are defined by **your** policies, tests, and CI.

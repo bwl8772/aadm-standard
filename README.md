@@ -151,6 +151,7 @@ See **[examples/ai-task-assistant/](examples/ai-task-assistant/)** for a concret
 | Skills & agent packs | [docs/skills.md](docs/skills.md) |
 | Core normative summary | [standards/aadm-core-principles.md](standards/aadm-core-principles.md) |
 | Human authority | [standards/human-in-the-loop.md](standards/human-in-the-loop.md) |
+| Guidance–feedback seam | [standards/guidance-feedback-seam.md](standards/guidance-feedback-seam.md) |
 | Adoption path | [community/adoption-guide.md](community/adoption-guide.md) |
 | Documentation hub | [docs/README.md](docs/README.md) |
 

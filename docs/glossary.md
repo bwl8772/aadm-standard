@@ -40,6 +40,10 @@ The **contract surface** between a Module and its collaborators: APIs, events, t
 
 A place where **responsibility or trust changes**—for example wire ↔ validated shape ↔ domain ↔ persistence, or your code ↔ an external provider. Sentinel-style audits and contract traces bind evidence **per seam** so drift is visible.
 
+## Guidance–feedback seam
+
+A **horizontal** cross-cutting pattern for workflows that tell users *what state they are in* and *what to do next* (nudges, recommendations, readiness, conflict copy, gates). Normative shape: **verdict** (server truth, Logician-owned) → **resolver** (exactly one) → **affordance** (one renderer on every surface). See [`standards/guidance-feedback-seam.md`](../standards/guidance-feedback-seam.md).
+
 ## Build intent
 
 The **declared purpose and constraints** of a change before implementation churn dominates. See [Build intent specification](build-intent-specification.md).
@@ -60,7 +64,7 @@ Organizations that need machine-stable labels sometimes use **`TRACE-NN`** patte
 
 ## VERT_* and HORI_* (Sentinel seam ids)
 
-Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows: **`VERT_*`** for coarse vertical hops (e.g. presentation toward platform concerns), **`HORI_*`** for horizontal kinds (schema contract, integration boundary, auth trust, external dependency, async/event). They are **not** UDALI **L1–L22** layer numbers. Exact enumerations are **organizational**—this glossary names the concepts only.
+Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows: **`VERT_*`** for coarse vertical hops (e.g. presentation toward platform concerns), **`HORI_*`** for horizontal kinds (schema contract, integration boundary, auth trust, external dependency, async/event, **guidance–feedback** as **`HORI_GUIDANCE_FEEDBACK`**). They are **not** UDALI **L1–L22** layer numbers. Hosted MCP implementations may expose input value **`guidance_feedback`** for the same seam. Exact enumerations are **organizational**—this glossary names the concepts only.
 
 ## AUTH
 

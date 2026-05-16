@@ -69,14 +69,14 @@ It is **architecture-and-process placement**, not full AUTH catalog conformance 
 
 - Target: service, repo, or bounded initiative name.  
 - **Vertical claim** for this pass (how deep UI→metal is asserted).  
-- **Horizontal seams** in play (schema, integration boundary, auth trust, external dependency, async/event, or none declared).  
+- **Horizontal seams** in play (schema, integration boundary, auth trust, external dependency, async/event, **guidance–feedback** when nudges/recommendations/readiness UX are in scope, or none declared).  
 - Depth: `narrow` | `standard` | `expansive` (or your org’s equivalent).
 
 ### 2.5 Deliverables (minimum)
 
 - **Scope statement** (ontology vs proof burden).  
 - **Vertical trace table** (coarse hops: presentation → app → domain → data → platform as applicable).  
-- **Horizontal seam matrix** with proof or gap per cell.  
+- **Horizontal seam matrix** with proof or gap per cell (include **`HORI_GUIDANCE_FEEDBACK`** when system-status / nudge / recommendation UX is attested — see [Guidance–feedback seam](../standards/guidance-feedback-seam.md)).  
 - **Residual risk register** (latent seams, deferred proof).  
 - **Sign-off** record (role, date, system of record).
 
