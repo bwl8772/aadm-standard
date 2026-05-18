@@ -42,6 +42,10 @@ Use the [UDALI coding personas](udali-personas.md) layer map to prevent silent c
 
 Statements like “secure,” “correct,” or “meets our regulatory obligations” should point to **tests, reviews, or monitored signals** appropriate to the claim’s scope—without implying AADM documentation alone constitutes legal certification.
 
+## 11. One seam for system-status feedback
+
+When a workflow surfaces readiness, nudges, recommendations, or gates across multiple screens, treat that as **one server-authoritative concern** (verdict → resolver → one affordance)—not per-page copy. Presentation renders; it does not decide severity. See [Guidance–feedback seam](../standards/guidance-feedback-seam.md).
+
 ---
 
 For concise normative wording your team can adopt verbatim, see [`standards/`](../standards/).
