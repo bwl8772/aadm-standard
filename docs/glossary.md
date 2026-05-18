@@ -66,9 +66,28 @@ An **optional** practice for proving that **critical field meanings survive hand
 
 Organizations that need machine-stable labels sometimes use **`TRACE-NN`** pattern ids in internal catalogs; **this public repo** describes the **practice** only. Pin **your** catalog version when reproducibility matters.
 
+## Attestation dimensions (attestation geometry)
+
+The **three inputs** that shape what a Sentinel assurance pass must prove. Together they define the geometry of the closure:
+
+- **Attestation depth** (`narrow` / `standard` / `expansive`) — how wide proof is for this pass; controls required vs latent tiers.  
+- **Vertical claim** — the deepest stack hop this attestation claims to cover (e.g. `presentation_only`, `through_domain_and_data`, `full_vertical_ui_to_metal`). Vertical = **depth**: one feature traced through all layers.  
+- **Horizontal seams** — which cross-cutting boundary types are explicitly in play (e.g. `schema_contract`, `auth_trust_boundary`, `async_or_event`, `guidance_feedback`). Horizontal = **breadth**: one seam type checked across all features that cross it.
+
+The hosted MCP tool **`sentinel_closure`** accepts these three dimensions and returns deterministic **required / additional / latent** seam tiers. See also: VERT_* and HORI_* (below), attestation closure.
+
+## Attestation closure
+
+The **deterministic output** of supplying attestation dimensions to `sentinel_closure`: a list of seams (vertical, horizontal, meta) each classified as **required**, **additional**, or **latent** — with proof hints per seam. The closure tells you *what evidence you must bind* before attestation is defensible.
+
 ## VERT_* and HORI_* (Sentinel seam ids)
 
-Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows: **`VERT_*`** for coarse vertical hops (e.g. presentation toward platform concerns), **`HORI_*`** for horizontal kinds (schema contract, integration boundary, auth trust, external dependency, async/event, **guidance–feedback** as **`HORI_GUIDANCE_FEEDBACK`**). They are **not** UDALI **L1–L22** layer numbers. Hosted MCP implementations may expose input value **`guidance_feedback`** for the same seam. Exact enumerations are **organizational**—this glossary names the concepts only.
+Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows — the finding-level output of an attestation closure:
+
+- **`VERT_*`** — coarse vertical hops: `VERT_UI`, `VERT_APP`, `VERT_DOMAIN`, `VERT_DATA`, `VERT_PLATFORM`.  
+- **`HORI_*`** — horizontal boundary kinds: `HORI_SCHEMA`, `HORI_INTEGRATION`, `HORI_AUTH`, `HORI_EXTERNAL`, `HORI_ASYNC`, `HORI_GUIDANCE_FEEDBACK`.
+
+They are **not** UDALI **L1–L22** layer numbers. Hosted MCP implementations expose the corresponding input values on `sentinel_closure`. Exact enumerations are **organizational** — this glossary names the concepts only.
 
 ## AUTH
 
