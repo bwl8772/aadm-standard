@@ -40,6 +40,10 @@ The **contract surface** between a Module and its collaborators: APIs, events, t
 
 A place where **responsibility or trust changes**—for example wire ↔ validated shape ↔ domain ↔ persistence, or your code ↔ an external provider. Sentinel-style audits and contract traces bind evidence **per seam** so drift is visible.
 
+## SEAM-NN (handoff archetype catalog)
+
+Stable ids (**SEAM-00** … **SEAM-15** in the hosted MCP bundle) for **which crossing types** must appear in a trace or assurance pass—persistent columns, wire ingress, normalization at dispatch, async parity, and similar. **SEAM** is scope; **TRACE-NN** is drift class; **AUTH-NN** is obligation; **VERT_* / HORI_*** is attestation geometry. Policy overview: [`standards/seam-catalog.md`](../standards/seam-catalog.md).
+
 ## Build intent
 
 The **declared purpose and constraints** of a change before implementation churn dominates. See [Build intent specification](build-intent-specification.md).

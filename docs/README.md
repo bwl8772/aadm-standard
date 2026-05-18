@@ -13,7 +13,7 @@ Start at the [project README](../README.md) for positioning. **Agents:** hosted 
 | [build-intent-specification.md](build-intent-specification.md) | PRD / architecture / BIS bridge |
 | [auth-aware-delivery.md](auth-aware-delivery.md) | AUTH discipline with agents |
 | [sentinel-audit-programs.md](sentinel-audit-programs.md) | Sentinel: **UDALI audit** (placement / [personas](udali-personas.md)) vs **AADM audit** — scope, stages, deliverables, evidence binding |
-| [glossary.md](glossary.md) | Definitions — UDALI, Module / Interface / Seam, delivery lanes, TRACE |
+| [glossary.md](glossary.md) | Definitions — UDALI, Module / Interface / Seam, SEAM-NN, delivery lanes, TRACE |
 
 ## Hosted MCP (coding agents)
 
