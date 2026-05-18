@@ -37,9 +37,11 @@ Shared language helps: **Module**, **Interface**, **Seam**, UDALI placement, AUT
 
 For **coding agents**, AADM also exposes a **hosted MCP**: overview and **connection instructions** on **[www.aadm.io](https://www.aadm.io)**, MCP URL **`https://mcp.aadm.io/mcp`**. This repo links there rather than duplicating setup steps—see [Using the AADM MCP](mcp-quickstart.md).
 
-## Optional contract trace (TRACE)
+## Optional contract trace (TRACE) and SEAM scope
 
 When the dominant risk is **data contract drift**, teams may add a **contract trace** slice: bound the slice, pick critical fields, walk material seams, record PASS / FAIL / DEFERRED with repo anchors. Practice is described in [Sentinel audit programs](sentinel-audit-programs.md) and the [Glossary](glossary.md).
+
+Use **SEAM-NN** archetypes ([`standards/seam-catalog.md`](../standards/seam-catalog.md)) to declare **which crossing types** are in scope—including normalization and dispatch paths that never appear as database columns. Hosted MCP subscribers load archetypes with **`fetch_seam`** ([MCP quickstart](mcp-quickstart.md)).
 
 ## What you get from adopting AADM
 

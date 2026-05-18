@@ -44,6 +44,10 @@ A place where **responsibility or trust changes**—for example wire ↔ validat
 
 A **horizontal** cross-cutting pattern for workflows that tell users *what state they are in* and *what to do next* (nudges, recommendations, readiness, conflict copy, gates). Normative shape: **verdict** (server truth, Logician-owned) → **resolver** (exactly one) → **affordance** (one renderer on every surface). See [`standards/guidance-feedback-seam.md`](../standards/guidance-feedback-seam.md).
 
+## SEAM-NN (handoff archetype catalog)
+
+Stable ids (**SEAM-00** … **SEAM-15** in the hosted MCP bundle) for **which crossing types** must appear in a trace or assurance pass—persistent columns, wire ingress, normalization at dispatch, async parity, and similar. **SEAM** is scope; **TRACE-NN** is drift class; **AUTH-NN** is obligation; **VERT_* / HORI_*** is attestation geometry. Policy overview: [`standards/seam-catalog.md`](../standards/seam-catalog.md).
+
 ## Build intent
 
 The **declared purpose and constraints** of a change before implementation churn dominates. See [Build intent specification](build-intent-specification.md).

@@ -21,6 +21,19 @@ The markdown in **this repository** is the portable **AADM Standard**—for huma
 - **Pass/fail** for behavior stays in **your** tests and pipelines ([Repository scope](repository-scope.md)).  
 - Protect MCP credentials like any internal API: **least privilege**, **no secrets in git**.
 
+## Citation namespaces (assurance & trace)
+
+When agents or auditors cite findings, keep families distinct:
+
+| Prefix | Use for |
+|--------|---------|
+| **AUTH-NN** | Governance obligation |
+| **SEAM-NN** | Handoff archetype in scope ([`standards/seam-catalog.md`](../standards/seam-catalog.md); MCP: **`fetch_seam`**) |
+| **TRACE-NN** | Contract drift pattern |
+| **VERT_* / HORI_*** | Sentinel attestation depth / boundary kind |
+
+Persistent column traces alone miss in-process normalization and dispatch—include **SEAM-04** / **SEAM-05** when agent or recipe ids are synthesized without a database anchor.
+
 ---
 
 ## Related
