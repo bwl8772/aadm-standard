@@ -44,6 +44,18 @@ A place where **responsibility or trust changes**—for example wire ↔ validat
 
 A **horizontal** cross-cutting pattern for workflows that tell users *what state they are in* and *what to do next* (nudges, recommendations, readiness, conflict copy, gates). Normative shape: **verdict** (server truth, Logician-owned) → **resolver** (exactly one) → **affordance** (one renderer on every surface). See [`standards/guidance-feedback-seam.md`](../standards/guidance-feedback-seam.md).
 
+## Signal Stack
+
+A **vertical discipline** for products with multiple UI surfaces: the same **twelve stack layers** (persistence → schema → contracts → … → verdict → mapper → UI → reveal) are located for **every** named page or editor. The program is **Signal Stack**; one surface’s filled checklist is a **SURF** column. See [`standards/signal-stack-compliance.md`](../standards/signal-stack-compliance.md). Complements the guidance–feedback seam (SIGL-08–12) and Sentinel assurance; not a substitute for AUTH or SEAM catalogs.
+
+## SIGL-NN (Signal Stack layer row)
+
+Stable ids **SIGL-01** through **SIGL-12** for **stack layer rows** in Signal Stack audits (database column through visibility/reveal). **SIGL-08** is stack row 8 (verdict producer), not “UDALI layer 8”—cite **SIGL** and **L*** together when useful. Template: [`templates/surf-checklist.md`](../templates/surf-checklist.md).
+
+## SURF (surface compliance column)
+
+**One named UI surface’s** Signal Stack attestation: twelve SIGL cells each with repository proof, **gap**, or **n/a**. Optional finding tag: **`SURF:<SurfaceName>`**. Proof lives in **your application repository**; public standard text does not scan repos or score compliance.
+
 ## SEAM-NN (handoff archetype catalog)
 
 Stable ids (**SEAM-00** … **SEAM-15** in the hosted MCP bundle) for **which crossing types** must appear in a trace or assurance pass—persistent columns, wire ingress, normalization at dispatch, async parity, and similar. **SEAM** is scope; **TRACE-NN** is drift class; **AUTH-NN** is obligation; **VERT_* / HORI_*** is attestation geometry. Policy overview: [`standards/seam-catalog.md`](../standards/seam-catalog.md).

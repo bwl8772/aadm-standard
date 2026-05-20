@@ -10,5 +10,6 @@ Starter blanks for product and engineering alignment. Pair with [`docs/build-int
 | [bis-lite.md](bis-lite.md) | Shared build intent for engineering |
 | [acceptance-criteria.md](acceptance-criteria.md) | Observable “done” checks |
 | [layer-map.md](layer-map.md) | Unifier → Integrator placement |
+| [surf-checklist.md](surf-checklist.md) | Signal Stack — twelve SIGL rows for one UI surface ([standard](../standards/signal-stack-compliance.md)) |
 
 This folder stays **static markdown** for humans and tickets. Teams may mirror excerpts into internal wikis or gate them with CI; see [`docs/repository-scope.md`](../docs/repository-scope.md). When you encode similar guidance as **agent skills**, align triggers and outputs with templates and lanes—see [`docs/skills.md`](../docs/skills.md).
