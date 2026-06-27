@@ -54,8 +54,9 @@ _No silent skips across accountability groupings._
 - [ ] **Cross-layer risks** (AUTH leakage, schema drift, missing audits) called out  
 - [ ] **Evidence plan** sketched for touched groupings  
 - [ ] **System-status / nudge / recommendation UX** (if any): one verdict producer, one resolver, one affordance — not per-screen copy maps ([Guidance–feedback seam](../standards/guidance-feedback-seam.md))
+- [ ] **Multiple UI surfaces** (if any): each in-scope surface has a complete **SURF** column (twelve **SIGL** rows with proof, gap, or n/a) — [Signal Stack compliance](../standards/signal-stack-compliance.md), [`templates/surf-checklist.md`](../templates/surf-checklist.md)
 
-Related: [UDALI coding personas](udali-personas.md), [UDALI 22-layer model](udali-22-layer-model.md), [Layer map template](../templates/layer-map.md), [UDALI layer boundaries](../standards/udali-layer-boundaries.md), [Guidance–feedback seam](../standards/guidance-feedback-seam.md)
+Related: [UDALI coding personas](udali-personas.md), [UDALI 22-layer model](udali-22-layer-model.md), [Layer map template](../templates/layer-map.md), [UDALI layer boundaries](../standards/udali-layer-boundaries.md), [Guidance–feedback seam](../standards/guidance-feedback-seam.md), [Signal Stack compliance](../standards/signal-stack-compliance.md)
 
 ---
 

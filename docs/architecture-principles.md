@@ -46,6 +46,10 @@ Statements like “secure,” “correct,” or “meets our regulatory obligati
 
 When a workflow surfaces readiness, nudges, recommendations, or gates across multiple screens, treat that as **one server-authoritative concern** (verdict → resolver → one affordance)—not per-page copy. Presentation renders; it does not decide severity. See [Guidance–feedback seam](../standards/guidance-feedback-seam.md).
 
+## 12. Signal Stack per UI surface
+
+When a product has **many workflow surfaces** (pages, editors, steps), each surface needs a **full vertical column**—persistence through reveal—not only a status banner. Use **Signal Stack**: twelve **SIGL** rows per **SURF** (surface), with proof or explicit **gap** / **n/a**, and **row parity** across surfaces at the same SIGL layer. See [Signal Stack compliance](../standards/signal-stack-compliance.md) and [`templates/surf-checklist.md`](../templates/surf-checklist.md).
+
 ---
 
 For concise normative wording your team can adopt verbatim, see [`standards/`](../standards/).

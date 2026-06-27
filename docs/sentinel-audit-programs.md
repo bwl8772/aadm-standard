@@ -84,6 +84,19 @@ It is **architecture-and-process placement**, not full AUTH catalog conformance 
 
 Teams often pair this pass with internal checklists derived from [layer map](../templates/layer-map.md), [architecture principles](architecture-principles.md), and AUTH placement summaries—**heuristic** guides, not substitutes for repo proof.
 
+### 2.7 Optional slice — **Signal Stack** / authoring surfaces
+
+When the scoped product has **multiple UI surfaces** that share workflow status, nudges, or gates, add a **SURF** (surface) pass:
+
+| Requirement | Detail |
+|-------------|--------|
+| **Program** | [Signal Stack compliance](../standards/signal-stack-compliance.md) — twelve **SIGL** rows per named surface |
+| **Column** | Each in-scope surface has a completed SURF checklist ([`templates/surf-checklist.md`](../templates/surf-checklist.md)) or equivalent |
+| **Parity** | Same SIGL row across surfaces—especially verdict producer (SIGL-08) and mapper (SIGL-10)—or explicit **gap** register |
+| **Horizontal seam** | Include **`HORI_GUIDANCE_FEEDBACK`** / [Guidance–feedback seam](../standards/guidance-feedback-seam.md) when status UX is attested |
+
+This slice is **additive** to the vertical trace and horizontal seam matrix in §2.5; it does not replace them.
+
 ---
 
 ## 3. Program B — Full **AADM audit**

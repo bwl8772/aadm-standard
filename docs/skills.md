@@ -59,6 +59,7 @@ Use this table when naming skills or writing “when to use” sections. Map **y
 | **Spec / PRD bridge** | Navigator | [PRD-lite](../templates/prd-lite.md), [use case](../templates/use-case.md). |
 | **Investigate defect** | Investigator | Evidence-first patterns in [examples/evidence-first-defect-resolution.md](../examples/evidence-first-defect-resolution.md), [AUTH-aware delivery](auth-aware-delivery.md) for privilege themes. |
 | **Assurance / audit** | Sentinel | [Sentinel audit programs](sentinel-audit-programs.md), [Compliance checklist](compliance-checklist.md). |
+| **Multi-surface / per-page stack** | Sentinel (often Navigator for new surfaces) | [Signal Stack compliance](../standards/signal-stack-compliance.md), [`templates/surf-checklist.md`](../templates/surf-checklist.md). |
 | **Architecture / boundaries** | Often Navigator (sometimes Sentinel) | [Architecture principles](architecture-principles.md), [Glossary — Module, Interface, Seam](glossary.md). |
 | **Test discipline / acceptance** | Navigator (closure) | [Acceptance criteria](../templates/acceptance-criteria.md), QA section of [Compliance checklist](compliance-checklist.md). |
 

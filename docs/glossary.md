@@ -44,6 +44,18 @@ A place where **responsibility or trust changes**—for example wire ↔ validat
 
 A **horizontal** cross-cutting pattern for workflows that tell users *what state they are in* and *what to do next* (nudges, recommendations, readiness, conflict copy, gates). Normative shape: **verdict** (server truth, Logician-owned) → **resolver** (exactly one) → **affordance** (one renderer on every surface). See [`standards/guidance-feedback-seam.md`](../standards/guidance-feedback-seam.md).
 
+## Signal Stack
+
+A **vertical discipline** for products with multiple UI surfaces: the same **twelve stack layers** (persistence → schema → contracts → … → verdict → mapper → UI → reveal) are located for **every** named page or editor. The program is **Signal Stack**; one surface’s filled checklist is a **SURF** column. See [`standards/signal-stack-compliance.md`](../standards/signal-stack-compliance.md). Complements the guidance–feedback seam (SIGL-08–12) and Sentinel assurance; not a substitute for AUTH or SEAM catalogs.
+
+## SIGL-NN (Signal Stack layer row)
+
+Stable ids **SIGL-01** through **SIGL-12** for **stack layer rows** in Signal Stack audits (database column through visibility/reveal). **SIGL-08** is stack row 8 (verdict producer), not “UDALI layer 8”—cite **SIGL** and **L*** together when useful. Template: [`templates/surf-checklist.md`](../templates/surf-checklist.md).
+
+## SURF (surface compliance column)
+
+**One named UI surface’s** Signal Stack attestation: twelve SIGL cells each with repository proof, **gap**, or **n/a**. Optional finding tag: **`SURF:<SurfaceName>`**. Proof lives in **your application repository**; public standard text does not scan repos or score compliance.
+
 ## SEAM-NN (handoff archetype catalog)
 
 Stable ids (**SEAM-00** … **SEAM-15** in the hosted MCP bundle) for **which crossing types** must appear in a trace or assurance pass—persistent columns, wire ingress, normalization at dispatch, async parity, and similar. **SEAM** is scope; **TRACE-NN** is drift class; **AUTH-NN** is obligation; **VERT_* / HORI_*** is attestation geometry. Policy overview: [`standards/seam-catalog.md`](../standards/seam-catalog.md).
@@ -66,9 +78,28 @@ An **optional** practice for proving that **critical field meanings survive hand
 
 Organizations that need machine-stable labels sometimes use **`TRACE-NN`** pattern ids in internal catalogs; **this public repo** describes the **practice** only. Pin **your** catalog version when reproducibility matters.
 
+## Attestation dimensions (attestation geometry)
+
+The **three inputs** that shape what a Sentinel assurance pass must prove. Together they define the geometry of the closure:
+
+- **Attestation depth** (`narrow` / `standard` / `expansive`) — how wide proof is for this pass; controls required vs latent tiers.  
+- **Vertical claim** — the deepest stack hop this attestation claims to cover (e.g. `presentation_only`, `through_domain_and_data`, `full_vertical_ui_to_metal`). Vertical = **depth**: one feature traced through all layers.  
+- **Horizontal seams** — which cross-cutting boundary types are explicitly in play (e.g. `schema_contract`, `auth_trust_boundary`, `async_or_event`, `guidance_feedback`). Horizontal = **breadth**: one seam type checked across all features that cross it.
+
+The hosted MCP tool **`sentinel_closure`** accepts these three dimensions and returns deterministic **required / additional / latent** seam tiers. See also: VERT_* and HORI_* (below), attestation closure.
+
+## Attestation closure
+
+The **deterministic output** of supplying attestation dimensions to `sentinel_closure`: a list of seams (vertical, horizontal, meta) each classified as **required**, **additional**, or **latent** — with proof hints per seam. The closure tells you *what evidence you must bind* before attestation is defensible.
+
 ## VERT_* and HORI_* (Sentinel seam ids)
 
-Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows: **`VERT_*`** for coarse vertical hops (e.g. presentation toward platform concerns), **`HORI_*`** for horizontal kinds (schema contract, integration boundary, auth trust, external dependency, async/event, **guidance–feedback** as **`HORI_GUIDANCE_FEEDBACK`**). They are **not** UDALI **L1–L22** layer numbers. Hosted MCP implementations may expose input value **`guidance_feedback`** for the same seam. Exact enumerations are **organizational**—this glossary names the concepts only.
+Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows — the finding-level output of an attestation closure:
+
+- **`VERT_*`** — coarse vertical hops: `VERT_UI`, `VERT_APP`, `VERT_DOMAIN`, `VERT_DATA`, `VERT_PLATFORM`.  
+- **`HORI_*`** — horizontal boundary kinds: `HORI_SCHEMA`, `HORI_INTEGRATION`, `HORI_AUTH`, `HORI_EXTERNAL`, `HORI_ASYNC`, `HORI_GUIDANCE_FEEDBACK`.
+
+They are **not** UDALI **L1–L22** layer numbers. Hosted MCP implementations expose the corresponding input values on `sentinel_closure`. Exact enumerations are **organizational** — this glossary names the concepts only.
 
 ## AUTH
 
@@ -106,4 +137,60 @@ An **undifferentiated lump** of unrelated responsibilities—often exacerbated w
 
 ## Adoption repo
 
-This **public documentation repository**: templates and narrative guidance for humans and tickets. **Coding agents:** hosted MCP instructions on **[www.aadm.io](https://www.aadm.io)**; endpoint **`https://mcp.aadm.io/mcp`** — [Using the AADM MCP](mcp-quickstart.md).
+This **public documentation repository**: templates and narrative guidance for humans and tickets. **Coding agents:** the standard is self-contained — see [AI coder playbook](ai-coder-playbook.md). The hosted MCP is an optional convenience — see [Using the AADM MCP](mcp-quickstart.md); endpoint `https://mcp.aadm.io/mcp`.
+
+---
+
+## Catalogs (numbered, append-only)
+
+### AUTH-NN
+
+A numbered **governance control** in the [AUTH catalog](../standards/auth-catalog.md). 48 controls grouped into 19 authority domains, AUTH-00 through AUTH-47. Names a single obligation that must be respected when designing, building, or auditing software. Implementations may not silently re-number or repurpose these.
+
+### SEAM-NN
+
+A numbered **auditable handoff archetype** in the [SEAM catalog](../standards/seam-catalog.md). 16 archetypes, SEAM-00 through SEAM-15. Names *which crossings* must be in scope when tracing data or auditing alignment. Each SEAM carries an anchor lifecycle (Persistent / Durable contract / Process-scoped / Transient composed / Ephemeral).
+
+### TRACE-NN
+
+A numbered **contract-drift pattern class** in the [TRACE catalog](../standards/trace-catalog.md). 12 patterns, TRACE-01 through TRACE-12. Names *what kind of drift* failed at a handoff. Combine with SEAM-NN (scope) and AUTH-NN (obligation) in findings.
+
+### HANDOFF-NN
+
+A numbered **cross-layer defect class** in the [HANDOFF catalog](../standards/handoff-patterns.md). Six pattern classes, HANDOFF-01 through HANDOFF-06. Names multi-step defects (write/invalidate parity, write-path bypass, shadow types, effect-before-persist, parallel purge, multi-step atomicity).
+
+---
+
+## Governance and conformance
+
+### Governance charter
+
+[`GOVERNANCE.md`](../GOVERNANCE.md). Declares the **order of precedence**: statute → adopter standards → this repository → implementations → generated agent output. Establishes the principle that *the standard is the source of truth* and *implementations enforce it*, not the reverse.
+
+### Conformance contract
+
+[`CONFORMANCE.md`](../CONFORMANCE.md). Enumerates the **testable obligations** that any tool using the AADM name must meet — identifier preservation, workflow shape, verdict boundary, evidence discipline, AI-coder hard-stops, documentation transparency.
+
+### Implementation
+
+Any software that loads, surfaces, or enforces AADM content — the hosted MCP, agent skill bundles, IDE plugins, in-house linters, audit tooling. Conformance with the standard is a contractual obligation for using the AADM name.
+
+### Adopter
+
+An engineering organization using AADM in its own delivery process. Free to extend locally; extensions are not "AADM" unless contributed back.
+
+---
+
+## Lane vocabulary additions
+
+### Path A / Path B (Investigator)
+
+Investigator Stage 1 is **Path A** (recon-only — gather evidence, do not edit code, do not classify root cause). Stage 2 moves to **Path B** (diagnose and classify) only after qualifying evidence is available. Skipping Path A is non-conformant.
+
+### Attestation closure
+
+The deterministic output of supplying attestation dimensions to a Sentinel pass: required, additional, and latent seams, derived from `attestation_depth`, `vertical_claim`, and the declared `horizontal_seams`. See [Sentinel program](../standards/sentinel-program.md).
+
+### Exit kind
+
+How a Sentinel pass closes: `stay_assurance` | `open_investigator` | `open_navigator` | `clarify_intent`.
