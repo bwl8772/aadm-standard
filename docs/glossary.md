@@ -137,4 +137,60 @@ An **undifferentiated lump** of unrelated responsibilities—often exacerbated w
 
 ## Adoption repo
 
-This **public documentation repository**: templates and narrative guidance for humans and tickets. **Coding agents:** hosted MCP instructions on **[www.aadm.io](https://www.aadm.io)**; endpoint **`https://mcp.aadm.io/mcp`** — [Using the AADM MCP](mcp-quickstart.md).
+This **public documentation repository**: templates and narrative guidance for humans and tickets. **Coding agents:** the standard is self-contained — see [AI coder playbook](ai-coder-playbook.md). The hosted MCP is an optional convenience — see [Using the AADM MCP](mcp-quickstart.md); endpoint `https://mcp.aadm.io/mcp`.
+
+---
+
+## Catalogs (numbered, append-only)
+
+### AUTH-NN
+
+A numbered **governance control** in the [AUTH catalog](../standards/auth-catalog.md). 48 controls grouped into 19 authority domains, AUTH-00 through AUTH-47. Names a single obligation that must be respected when designing, building, or auditing software. Implementations may not silently re-number or repurpose these.
+
+### SEAM-NN
+
+A numbered **auditable handoff archetype** in the [SEAM catalog](../standards/seam-catalog.md). 16 archetypes, SEAM-00 through SEAM-15. Names *which crossings* must be in scope when tracing data or auditing alignment. Each SEAM carries an anchor lifecycle (Persistent / Durable contract / Process-scoped / Transient composed / Ephemeral).
+
+### TRACE-NN
+
+A numbered **contract-drift pattern class** in the [TRACE catalog](../standards/trace-catalog.md). 12 patterns, TRACE-01 through TRACE-12. Names *what kind of drift* failed at a handoff. Combine with SEAM-NN (scope) and AUTH-NN (obligation) in findings.
+
+### HANDOFF-NN
+
+A numbered **cross-layer defect class** in the [HANDOFF catalog](../standards/handoff-patterns.md). Six pattern classes, HANDOFF-01 through HANDOFF-06. Names multi-step defects (write/invalidate parity, write-path bypass, shadow types, effect-before-persist, parallel purge, multi-step atomicity).
+
+---
+
+## Governance and conformance
+
+### Governance charter
+
+[`GOVERNANCE.md`](../GOVERNANCE.md). Declares the **order of precedence**: statute → adopter standards → this repository → implementations → generated agent output. Establishes the principle that *the standard is the source of truth* and *implementations enforce it*, not the reverse.
+
+### Conformance contract
+
+[`CONFORMANCE.md`](../CONFORMANCE.md). Enumerates the **testable obligations** that any tool using the AADM name must meet — identifier preservation, workflow shape, verdict boundary, evidence discipline, AI-coder hard-stops, documentation transparency.
+
+### Implementation
+
+Any software that loads, surfaces, or enforces AADM content — the hosted MCP, agent skill bundles, IDE plugins, in-house linters, audit tooling. Conformance with the standard is a contractual obligation for using the AADM name.
+
+### Adopter
+
+An engineering organization using AADM in its own delivery process. Free to extend locally; extensions are not "AADM" unless contributed back.
+
+---
+
+## Lane vocabulary additions
+
+### Path A / Path B (Investigator)
+
+Investigator Stage 1 is **Path A** (recon-only — gather evidence, do not edit code, do not classify root cause). Stage 2 moves to **Path B** (diagnose and classify) only after qualifying evidence is available. Skipping Path A is non-conformant.
+
+### Attestation closure
+
+The deterministic output of supplying attestation dimensions to a Sentinel pass: required, additional, and latent seams, derived from `attestation_depth`, `vertical_claim`, and the declared `horizontal_seams`. See [Sentinel program](../standards/sentinel-program.md).
+
+### Exit kind
+
+How a Sentinel pass closes: `stay_assurance` | `open_investigator` | `open_navigator` | `clarify_intent`.
