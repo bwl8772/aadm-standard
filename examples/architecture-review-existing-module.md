@@ -47,7 +47,7 @@ Without AADM, "architecture review" means reading code until you feel confident 
 | Horizontal seam | Challenge question | Finding |
 |-----------------|-------------------|---------|
 | `HORI_SCHEMA` | Is the payment intent DTO shape tested at the boundary (contract test)? | No contract test. Shape is validated by Zod at the route, but the order service has its own copy of the type. **Risk: desync between producer and consumer.** |
-| `HORI_EXTERNAL` | Is the payment provider adapter isolated? Can you swap providers without touching domain logic? | Adapter pattern exists (`StripeAdapter`, `MockAdapter`). Provider-specific error mapping is clean. **Strong.** |
+| `HORI_EXT` | Is the payment provider adapter isolated? Can you swap providers without touching domain logic? | Adapter pattern exists (`StripeAdapter`, `MockAdapter`). Provider-specific error mapping is clean. **Strong.** |
 | `HORI_ASYNC` | Are payment events (completed/failed) guaranteed delivered? What happens if the event bus drops one? | Events published after DB commit (good). No outbox pattern — if publish fails after commit, event is lost. **Risk: eventual consistency gap.** |
 | `HORI_AUTH` | Who can create a payment intent? Can a user trigger payment for another user's order? | Route checks `user_id === order.user_id`. No row-level policy at the DB layer. **Adequate for now, fragile if new callers added.** |
 

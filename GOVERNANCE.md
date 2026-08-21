@@ -35,7 +35,7 @@ When sources disagree, this is the order in which the conflict is resolved:
 
 Any tool that claims AADM conformance — including the hosted MCP — **MUST**:
 
-1. **Preserve identifier semantics.** `AUTH-21`, `SEAM-04`, `TRACE-03`, `VERT_APP`, `HORI_SCHEMA`, `SIGL-08`, `L13` mean what this repository says they mean. Implementations may add catalog entries but must not silently re-number, re-letter, or repurpose existing ones.
+1. **Preserve identifier semantics.** `AUTH-21`, `SEAM-04`, `TRACE-03`, `HANDOFF-04`, `AGENT-05`, `VERT_APP`, `HORI_SCHEMA`, `SIGL-08`, `L13` mean what this repository says they mean. Implementations may add catalog entries but must not silently re-number, re-letter, or repurpose existing ones.
 2. **Preserve workflow shape.** Navigator has three stages (Scope → Verify → Readiness). Investigator has three stages (Investigate & evidence → Diagnose & classify → Scoped remediation). Sentinel has three stages (Scope & frame → Trace & bind evidence → Attest readiness). Each stage carries a human gate. An implementation that collapses these is non-conformant.
 3. **Preserve the boundary between framing and verdict.** The standard frames how work should be shaped, classified, and reviewed. It does not score adopter repositories. An implementation that emits a "pass/fail" or "compliance score" derived purely from MCP-side data (without the adopter's own tests and CI) is non-conformant.
 4. **Preserve evidence discipline.** When an implementation returns guidance for a defect lane, it must require evidence (failing test, error, repro, anchors) before classifying root cause. Open-ended "what could be wrong?" answers for defect-shaped narratives are non-conformant.
@@ -64,7 +64,7 @@ Changes to the standard follow a documented process:
 3. **Ratify** by merge to `main`. The merged version is the standard; prior versions are accessible by git tag.
 4. **Echo.** Implementations have a reasonable window (default: 30 days from a tagged release) to mirror the change. Implementations should declare which standard version they enforce.
 
-Numeric identifiers (`AUTH-NN`, `SEAM-NN`, `TRACE-NN`, `L`-numbers, `SIGL-NN`) are **append-only**. They are not re-used. A retired control is marked `RETIRED` and kept in the catalog.
+Numeric identifiers (`AUTH-NN`, `SEAM-NN`, `TRACE-NN`, `HANDOFF-NN`, `AGENT-NN`, `L`-numbers, `SIGL-NN`) are **append-only**. They are not re-used. A retired control is marked `RETIRED` and kept in the catalog.
 
 Identifier *titles* and *obligation text* may be revised. Adopters who pin to a version should reference the git tag.
 

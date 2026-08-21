@@ -8,6 +8,8 @@
 
 TRACE does **not** replace AUTH or placement. It complements them: a single finding may cite an AUTH obligation, a SEAM archetype, *and* a TRACE pattern class.
 
+**`TRACE-NN` is not the only "trace" in this standard.** It is a contract-drift pattern class. Sentinel stage 2 is *trace & bind evidence*, an assurance activity. [AUTH-30](auth-catalog.md#auth-30--traceability-authority) is correlation-id traceability across service boundaries. And the record of one agent execution is an **AgentRun**, deliberately not called a trace ([`agent-run-record.md`](agent-run-record.md)). Findings must name which is meant — see [Glossary — the four senses of "trace"](../docs/glossary.md#the-four-senses-of-trace--do-not-conflate).
+
 ---
 
 ## How a TRACE pass works
@@ -40,6 +42,9 @@ Done means: every material seam row is proven, failed with evidence, or explicit
 | **TRACE-10** | Event/API parity | Async payload doesn't match documented API or domain event schema. | Schema registry, contract tests. |
 | **TRACE-11** | Computed field inconsistency | Derived fields recomputed differently across paths (read vs write, CQRS). | Both code paths with identical-input fixture. |
 | **TRACE-12** | Observation/select leakage | Fields exposed in logs/metrics/errors that policy forbids. | Redaction layer, error payloads, observability config. |
+| **TRACE-13** | Silent field discard | The request succeeds — 2xx, no thrown error — but a required fact is omitted, stripped, or never mapped. Nothing fails; the field is simply gone. | Success-payload field sets at each handoff; mapper, projection, and serializer sites that drop unknown or empty values. |
+
+**TRACE-13 against its neighbours.** TRACE-04 is silent *type* coercion, where the value survives but changes shape. TRACE-08 is round-trip asymmetry, usually found with fixtures. TRACE-13 is the everyday "it saved and returned success, but the field disappeared" class. Its proof is **field survival across seams**, not a failed response row — which means an investigator who starts by looking for errors will not find it.
 
 ---
 
@@ -92,6 +97,6 @@ Open gaps / owners:
 
 ## Non-goals
 
-- TRACE is not a second AUTH catalog; the 12 pattern ids stay stable and small.
+- TRACE is not a second AUTH catalog; the 13 pattern ids stay stable and small.
 - TRACE does not assign compliance scores; proof remains repository evidence.
 - TRACE does not substitute for AUTH-24 (Verification) — patterns name failure shapes; tests prove pass/fail.

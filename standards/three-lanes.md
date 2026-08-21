@@ -138,9 +138,14 @@ Each stage carries a **human gate**.
 **Outputs required:**
 
 - Named root cause anchored to code or contract.
-- Classification — which AUTH obligation, SEAM crossing, or TRACE pattern best names the defect class.
+- Classification — which AUTH obligation, SEAM crossing, TRACE pattern, HANDOFF class, or AGENT failure mode best names the defect class.
+- **Likely layer** — the UDALI band and, where useful, the `L1`–`L22` slice that *owns* the defect. This is frequently not the layer where the symptom appeared: a wrong value on screen is usually owned at the mapper or verdict producer, not at the component that rendered it.
+- **Fix location** — the specific module or interface the change belongs in, stated separately from the layer. Naming it here is what prevents the fix landing wherever the symptom was first noticed, which is how cross-layer defects get patched at the surface and recur.
+- **Suggested approach** — the intended shape of the change in one or two sentences, sufficient for a human to agree or redirect *before* code is written.
 - Bounded fix scope — what files, modules, or behaviors are in scope; what is out.
 - Status: `CLASSIFIED`.
+
+The three placement fields exist because classification alone does not constrain a fix. A defect can be correctly named and still repaired in the wrong place, and a fix in the wrong layer is a new defect with the old one's symptoms suppressed.
 
 **Common failure mode.** Classifying without anchors. If Stage 1 didn't produce evidence, Stage 2 cannot happen.
 

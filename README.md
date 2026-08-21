@@ -13,10 +13,12 @@ AADM is a **structured way to deliver AI-assisted systems** so that speed does n
 - **Three lanes** for shaping work — Navigator (planned change), Investigator (defect with evidence), Sentinel (assurance across seams). See [`standards/three-lanes.md`](standards/three-lanes.md).
 - **AUTH catalog** — 48 obligation controls (AUTH-00..47) grouped into 19 authority domains. See [`standards/auth-catalog.md`](standards/auth-catalog.md).
 - **SEAM catalog** — 16 auditable handoff archetypes (SEAM-00..15). See [`standards/seam-catalog.md`](standards/seam-catalog.md).
-- **TRACE catalog** — 12 data-contract drift patterns (TRACE-01..12). See [`standards/trace-catalog.md`](standards/trace-catalog.md).
+- **TRACE catalog** — 13 data-contract drift patterns (TRACE-01..13). See [`standards/trace-catalog.md`](standards/trace-catalog.md).
 - **UDALI placement** — five collaboration bands (Unifier, Designer, Adapter, Logician, Integrator) and an optional 22-layer lattice (L1–L22). See [`docs/udali-personas.md`](docs/udali-personas.md) and [`docs/udali-22-layer-model.md`](docs/udali-22-layer-model.md).
 - **Sentinel attestation geometry** — VERT_*, HORI_*, closure rules. See [`standards/sentinel-program.md`](standards/sentinel-program.md).
 - **Evidence model** — citation namespaces and binding rules so findings dedupe across tools, tickets, and audits. See [`standards/evidence-model.md`](standards/evidence-model.md).
+- **AGENT catalog** — 9 agentic construction failure classes (AGENT-01..09). See [`standards/agentic-failure-modes.md`](standards/agentic-failure-modes.md).
+- **Agent runtime and authority** — the control wrapper, tool contract, run record, autonomy ladder, and the fourth authority (what an actor may change about the system itself). See [`standards/agent-runtime-harness.md`](standards/agent-runtime-harness.md) and [`standards/development-authority.md`](standards/development-authority.md).
 
 AADM is **descriptive guidance and a normative catalog**. Proof of correctness stays in **your application** — automated tests, CI gates, operational controls.
 
@@ -172,9 +174,18 @@ See [`examples/ai-task-assistant/`](examples/ai-task-assistant/) for a concrete 
 | Three lanes (Navigator/Investigator/Sentinel) | [`standards/three-lanes.md`](standards/three-lanes.md) |
 | AUTH catalog (AUTH-00..47) | [`standards/auth-catalog.md`](standards/auth-catalog.md) |
 | SEAM catalog (SEAM-00..15) | [`standards/seam-catalog.md`](standards/seam-catalog.md) |
-| TRACE catalog (TRACE-01..12) | [`standards/trace-catalog.md`](standards/trace-catalog.md) |
-| HANDOFF patterns (HANDOFF-01..06) | [`standards/handoff-patterns.md`](standards/handoff-patterns.md) |
+| TRACE catalog (TRACE-01..13) | [`standards/trace-catalog.md`](standards/trace-catalog.md) |
+| HANDOFF patterns (HANDOFF-01..08) | [`standards/handoff-patterns.md`](standards/handoff-patterns.md) |
 | Sentinel attestation closure (VERT_/HORI_) | [`standards/sentinel-program.md`](standards/sentinel-program.md) |
+| AGENT failure modes (AGENT-01..09) | [`standards/agentic-failure-modes.md`](standards/agentic-failure-modes.md) |
+| Agent runtime harness (control wrapper) | [`standards/agent-runtime-harness.md`](standards/agent-runtime-harness.md) |
+| Agent tool design (tool contract) | [`standards/agent-tool-design.md`](standards/agent-tool-design.md) |
+| Agent context and state | [`standards/agent-context-and-state.md`](standards/agent-context-and-state.md) |
+| Agent run record (AgentRun) | [`standards/agent-run-record.md`](standards/agent-run-record.md) |
+| Agent evaluation | [`standards/agent-evaluation.md`](standards/agent-evaluation.md) |
+| Multi-agent restraint | [`standards/multi-agent-restraint.md`](standards/multi-agent-restraint.md) |
+| Development authority (fourth authority) | [`standards/development-authority.md`](standards/development-authority.md) |
+| Human in the loop + autonomy ladder | [`standards/human-in-the-loop.md`](standards/human-in-the-loop.md) |
 | UDALI ↔ AUTH enforcement mapping | [`standards/udali-auth-enforcement-mapping.md`](standards/udali-auth-enforcement-mapping.md) |
 | Evidence model | [`standards/evidence-model.md`](standards/evidence-model.md) |
 | Universal engineering truths | [`standards/universal-engineering-truths.md`](standards/universal-engineering-truths.md) |
@@ -196,7 +207,7 @@ See [`examples/ai-task-assistant/`](examples/ai-task-assistant/) for a concrete 
 - **Process.** See [`CONTRIBUTING.md`](CONTRIBUTING.md); interactions follow [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
 - **Security.** Report sensitive issues per [`SECURITY.md`](SECURITY.md).
 
-Substantive changes to the standard — new AUTH control, new SEAM, new lane stage, new doctrine slice — require a written rationale and backwards-compatibility note. Numeric ids (`AUTH-NN`, `SEAM-NN`, `TRACE-NN`, `L`-numbers, `SIGL-NN`) are **append-only**; retired ids stay in the catalog marked `RETIRED`.
+Substantive changes to the standard — new AUTH control, new SEAM, new lane stage, new doctrine slice — require a written rationale and backwards-compatibility note. Numeric ids (`AUTH-NN`, `SEAM-NN`, `TRACE-NN`, `HANDOFF-NN`, `AGENT-NN`, `L`-numbers, `SIGL-NN`) are **append-only**; retired ids stay in the catalog marked `RETIRED`.
 
 ---
 

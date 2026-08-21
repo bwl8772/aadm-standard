@@ -48,7 +48,7 @@ These rows describe **product placement** for one surface. Typical [UDALI 22-lay
 | **SIGL-09** | Action eligibility | ~L14 | Allowed actions, phase gates |
 | **SIGL-10** | Single client mapper | ~L15 | Verdict → affordance (one resolver policy) |
 | **SIGL-11** | UI component | ~L21 | Dumb renderer of affordance only |
-| **SIGL-12** | Visibility / reveal | ~L22 | Hidden → shown → enabled → blocked |
+| **SIGL-12** | Visibility / reveal | ~L22 | Hidden → shown → enabled → blocked; plus **run state** where the surface exposes an autonomous agent |
 
 ---
 
@@ -78,6 +78,33 @@ These rows describe **product placement** for one surface. Typical [UDALI 22-lay
 4. **Server-shaped reveal (SIGL-12).** Every show/hide/enable rule traces to SIGL-08, SIGL-09, or SIGL-04—not ad-hoc UI-only conditions.
 
 Layers SIGL-01–07 bound **data and contracts** for the surface; SIGL-08–12 implement [Guidance–feedback seam](guidance-feedback-seam.md) when the surface shows system-status UX.
+
+---
+
+## Autonomous run state (SIGL-12, second dimension)
+
+`Hidden → shown → enabled → blocked` answers *may the user act here*. When a surface exposes an autonomous agent, a second question arrives that the reveal vocabulary cannot express: *what is the agent doing right now, and what may the user do about it?*
+
+Surfaces that expose an agent run MUST locate a declared run state, alongside the reveal state.
+
+| Run state | Meaning | Affordance the surface owes |
+|-----------|---------|-----------------------------|
+| **idle** | No run in flight | The action that would start one |
+| **running** | In flight | Progress and a cancel path — [AUTH-28](auth-catalog.md#auth-28--async-job--long-running-task-authority) requires long work to be observable and cancellable |
+| **awaiting_approval** | Blocked on a human gate | What is being asked, by whom it may be approved, and enough context to judge it |
+| **reversible** | Acted; inside the reversal window | The undo path, and the time remaining. This state is what makes autonomy rung 6 legitimate ([`human-in-the-loop.md`](human-in-the-loop.md)) |
+| **settled** | Terminal and final | The outcome, and a link to the run record |
+| **failed** | Terminal failure needing attention | What failed and what the user can do |
+
+Three invariants extend the existing four:
+
+5. **Run state is server truth.** The surface renders it; it never infers "probably still running" from a pending request or a stale poll. Same discipline as SIGL-08 — this is a verdict, and verdicts are produced once, server-side.
+6. **`reversible` is a real state, not a toast.** If the product claims a reversal window, the window is a server-held fact with a deadline and a tested undo path. A notification that scrolls away is not a reversal affordance.
+7. **`awaiting_approval` renders the decision, not just the fact of one.** A gate the user cannot evaluate from the surface is a gate that will be approved reflexively, which is [`agentic-failure-modes.md`](agentic-failure-modes.md) AGENT-08 arriving through the UI.
+
+The two dimensions are orthogonal and both apply. A control can be `shown` but `blocked` while a run is `awaiting_approval`; it can be `enabled` while the run is `idle`. Collapsing them — using disabled-ness to signal "running" — loses the distinction between *you may not do this* and *this is already happening*.
+
+Once a run ends, these surface states collapse the richer terminal enum in [`agent-run-record.md`](agent-run-record.md): `settled` covers `completed`, `incomplete`, and `cancelled`; `failed` covers `budget_exhausted`, `gate_refused`, and `failed`. The surface may simplify for the user; the record may not.
 
 ---
 

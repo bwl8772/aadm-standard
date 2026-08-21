@@ -40,6 +40,13 @@ Real engineering situations where the AADM standard changes how you work. Each e
 | [sentinel-attestation-feature-check.md](sentinel-attestation-feature-check.md) | Scope attestation dimensions for "scheduled send" → get required seam tiers → bind evidence per seam before release |
 | [architecture-review-existing-module.md](architecture-review-existing-module.md) | Review an inherited "payment processing" module — vertical depth + horizontal seams → prioritized risk map |
 
+### Real-world vignettes (all lanes)
+
+| Example | What it shows |
+|---------|---------------|
+| [mcp-real-world-vignettes-v1.md](mcp-real-world-vignettes-v1.md) | 20 public-site vignettes — problem / AADM tools used / hour estimates, across edtech, fintech, regtech, logistics, insurance, healthcare, retail, and HR tech (app names fictional) |
+| [mcp-real-world-vignettes-cards-v1.md](mcp-real-world-vignettes-cards-v1.md) | Hero-grid cards — one paragraph per vignette plus UI metadata (title, tag, hours, tools) for landing pages and carousels |
+
 ### Worked project scaffold
 
 | Example | What it shows |

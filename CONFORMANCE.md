@@ -13,8 +13,10 @@ An implementation is anything that loads, surfaces, applies, or enforces AADM co
 | AUTH-NN identifiers (00–47, plus future ratified additions) match the titles and obligation summaries in [`standards/auth-catalog.md`](standards/auth-catalog.md). | Round-trip: given any `AUTH-NN`, the implementation returns the canonical title and at minimum the one-line obligation. |
 | SEAM-NN identifiers (00–15, plus future ratified additions) match the canonical catalog in [`standards/seam-catalog.md`](standards/seam-catalog.md). | Round-trip: given any `SEAM-NN`, the implementation returns the canonical archetype name and crossing description. |
 | UDALI layer numbers (L1–L22) align with [`docs/udali-22-layer-model.md`](docs/udali-22-layer-model.md) and the enforcement mapping in [`standards/udali-auth-enforcement-mapping.md`](standards/udali-auth-enforcement-mapping.md). | An implementation that says "L11" must mean the Auth layer (identity, RBAC, tenancy); never some other layer. |
-| Vertical Sentinel seams `VERT_UI`, `VERT_APP`, `VERT_DOMAIN`, `VERT_DATA`, `VERT_PLATFORM` and horizontal seams `HORI_SCHEMA`, `HORI_SERVICE`, `HORI_AUTH`, `HORI_EXT`, `HORI_ASYNC`, `HORI_GUIDANCE_FEEDBACK` are stable. | An implementation may not rename these. New ids must be additive and clearly namespaced. |
+| Vertical Sentinel seams `VERT_UI`, `VERT_APP`, `VERT_DOMAIN`, `VERT_DATA`, `VERT_PLATFORM` and horizontal seams `HORI_SCHEMA`, `HORI_SERVICE`, `HORI_AUTH`, `HORI_EXT`, `HORI_ASYNC`, `HORI_GUIDANCE_FEEDBACK`, `HORI_REALM_BRIDGE` are stable. | An implementation may not rename these. New ids must be additive and clearly namespaced. |
 | `SIGL-01..12` row meanings (Signal Stack) are stable. | Given `SIGL-08`, the implementation returns the verdict-producer row, not "UDALI layer 8." |
+| `TRACE-01..13` and `HANDOFF-01..08` pattern classes match [`standards/trace-catalog.md`](standards/trace-catalog.md) and [`standards/handoff-patterns.md`](standards/handoff-patterns.md). | Round-trip: given any id, the implementation returns the canonical pattern name. |
+| `AGENT-01..09` agentic failure classes match [`standards/agentic-failure-modes.md`](standards/agentic-failure-modes.md). | Round-trip: given `AGENT-05`, the implementation returns `context_drift`, not a generic "context problem." |
 
 ---
 

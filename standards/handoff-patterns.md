@@ -12,6 +12,8 @@
 - An external side effect ran before the durable write was committed.
 - Two purge or wipe paths exist and diverged.
 - A multi-step lifecycle is not transaction-bound, leaving inconsistent state on partial failure.
+- A nested route trusts the parent id in the path without checking that the child row actually belongs to it.
+- A value is asserted into a type at a boundary instead of being parsed against a schema.
 
 ## Catalog
 
@@ -23,6 +25,8 @@
 | **HANDOFF-04** | `effect_before_persist` | External side effect before durable write. |
 | **HANDOFF-05** | `parallel_purge` | Two wipe/purge brains diverge. |
 | **HANDOFF-06** | `multi_step_atomicity` | Lifecycle steps not transaction-bound. |
+| **HANDOFF-07** | `nested_resource_scope` | Parent resource id in the path not verified against the child row's ownership. |
+| **HANDOFF-08** | `cast_without_parse` | Type assertion trusted at a boundary instead of a schema parse. |
 
 ## How findings use these
 

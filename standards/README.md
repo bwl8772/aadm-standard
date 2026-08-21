@@ -15,7 +15,7 @@ Normative statements, catalogs, and workflows you can adopt or adapt. Full narra
 |------|-------|
 | [aadm-core-principles.md](aadm-core-principles.md) | Eight core principles with checklists |
 | [architecture-before-code.md](architecture-before-code.md) | Intent before scaled implementation |
-| [human-in-the-loop.md](human-in-the-loop.md) | Human approval for high-risk actions |
+| [human-in-the-loop.md](human-in-the-loop.md) | Human approval for high-risk actions; the seven-rung autonomy ladder |
 | [no-monolith-rule.md](no-monolith-rule.md) | Avoid undifferentiated lumping |
 | [universal-engineering-truths.md](universal-engineering-truths.md) | Twenty stack-agnostic truths |
 | [universal-coding-principles.md](universal-coding-principles.md) | Skeptical phase-by-phase checklist |
@@ -28,8 +28,23 @@ Normative statements, catalogs, and workflows you can adopt or adapt. Full narra
 |------|-------|
 | [auth-catalog.md](auth-catalog.md) | AUTH-00..47 — obligations grouped by authority domain |
 | [seam-catalog.md](seam-catalog.md) | SEAM-00..15 — auditable handoff archetypes |
-| [trace-catalog.md](trace-catalog.md) | TRACE-01..12 — data-contract drift patterns |
-| [handoff-patterns.md](handoff-patterns.md) | HANDOFF-01..06 — cross-layer defect classes |
+| [trace-catalog.md](trace-catalog.md) | TRACE-01..13 — data-contract drift patterns |
+| [handoff-patterns.md](handoff-patterns.md) | HANDOFF-01..08 — cross-layer defect classes |
+| [agentic-failure-modes.md](agentic-failure-modes.md) | AGENT-01..09 — agentic construction failure classes |
+
+## Agent runtime and authority
+
+How to build systems that use agents, and what governs them. Assembles the agentic AUTH controls (AUTH-44..47) plus the runtime concerns the catalogs name individually but no single document assembled.
+
+| File | Topic |
+|------|-------|
+| [agent-runtime-harness.md](agent-runtime-harness.md) | The control wrapper, the agent loop, reasons vs governs, the autonomy inversion |
+| [agent-tool-design.md](agent-tool-design.md) | Tool contract — narrow, typed, classified, idempotent, reversible, audited; never-register list |
+| [agent-context-and-state.md](agent-context-and-state.md) | Decision-scoped assembly, trust classification, durable state outside the transcript |
+| [agent-run-record.md](agent-run-record.md) | The AgentRun envelope, events, and terminal states |
+| [agent-evaluation.md](agent-evaluation.md) | Post-deployment metric catalog; why adaptive routing raises the validation burden |
+| [multi-agent-restraint.md](multi-agent-restraint.md) | When a second agent is justified; agent-to-agent authority |
+| [development-authority.md](development-authority.md) | The fourth authority — what an actor may change about the system itself |
 
 ## Workflows
 

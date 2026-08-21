@@ -56,7 +56,7 @@ With those three dimensions supplied (via `sentinel_closure` in the hosted MCP, 
 | `HORI_AUTH` | required | Cancel/reschedule gated to sender or admin role |
 
 **Latent** (not claimed, residual risk acknowledged):
-- `HORI_EXTERNAL` — if using a third-party email provider, that seam is latent unless explicitly claimed.
+- `HORI_EXT` — if using a third-party email provider, that seam is latent unless explicitly claimed.
 
 ---
 

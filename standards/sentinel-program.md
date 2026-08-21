@@ -36,6 +36,7 @@ Vertical bands are **coarser** than UDALI L-numbers. A finding may cite both: `L
 | `HORI_EXT` | External integration | Third-party APIs, vendor systems. |
 | `HORI_ASYNC` | Async / event | Queues, events, fan-out. |
 | `HORI_GUIDANCE_FEEDBACK` | Guidance ↔ UI | Server-computed verdict to UI affordance (see [SEAM-13](seam-catalog.md#seam-13--guidancefeedback)). |
+| `HORI_REALM_BRIDGE` | Realm bridge | Handoff from one data-flow stack into another, or across an authority/trust realm (see [`data-flow-stacks.md`](data-flow-stacks.md)). |
 
 A pass may also see `META_SCOPE` and `META_ATTEST` rows — these are scope framing and human attestation, not data fields.
 

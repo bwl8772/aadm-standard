@@ -84,7 +84,7 @@ Examples:
 - `mutation.command-writer @ UDALI:A AUTH-11` — write-side state, Adapter band, staleness-bound.
 - `projection.producer @ UDALI:L SIGL-04` — recompiler in Logician band.
 - `guidance.resolver @ UDALI:L SEAM-13` — the single resolver inside the Guidance seam.
-- `execution.dispatcher → execution.agent @ HORI_realm-bridge` — agent run crossing trust realms.
+- `execution.dispatcher → execution.agent @ HORI_REALM_BRIDGE` — agent run crossing trust realms.
 
 Bare `producer` / `writer` / `orchestrator` without a stack qualifier should be treated by reviewers as **drift**.
 

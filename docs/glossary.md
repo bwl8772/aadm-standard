@@ -78,6 +78,19 @@ An **optional** practice for proving that **critical field meanings survive hand
 
 Organizations that need machine-stable labels sometimes use **`TRACE-NN`** pattern ids in internal catalogs; **this public repo** describes the **practice** only. Pin **your** catalog version when reproducibility matters.
 
+## The four senses of "trace" — do not conflate
+
+AADM uses the word *trace* in four unrelated ways. Findings, tool output, and doc prose must say which one they mean.
+
+| Sense | What it is | Where it is defined |
+|-------|------------|---------------------|
+| **`TRACE-NN`** | A **contract-drift pattern class** — the label for *what kind of drift* failed at a handoff. TRACE-01 through TRACE-13. | [`standards/trace-catalog.md`](../standards/trace-catalog.md) |
+| **Trace & bind evidence** | **Sentinel stage 2** — the human-gated activity of walking seams and attaching repository proof. A verb, not an artifact. | [`standards/sentinel-program.md`](../standards/sentinel-program.md) |
+| **AUTH-30 Traceability Authority** | The **obligation** that a request crossing modules or services carries a correlation identifier so the chain can be reconstructed. This is distributed tracing in the ordinary industry sense. | [`standards/auth-catalog.md`](../standards/auth-catalog.md) |
+| **AgentRun** (run record) | The **durable record of one agent execution** — turns, tool calls, gate outcomes, terminal state. Deliberately **not** called a trace, precisely because the other three senses already exist. | [`standards/agent-run-record.md`](../standards/agent-run-record.md) |
+
+A finding may legitimately cite more than one: an agent that dropped a tenant id while calling a tool would carry a `TRACE-NN` drift class, an `AUTH-30` correlation gap, and an AgentRun id — three different facts, three different words.
+
 ## Attestation dimensions (attestation geometry)
 
 The **three inputs** that shape what a Sentinel assurance pass must prove. Together they define the geometry of the closure:
@@ -97,7 +110,7 @@ The **deterministic output** of supplying attestation dimensions to `sentinel_cl
 Short **machine-stable ids** for **scope-of-attestation seams** in assurance workflows — the finding-level output of an attestation closure:
 
 - **`VERT_*`** — coarse vertical hops: `VERT_UI`, `VERT_APP`, `VERT_DOMAIN`, `VERT_DATA`, `VERT_PLATFORM`.  
-- **`HORI_*`** — horizontal boundary kinds: `HORI_SCHEMA`, `HORI_INTEGRATION`, `HORI_AUTH`, `HORI_EXTERNAL`, `HORI_ASYNC`, `HORI_GUIDANCE_FEEDBACK`.
+- **`HORI_*`** — horizontal boundary kinds: `HORI_SCHEMA`, `HORI_SERVICE`, `HORI_AUTH`, `HORI_EXT`, `HORI_ASYNC`, `HORI_GUIDANCE_FEEDBACK`, `HORI_REALM_BRIDGE`.
 
 They are **not** UDALI **L1–L22** layer numbers. Hosted MCP implementations expose the corresponding input values on `sentinel_closure`. Exact enumerations are **organizational** — this glossary names the concepts only.
 
@@ -122,6 +135,18 @@ A **packaged playbook** an agent runtime loads for recurring tasks—often autho
 ## Agent
 
 An **automated actor** (LLM-driven or otherwise) that proposes actions, code, or plans. Treated as **powerful but not authoritative** for high-risk decisions unless explicitly governed.
+
+## Control wrapper (agent runtime harness)
+
+The **deterministic code around the model** that decides whether each proposed step is allowed to happen: budget enforcement, tool authorization, context trust classification, gate checks, and run recording. The model reasons; the wrapper governs. An agent with no wrapper is not an autonomous agent — it is an unbounded one. See [`standards/agent-runtime-harness.md`](../standards/agent-runtime-harness.md).
+
+## AgentRun (run record)
+
+The **durable record of one agent execution**: what it was asked, which turns and tool calls occurred, which gates fired, and how it terminated. Distinct from `TRACE-NN`, from Sentinel's "trace & bind evidence" stage, and from AUTH-30 correlation ids — see *The four senses of "trace"* above. See [`standards/agent-run-record.md`](../standards/agent-run-record.md).
+
+## Autonomy ladder
+
+The **seven rungs** from suggestion to unattended action, used to state how much authority a given agent capability actually holds. A rung is **earned by evidence**, not assigned by ambition — an agent moves up only when its run records and evaluation metrics justify it. See [`standards/human-in-the-loop.md`](../standards/human-in-the-loop.md).
 
 ## Human in the loop (HITL)
 
@@ -153,11 +178,15 @@ A numbered **auditable handoff archetype** in the [SEAM catalog](../standards/se
 
 ### TRACE-NN
 
-A numbered **contract-drift pattern class** in the [TRACE catalog](../standards/trace-catalog.md). 12 patterns, TRACE-01 through TRACE-12. Names *what kind of drift* failed at a handoff. Combine with SEAM-NN (scope) and AUTH-NN (obligation) in findings.
+A numbered **contract-drift pattern class** in the [TRACE catalog](../standards/trace-catalog.md). 13 patterns, TRACE-01 through TRACE-13. Names *what kind of drift* failed at a handoff. Combine with SEAM-NN (scope) and AUTH-NN (obligation) in findings.
 
 ### HANDOFF-NN
 
-A numbered **cross-layer defect class** in the [HANDOFF catalog](../standards/handoff-patterns.md). Six pattern classes, HANDOFF-01 through HANDOFF-06. Names multi-step defects (write/invalidate parity, write-path bypass, shadow types, effect-before-persist, parallel purge, multi-step atomicity).
+A numbered **cross-layer defect class** in the [HANDOFF catalog](../standards/handoff-patterns.md). Eight pattern classes, HANDOFF-01 through HANDOFF-08. Names multi-step defects (write/invalidate parity, write-path bypass, shadow types, effect-before-persist, parallel purge, multi-step atomicity, nested-resource scope, cast without parse).
+
+### AGENT-NN
+
+A numbered **agentic construction failure class** in the [agentic failure modes catalog](../standards/agentic-failure-modes.md). Nine classes, AGENT-01 through AGENT-09. Names what is structurally wrong with *how an agent was built* — as distinct from a single bad generation. The discriminating question: would a better model fix this? If yes, it is not an AGENT finding.
 
 ---
 

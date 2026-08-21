@@ -12,15 +12,18 @@ Agents and integrated coding assistants can traverse documentation, generate cod
 
 AADM does not prescribe a specific identity product. It prescribes **clarity**.
 
-## Separation of concerns
+## Separation of concerns — the four authorities
 
 | Concern | Question | Typical placement |
 |---------|-----------|-------------------|
 | Authentication | Who is this caller? | Gateway, identity provider integration, session issuance |
 | Authorization | What may they do to which resources? | Policy checks adjacent to domain operations |
 | Auditing | Who did what, when? | Tamper-evident logs tied to identity context |
+| **Development authority** | What may this actor change about the system itself? | Repository zone declaration enforced at the merge and release gate |
 
 Authentication middleware should not silently substitute for domain authorization rules.
+
+The first three govern **behaviour at runtime**. The fourth governs **change to the thing that runs**, and it exists as a named concern because agent-assisted delivery introduced an actor whose main output is modification of the system rather than use of it. It cannot be folded into authorization: an actor with unbounded development authority can edit the code that enforces authorization, so the fourth authority bounds the other three rather than sitting beside them. See [`standards/development-authority.md`](../standards/development-authority.md).
 
 ## Delivery checkpoints
 

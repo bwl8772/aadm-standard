@@ -40,13 +40,13 @@ The thread stayed in **recon-first** posture until anchors existed: **route + st
 
 When logs showed **exact enum mismatch paths**, diagnosis stayed scoped: contract choke point vs client state vs read-model degradation—not three undifferentiated guesses.
 
-### 2. Layer and ownership hints ([UDALI](../../docs/udali-personas.md))
+### 2. Layer and ownership hints ([UDALI](../docs/udali-personas.md))
 
 Naming **presentation**, **application boundary**, and **validation ordering** reduced the risk of a **single mega-change** that rewires read models, clients, and gateways at once. Fixes could land close together while the **narrative** stayed: “boundary normalization,” “client inference guard,” “transport/schema ordering.”
 
 ### 3. AUTH context where approvals and readiness matter
 
-When **UI copy** and **server readiness flags** disagreed, framing the bug as **cross-layer invariant drift** (not only cosmetic copy) matched [AUTH-aware delivery](../../docs/auth-aware-delivery.md) themes.
+When **UI copy** and **server readiness flags** disagreed, framing the bug as **cross-layer invariant drift** (not only cosmetic copy) matched [AUTH-aware delivery](../docs/auth-aware-delivery.md) themes.
 
 ### 4. Hold points as sequencing, not magic
 
@@ -77,5 +77,5 @@ For multi-session investigations, maintain a **short evidence log** in the ticke
 ## Where to go next
 
 - Navigator-shaped readiness thread: [navigator-readiness-hr-app.md](navigator-readiness-hr-app.md)  
-- [Glossary — Investigator lane](../../docs/glossary.md)  
-- [Repository scope](../../docs/repository-scope.md)  
+- [Glossary — Investigator lane](../docs/glossary.md)  
+- [Repository scope](../docs/repository-scope.md)  
