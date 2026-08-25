@@ -369,7 +369,7 @@ Releases to production MUST pass a declared gate (CI green, security scan, chang
 
 ## 19. Agentic AI Behavior Authority *(candidate domain)*
 
-> These controls address autonomous-agent edge cases that fall between AUTH-34, AUTH-35, AUTH-36, AUTH-38/39, and AUTH-14. They are **candidate** — proposed but not ratified. Treat as guidance until ratified by the maintainers.
+> These controls address autonomous-agent edge cases that fall between AUTH-34, AUTH-35, AUTH-36, AUTH-38/39, and AUTH-14. They are **candidate** — adopt and enforce them now; the flag marks catalog maturity (wording may still be refined at ratification), not a barrier to use. Per GOVERNANCE §5, merge to `main` makes them part of the standard; ratification review stabilizes titles and obligation text.
 
 ### AUTH-44 — Tool Invocation Authority
 
@@ -411,7 +411,7 @@ Every capability exposed to a model MUST be registered as a governed interface: 
 
 ## 20. AI Assurance Authority *(candidate domain)*
 
-> These controls govern whether AI-produced work is trusted for consequence — evaluated, evidenced, verified complete, regression-guarded, qualified, and workflow-gated. Domain 19 governs whether the agent stays inside its bounds; this domain governs whether what it produced is any good and provably done. **Candidate** — proposed but not ratified. Treat as guidance until ratified by the maintainers. The adoption map for this domain is [`ai-automation-profile.md`](ai-automation-profile.md).
+> These controls govern whether AI-produced work is trusted for consequence — evaluated, evidenced, verified complete, regression-guarded, qualified, and workflow-gated. Domain 19 governs whether the agent stays inside its bounds; this domain governs whether what it produced is any good and provably done. **Candidate** — adopt and enforce now; the flag marks wording maturity, not a barrier to use (see the domain 19 note). The adoption map for this domain is [`ai-automation-profile.md`](ai-automation-profile.md).
 
 ### AUTH-48 — Output Evaluation Authority
 
