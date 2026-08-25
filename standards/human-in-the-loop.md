@@ -18,6 +18,20 @@ HITL preserves **traceable judgment** aligned to risk.
 
 ---
 
+## An authority mechanism, not a workflow step
+
+HITL is routinely drawn as a box in a flowchart — "human review" between two automated stages. That framing understates what it is and invites the failure modes that follow from understating it.
+
+A HITL checkpoint is an exercise of **authority**: an accountable, named person approving, rejecting, or attesting *before* the effect, under [AUTH-14 (Approval Authority)](auth-catalog.md#auth-14--approval-authority), with a decision record that can be reconstructed later. Three consequences separate it from an ordinary workflow step:
+
+1. **The gate is owned by a control, not by the flow.** A workflow step can be reordered, parallelized, or skipped when the diagram changes. An AUTH-14 gate cannot — the workflow routes *to* it ([AUTH-55](auth-catalog.md#auth-55--automation-workflow-gate-authority)), and a redesigned flow that no longer passes through it has removed an authority, which is itself an approval trigger (see the table below).
+2. **It cannot be satisfied by assertion.** An automation that reports "approval obtained" has asserted, not approved. The gate is satisfied only by the gate's own recorded decision — the same rule that governs completion ([AUTH-50](auth-catalog.md#auth-50--completion-verification-authority)) and workflow advancement ([AUTH-55](auth-catalog.md#auth-55--automation-workflow-gate-authority)). An agent may prepare the approval package; it cannot emit the verdict.
+3. **The approver is a role with authority over the effect, not an available human.** "A person clicked yes" is a workflow step. Authority means the named role is accountable for that class of effect, the decision basis is recorded, and a near-zero rejection rate is investigated as a finding — a gate nobody ever refuses is either unnecessary or not being read ([`agent-evaluation.md`](agent-evaluation.md), intervention metrics).
+
+Where the [AI Automation Profile](ai-automation-profile.md) routes a requirement to a human, this is the mechanism it means.
+
+---
+
 ## What good looks like
 
 - Written **triggers** (“what requires human approval”).  
