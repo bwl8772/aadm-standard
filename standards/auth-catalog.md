@@ -24,7 +24,8 @@ The catalog is grouped into **authority domains** (areas of governance responsib
 | 16 | AI Behavior Authority | AUTH-35, AUTH-36, AUTH-37 |
 | 17 | Performance Authority | AUTH-38, AUTH-39, AUTH-40 |
 | 18 | Deployment Authority | AUTH-41, AUTH-42, AUTH-43 |
-| 19 | Agentic AI Behavior Authority *(candidate)* | AUTH-44, AUTH-45, AUTH-46, AUTH-47 |
+| 19 | Agentic AI Behavior Authority *(candidate)* | AUTH-44, AUTH-45, AUTH-46, AUTH-47, AUTH-53, AUTH-54 |
+| 20 | AI Assurance Authority *(candidate)* | AUTH-48, AUTH-49, AUTH-50, AUTH-51, AUTH-52, AUTH-55 |
 
 A control is **named, numbered, and obligation-summarized** below. Adopters MAY require more depth (threat model, test specification, audit evidence type) in their own internal catalogs.
 
@@ -393,6 +394,60 @@ Content reaching an agent from untrusted sources (user input, tool output, retri
 When agents have persistent memory (user preferences, prior context, learned facts), the memory MUST have provenance — what wrote it, when, and from what source — and a mechanism to detect and recover from poisoning.
 
 **Obligation summary:** Agent memory is provenanced and recoverable.
+
+### AUTH-53 — Agent Scope Authority
+
+Every agent MUST have a declared, machine-readable authority envelope — what it may read, create, modify, execute, request, approve, and never perform — enforced deny-by-default by the runtime, with task-scoped least-privilege credentials. Delegated authority narrows: a spawned agent cannot hold more than its parent, and an agent can never widen its own envelope or approve its own request.
+
+**Obligation summary:** Each agent has an enforced authority envelope; reach equals the envelope, not the credential.
+
+### AUTH-54 — Tool Contract Authority
+
+Every capability exposed to a model MUST be registered as a governed interface: narrow (one effect, no mode switch), typed (validated input and output schemas, honest description), side-effect classified (read / write / external / irreversible; unclassified defaults to irreversible), idempotent where retryable, reversible or explicitly not, and audited. Capabilities that cannot hold these properties (arbitrary code or query execution, secret retrieval, permission grants, controls-modifying or bulk-destructive operations, generic outbound HTTP) MUST NOT be registered at all.
+
+**Obligation summary:** A tool is a governed contract before it is callable; some capabilities are never tools.
+
+---
+
+## 20. AI Assurance Authority *(candidate domain)*
+
+> These controls govern whether AI-produced work is trusted for consequence — evaluated, evidenced, verified complete, regression-guarded, qualified, and workflow-gated. Domain 19 governs whether the agent stays inside its bounds; this domain governs whether what it produced is any good and provably done. **Candidate** — proposed but not ratified. Treat as guidance until ratified by the maintainers. The adoption map for this domain is [`ai-automation-profile.md`](ai-automation-profile.md).
+
+### AUTH-48 — Output Evaluation Authority
+
+AI-generated work that carries consequence MUST be evaluated by something other than the agent or model that produced it: deterministic checks for every criterion expressible as a rule, a separate AI evaluator with explicit criteria for semantic judgement, and a structured machine-readable verdict (outcome, per-criterion result, reason, evidence). Failed verdicts route through a bounded correct-and-re-evaluate cycle that escalates to a human at the correction budget. Passing schema validation is never proof of correctness.
+
+**Obligation summary:** Generated work is judged independently of its producer, with a verdict automation can act on.
+
+### AUTH-49 — Claim Grounding Authority
+
+AI-generated claims, recommendations, diagnoses, and decisions that a consumer will rely on MUST carry the evidence required to verify them — resolvable references to sources the run actually read, with trust classification. Unsupported claims are marked or withheld per declared policy, never emitted as equal to supported ones; inference is not presented as retrieval.
+
+**Obligation summary:** Consequential claims cite resolvable evidence; unsupported claims are visible as such.
+
+### AUTH-50 — Completion Verification Authority
+
+An automation MUST verify the resulting system state, or the required artifact, before recording an agent's work as complete. The completion condition is declared in advance and observable; verification reads the state of record, not the agent's report; partial completion is recorded as `incomplete`, never rounded up.
+
+**Obligation summary:** Completion is a verified fact about the system, not the agent's assertion.
+
+### AUTH-51 — Regression Corpus Authority
+
+Material AI and automation failures MUST be captured as replayable cases — inputs, context, governing configuration, expected and actual behaviour — and retained as a corpus that is replayed against changes to models, prompts, harnesses, agents, tools, evaluators, contracts, and workflows. Each material failure results in a durable change to a governing mechanism; passing cases are retained, not retired.
+
+**Obligation summary:** A failure seen once is detectable forever; every governing change replays the corpus.
+
+### AUTH-52 — AI Change Qualification Authority
+
+A new or changed governing configuration — model, prompt, harness, tool surface, evaluator, or routing policy — MUST satisfy declared evaluation and regression thresholds before it carries production authority. Thresholds are declared before results are known; every route in a routed configuration qualifies separately; provider-side model changes are detected and qualified, not silently inherited; autonomy rung promotions cite evaluation evidence.
+
+**Obligation summary:** Governing changes earn production authority through declared, pre-committed thresholds.
+
+### AUTH-55 — Automation Workflow Gate Authority
+
+Business-critical AI automation MUST run inside an explicitly defined workflow whose states, permitted transitions, and mandatory gates are owned by deterministic software the model cannot modify. Transitions are decided from recorded gate results, never from the agent's account of them; the AI decides how to work within its authorized state but cannot expand scope, reorder states, or waive a gate; failures route through declared retry, correction, rollback, or safe-termination paths that escalate on exhaustion.
+
+**Obligation summary:** The lifecycle is owned outside the model; gates are satisfied by their owning controls, not by assertion.
 
 ---
 

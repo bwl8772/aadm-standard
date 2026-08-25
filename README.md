@@ -11,7 +11,7 @@
 AADM is a **structured way to deliver AI-assisted systems** so that speed does not erase accountability. It combines:
 
 - **Three lanes** for shaping work — Navigator (planned change), Investigator (defect with evidence), Sentinel (assurance across seams). See [`standards/three-lanes.md`](standards/three-lanes.md).
-- **AUTH catalog** — 48 obligation controls (AUTH-00..47) grouped into 19 authority domains. See [`standards/auth-catalog.md`](standards/auth-catalog.md).
+- **AUTH catalog** — 56 obligation controls (AUTH-00..55) grouped into 20 authority domains (19 and 20 are candidate). See [`standards/auth-catalog.md`](standards/auth-catalog.md).
 - **SEAM catalog** — 16 auditable handoff archetypes (SEAM-00..15). See [`standards/seam-catalog.md`](standards/seam-catalog.md).
 - **TRACE catalog** — 13 data-contract drift patterns (TRACE-01..13). See [`standards/trace-catalog.md`](standards/trace-catalog.md).
 - **UDALI placement** — five collaboration bands (Unifier, Designer, Adapter, Logician, Integrator) and an optional 22-layer lattice (L1–L22). See [`docs/udali-personas.md`](docs/udali-personas.md) and [`docs/udali-22-layer-model.md`](docs/udali-22-layer-model.md).

@@ -10,7 +10,7 @@ An implementation is anything that loads, surfaces, applies, or enforces AADM co
 
 | Obligation | Test |
 |------------|------|
-| AUTH-NN identifiers (00–47, plus future ratified additions) match the titles and obligation summaries in [`standards/auth-catalog.md`](standards/auth-catalog.md). | Round-trip: given any `AUTH-NN`, the implementation returns the canonical title and at minimum the one-line obligation. |
+| AUTH-NN identifiers (00–55, plus future ratified additions) match the titles and obligation summaries in [`standards/auth-catalog.md`](standards/auth-catalog.md). | Round-trip: given any `AUTH-NN`, the implementation returns the canonical title and at minimum the one-line obligation. |
 | SEAM-NN identifiers (00–15, plus future ratified additions) match the canonical catalog in [`standards/seam-catalog.md`](standards/seam-catalog.md). | Round-trip: given any `SEAM-NN`, the implementation returns the canonical archetype name and crossing description. |
 | UDALI layer numbers (L1–L22) align with [`docs/udali-22-layer-model.md`](docs/udali-22-layer-model.md) and the enforcement mapping in [`standards/udali-auth-enforcement-mapping.md`](standards/udali-auth-enforcement-mapping.md). | An implementation that says "L11" must mean the Auth layer (identity, RBAC, tenancy); never some other layer. |
 | Vertical Sentinel seams `VERT_UI`, `VERT_APP`, `VERT_DOMAIN`, `VERT_DATA`, `VERT_PLATFORM` and horizontal seams `HORI_SCHEMA`, `HORI_SERVICE`, `HORI_AUTH`, `HORI_EXT`, `HORI_ASYNC`, `HORI_GUIDANCE_FEEDBACK`, `HORI_REALM_BRIDGE` are stable. | An implementation may not rename these. New ids must be additive and clearly namespaced. |
@@ -84,7 +84,7 @@ An implementation that surfaces these as acceptable recommendations is non-confo
 
 An implementation can self-check conformance with a short script:
 
-1. For ten randomly selected `AUTH-NN` ids in `[00..47]`, confirm the title returned matches `standards/auth-catalog.md`.
+1. For ten randomly selected `AUTH-NN` ids in `[00..55]`, confirm the title returned matches `standards/auth-catalog.md`.
 2. For each of `SEAM-00..15`, confirm the archetype name matches `standards/seam-catalog.md`.
 3. Issue a Navigator prompt: confirm the response references "Scope → Verify → Readiness" or equivalent.
 4. Issue an Investigator prompt with no evidence: confirm the response asks for evidence rather than guessing.

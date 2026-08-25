@@ -170,7 +170,7 @@ This **public documentation repository**: templates and narrative guidance for h
 
 ### AUTH-NN
 
-A numbered **governance control** in the [AUTH catalog](../standards/auth-catalog.md). 48 controls grouped into 19 authority domains, AUTH-00 through AUTH-47. Names a single obligation that must be respected when designing, building, or auditing software. Implementations may not silently re-number or repurpose these.
+A numbered **governance control** in the [AUTH catalog](../standards/auth-catalog.md). 56 controls grouped into 20 authority domains, AUTH-00 through AUTH-55 (domains 19 and 20 are candidate). Names a single obligation that must be respected when designing, building, or auditing software. Implementations may not silently re-number or repurpose these.
 
 ### SEAM-NN
 
