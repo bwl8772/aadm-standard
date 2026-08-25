@@ -1,6 +1,6 @@
 # AI Automation Profile v1 — AR-01..AR-30
 
-**Status:** CANDIDATE profile. Normative authority stays with the AUTH catalog and the doctrine it cites; this profile adds no obligations of its own. AUTH-44..47 and AUTH-48..55 are CANDIDATE controls pending Architect / AI Auditor ratification.
+**Status:** CANDIDATE profile — adopt now. Normative authority stays with the AUTH catalog and the doctrine it cites; this profile adds no obligations of its own. AUTH-44..47 and AUTH-48..55 carry the CANDIDATE flag as a maturity marker (wording may be refined at ratification), not as a barrier to enforcement.
 
 **What this is.** A reusable adoption profile for business-critical AI automation: thirty implementation requirements (AR-01..AR-30), each mapped to the AADM control that owns it, the UDALI placement, the delivery-template field where it is declared, the evidence assurance expects, and the kind of test that proves it. The architecture is:
 

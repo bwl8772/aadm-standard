@@ -12,7 +12,7 @@ This is not a substitute for designing per-feature placement — it is a default
 
 ## Layer responsibility matrix
 
-> **Candidate controls.** AUTH-44..47, AUTH-53..54 (Agentic AI Behavior) and AUTH-48..52, AUTH-55 (AI Assurance) are CANDIDATE — mapped here so placement is declared from day one, flagged *(c)* in the matrix until ratified.
+> **Candidate controls.** AUTH-44..47, AUTH-53..54 (Agentic AI Behavior) and AUTH-48..52, AUTH-55 (AI Assurance) are CANDIDATE — enforceable now; mapped here so placement is declared from day one, flagged *(c)* in the matrix until ratification stabilizes their wording.
 
 | Layer | Name | Responsibility | Forbidden behaviors | Primary AUTH controls |
 |-------|------|----------------|---------------------|------------------------|
