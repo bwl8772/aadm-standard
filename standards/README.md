@@ -26,7 +26,7 @@ Normative statements, catalogs, and workflows you can adopt or adapt. Full narra
 
 | File | Topic |
 |------|-------|
-| [auth-catalog.md](auth-catalog.md) | AUTH-00..47 — obligations grouped by authority domain |
+| [auth-catalog.md](auth-catalog.md) | AUTH-00..55 — obligations grouped by authority domain |
 | [seam-catalog.md](seam-catalog.md) | SEAM-00..15 — auditable handoff archetypes |
 | [trace-catalog.md](trace-catalog.md) | TRACE-01..13 — data-contract drift patterns |
 | [handoff-patterns.md](handoff-patterns.md) | HANDOFF-01..08 — cross-layer defect classes |
@@ -34,7 +34,7 @@ Normative statements, catalogs, and workflows you can adopt or adapt. Full narra
 
 ## Agent runtime and authority
 
-How to build systems that use agents, and what governs them. Assembles the agentic AUTH controls (AUTH-44..47) plus the runtime concerns the catalogs name individually but no single document assembled.
+How to build systems that use agents, and what governs them. Assembles the agentic AUTH controls (AUTH-44..47, AUTH-53..54) and the AI assurance controls (AUTH-48..52, AUTH-55) plus the runtime concerns the catalogs name individually but no single document assembled.
 
 | File | Topic |
 |------|-------|
@@ -45,6 +45,7 @@ How to build systems that use agents, and what governs them. Assembles the agent
 | [agent-evaluation.md](agent-evaluation.md) | Post-deployment metric catalog; why adaptive routing raises the validation burden |
 | [multi-agent-restraint.md](multi-agent-restraint.md) | When a second agent is justified; agent-to-agent authority |
 | [development-authority.md](development-authority.md) | The fourth authority — what an actor may change about the system itself |
+| [ai-automation-profile.md](ai-automation-profile.md) | AR-01..AR-30 mapped to owning controls, UDALI placement, template fields, evidence, and test/eval type |
 
 ## Workflows
 
